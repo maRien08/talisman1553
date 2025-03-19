@@ -1,0 +1,11 @@
+权限等级,名字前缀,世界喊话限制,客户端显示GM,是否是官方GM
+ID,NamePrefix,WorldChatLimit,ShowInClient,IsGM
+1,[Mod],0,1,0
+2,[GM],0,1,1
+3,[GM],0,1,1
+4,[GM],0,1,1
+5,[GM],0,1,1
+6,[GM],0,1,1
+7,[GM],0,1,1
+8,[GM],0,1,1
+9,[GM],0,1,1

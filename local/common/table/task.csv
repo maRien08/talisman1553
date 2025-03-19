@@ -1,0 +1,957 @@
+number,string,,number,string,number,number,number,number,number,number,number,string,cmd,cmd,cmd,cmd,cmd,cmd,number,number;num,number;num,number;num,number;num,number;num,number;num,number;num,number;num,string,number,number,number;num,number;num,,cmd,,cmd,cmd,,,
+任务编号,名称,所属势力,任务等级,任务难度,单次任务,"重复任务每天
+最大完成次数",重复任务每日前三次奖励加成,团队自动接受,团队共享,最小接受等级,最大接受等级,门派要求,接受要求,任务接受后指令,额外完成要求,完成要求,任务完成指令,任务取消指令,完成时间限制,杀死npc,杀死npc数量,收集道具,收集道具数量,道具掉落npc,掉落道具,道具掉落率,最大掉落数量,交互类型,相关npc,相关npc数量,使用道具,使用道具数量,xxx,任务固定奖励,任务固定奖励,任务选择奖励,任务随机奖励,门派专有奖励,向导屏蔽,
+ID,,force,lev,dif,once,day_num,day_rate,team_accept,team_shared,accept_min_lev,accept_max_lev,accept_party,accept_req,accept_exe,extra_finish_req,finish_req,finish_exe,cancel_exe,time_limit,kill_npc_id,kill_npc_num,get_item_id,get_item_num,item_drop_npcid,item_drop_id,item_drop_rate,item_drop_num,related_type,related_npcid,related_npcnum,use_item_id,use_item_num,,reward_fix_exp,reward_fix,reward_select,reward_random,party_reward,mask,
+1,神奇的药水,11,1,0,1,0,,,1,1,99,fm,"GetTaskItemSpace >= 1
+CheckTaskFinished(8)",,GetItemSpace >= 1,,,,0,0,0,233,4,160,233,1,4,,0,,0,99,4 ,AddExp(240);AddNimbus(120);AddMoney(72),"AddItem (347,3)",,,,0,
+2,速送药方,13,5,0,1,0,,,1,4,99,fm,"GetTaskItemSpace >= 1
+CheckTaskFinished(13)",AddItem(236),,,"RemoveItem(236,1)","RemoveItem(236,1)",0,0,0,236,1,0,0,0,0,,0,,0,99,4 ,AddExp(320);AddNimbus(160);AddMoney(96),,,,,0,
+3,美味兔肉,11,2,0,1,0,,,1,1,99,fm,"CheckTaskFinished(9)
+GetTaskItemSpace >= 1",,,,,,0,0,0,234,5,101,234,1,5,,0,,0,99,5 ,AddExp(325);AddNimbus(162);AddMoney(105),,,,,0,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+7,围剿野兔幼崽,11,3,0,1,0,,,1,2,99,fm,CheckTaskFinished(3),,GetItemSpace >= 1,,,,0,201,8,0,0,0,0,0,0,,0,,0,99,8 ,AddExp(560);AddNimbus(280);AddMoney(168),"AddItemEx(267,0,1,1)",,,,0,
+8,门派历史,11,1,0,1,0,,,1,1,99,fm,,,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,2 ,AddExp(120);AddNimbus(60);AddMoney(36),,,,,0,
+9,修炼法宝,11,2,0,1,0,,,1,1,99,fm,CheckTaskFinished(1),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,2 ,AddExp(130);AddNimbus(65);AddMoney(42),,,,,0,
+10,危险的山狼,11,4,0,1,0,,,1,3,99,fm,CheckTaskFinished(7),,,,,,0,202,10,0,0,0,0,0,0,,0,,0,99,10 ,AddExp(750);AddNimbus(375);AddMoney(240),,,,,0,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+13,初入江湖,11,5,0,1,0,,,1,3,99,fm,CheckTaskFinished(10),,GetItemSpace >= 1,,,,0,,,0,0,0,0,0,0,,0,,0,99,2 ,AddExp(160);AddNimbus(80);AddMoney(48),"AddItemEx(71,0,202,1)",,,,0,
+14,奇异灵芝,13,7,1,1,0,,,1,5,99,all,GetTaskItemSpace >= 1,,,,,,0,10,1,346,1,10,346,1,1,,0,,0,99,3 ,AddExp(270);AddNimbus(135);AddMoney(81),,,,,0,
+17,门派历史,12,1,0,1,0,,,1,1,99,em,,,,,,,0,0,0,,,0,0,0,0,,0,,0,99,2 ,AddExp(120);AddNimbus(60);AddMoney(36),,,,,0,
+18,兔尾入药,12,2,0,1,0,,,1,1,99,em,CheckTaskFinished(20),,GetItemSpace >= 1,,,,0,0,0,349,5,101,349,1,5,,0,,0,99,5 ,AddExp(325);AddNimbus(162);AddMoney(105),"AddItem (348,3)",,,,0,
+19,通灵白兔,12,1,0,1,0,,,1,1,99,em,CheckTaskFinished(17),,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,99,4 ,AddExp(240);AddNimbus(120);AddMoney(72),,,,,0,
+20,修炼法宝,12,2,0,1,0,,,1,1,99,em,CheckTaskFinished(19),,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,99,2 ,AddExp(130);AddNimbus(65);AddMoney(42),,,,,0,
+21,偷食的野兔幼崽,12,3,0,1,0,,,1,2,99,em,CheckTaskFinished(18),,GetItemSpace >= 1,,,,0,201,8,0,0,0,0,0,0,,0,,0,99,8 ,AddExp(560);AddNimbus(280);AddMoney(168),"AddItemEx(258,0,1,1)",,,,0,
+22,赶跑幼年山狼,12,4,0,1,0,,,1,3,99,em,CheckTaskFinished(21),,,,,,0,202,10,0,0,0,0,0,0,,0,,0,99,10 ,AddExp(750);AddNimbus(375);AddMoney(240),,,,,0,
+23,初入江湖,12,5,0,1,0,,,1,4,99,em,CheckTaskFinished(22),,GetItemSpace >= 1,,,,0,,,0,0,0,0,0,0,,0,,0,99,2 ,AddExp(160);AddNimbus(80);AddMoney(48),"AddItemEx(64,0,202,1)","
+",,,0,
+24,老友的问候,13,5,0,1,0,,,1,4,99,em,"GetTaskItemSpace >= 1
+CheckTaskFinished(23)",AddItem(206),,,"RemoveItem(206,1)","RemoveItem(206,1)",0,0,0,206,1,0,0,0,0,,0,,0,99,4 ,AddExp(320);AddNimbus(160);AddMoney(96),,,,,0,
+38,雨后春笋,23,1,0,1,0,,,1,1,99,qc,GetTaskItemSpace >= 1,,GetItemSpace >= 1,,,,0,0,0,417,4,368,417,1,4,,0,,0,99,4 ,AddExp(240);AddNimbus(120);AddMoney(72),"AddItem (347,3)",,,,0,
+39,门派历史,23,1,0,1,0,,,1,1,99,qc,"CheckTaskFinished(38)
+GetTaskItemSpace >= 1",,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,2 ,AddExp(120);AddNimbus(60);AddMoney(36),,,,,0,
+40,修炼法宝,23,2,0,1,0,,,1,2,99,qc,CheckTaskFinished(39),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,1 ,AddExp(65);AddNimbus(32);AddMoney(21),,,,,0,
+41,兔皮披肩,23,2,0,1,0,,,1,2,99,qc,"CheckTaskFinished(40)
+GetTaskItemSpace >= 1",,,,,,0,0,0,418,5,101,418,1,5,,0,,0,99,5 ,AddExp(325);AddNimbus(162);AddMoney(105),,,,,0,
+42,受惊的野兔幼崽,23,3,0,1,0,,,1,3,99,qc,CheckTaskFinished(41),,GetItemSpace >= 1,,,,0,201,8,0,0,0,0,0,0,,0,,0,99,8 ,AddExp(560);AddNimbus(280);AddMoney(168),"AddItemEx(601,0,1,1)",,,,0,
+43,顽皮的幼年山狼,23,4,0,1,0,,,1,3,99,qc,CheckTaskFinished(42),,,,,,0,202,10,0,0,0,0,0,0,,0,,0,99,10 ,AddExp(750);AddNimbus(375);AddMoney(240),,,,,0,
+44,初入江湖,23,5,0,1,0,,,1,4,99,qc,CheckTaskFinished(43),,GetItemSpace >= 1,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,2 ,AddExp(160);AddNimbus(80);AddMoney(48),"AddItemEx(570,0,202,1)",,,,0,
+45,江湖之路,23,5,0,1,0,,,1,4,99,qc,"CheckTaskFinished(44)
+GetTaskItemSpace >= 1",AddItem(206),,,"RemoveItem(206,1)","RemoveItem(206,1)",0,0,0,206,1,0,0,0,0,,0,,0,99,4 ,AddExp(320);AddNimbus(160);AddMoney(96),,,,,0,
+46,虎爪山猎手,24,18,0,0,0,,,1,15,99,all,,,,,,,0,352;74;86;,15;12;10,0,0,0,0,0,0,,0,,0,99,37 ,AddNimbus(894);AddExp(536);AddMoney(111),,,,,0,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+51,百花山渊源,19,1,0,1,0,,,1,1,99,bh,GetTaskItemSpace >= 1,,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,2 ,AddExp(120);AddNimbus(60);AddMoney(36),,,,,1,
+52,百合花露,19,1,0,1,0,,,1,1,99,bh,"CheckTaskFinished(51)
+GetTaskItemSpace >= 1",,GetItemSpace >= 1,,,,0,0,0,354,4,229,354,1,4,,0,,0,99,4 ,AddExp(240);AddNimbus(120);AddMoney(72),"AddItem (348,3)",,,,1,
+53,法宝修炼,19,2,0,1,0,,,1,2,99,bh,CheckTaskFinished(52),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,1 ,AddExp(65);AddNimbus(32);AddMoney(21),,,,,1,
+54,炼丹材料,19,2,0,1,0,,,1,2,99,bh,"CheckTaskFinished(53)
+GetTaskItemSpace >= 1",,,,,,0,0,0,220,5,230,220,1,5,,0,,0,99,5 ,AddExp(325);AddNimbus(162);AddMoney(105),,,,,1,
+55,奇怪的征兆,19,3,0,1,0,,,1,3,99,bh,CheckTaskFinished(54),,GetItemSpace >= 1,,,,0,76,8,0,0,0,0,0,0,,0,,0,99,8 ,AddExp(560);AddNimbus(280);AddMoney(168),"AddItemEx(276,0,1,1)",,,,1,
+56,鬼气森森,19,4,0,1,0,,,1,3,99,bh,CheckTaskFinished(55),,GetItemSpace >= 1,,,,0,119,10,0,0,0,0,0,0,,0,,0,99,10 ,AddExp(750);AddNimbus(375);AddMoney(240),,,,,1,
+57,初入江湖,19,5,0,1,0,,,1,4,99,bh,CheckTaskFinished(56),,GetItemSpace >= 1,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,2 ,AddExp(160);AddNimbus(80);AddMoney(48),"AddItemEx(72,0,202,1)",,,,1,
+58,拜访隐士,18,5,0,1,0,,,1,4,99,bh,"CheckTaskFinished(57)
+GetTaskItemSpace >= 1",AddItem(206),,,"RemoveItem(206,1)","RemoveItem(206,1)",0,0,0,0,0,0,0,0,0,,0,,0,99,4 ,AddExp(320);AddNimbus(160);AddMoney(96),,,,,1,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+100,虎爪山勇者,24,15,0,0,0,,,1,13,99,all,,,,,,,0,88;350,18;18,0,0,0,0,0,0,,0,,0,99,36 ,"AddCredit(17,360);AddExp(936);AddNimbus(156)",,,,,0,
+,,,,,,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,
+125,云灵山蛇妖,14,15,0,1,0,,,1,13,99,all,,,,,,,0,9;11;12,15;12;10,0,0,0,0,0,0,,0,,0,99,38 ,"AddCredit(14,380);AddExp(988);AddNimbus(165)",,,,,0,
+126,云灵山鬼气,14,18,0,0,0,,,1,15,99,all,,,,,,,0,15;16;17,15;12;10,0,0,0,0,0,0,,0,,0,99,38 ,AddNimbus(918);AddExp(551);AddMoney(114),,,,,0,
+127,避邪村的烦恼,15,21,0,1,0,,,1,19,99,all,,,,,,,0,19;22;28,15;12;10,0,0,0,0,0,0,,0,,0,99,38 ,"AddCredit(15,380);AddExp(1216);AddNimbus(203)",,,,,0,
+128,成都盗匪,15,23,0,0,0,,,1,20,99,all,,,,,,,0,20;249;241;,15;15;15,0,0,0,0,0,0,,0,,0,99,47 ,AddNimbus(1332);AddExp(799);AddMoney(160),,,,,0,
+129,慈云羽翼,16,26,0,1,0,,,1,23,99,all,,,,,,,0,27;30;124;,15;15;15,0,0,0,0,0,0,,0,,0,99,47 ,"AddCredit(16,470);AddExp(1739);AddNimbus(290)",,,,,0,
+130,慈云妖人,16,28,0,0,0,,,1,25,99,all,,,,,,,0,68;244;245;,15;15;15,0,0,0,0,0,0,,0,,0,99,47 ,AddNimbus(1528);AddExp(916);AddMoney(188),,,,,0,
+131,碧泉涧危机,26,32,0,0,0,,,1,25,99,all,,,,,,,0,186;188;377;,15;15;15,0,0,0,0,0,0,,0,,0,99,47 ,AddNimbus(1684);AddExp(1010);AddMoney(207),,,,,0,
+132,清远寺危机,22,40,0,0,0,,,1,38,99,all,,,,,,,0,310;311;314;,15;15;15,0,0,0,0,0,0,,0,,0,99,47 ,AddNimbus(1998);AddExp(1198);AddMoney(244),,,,,0,
+133,天化村危机,13,7,0,0,0,,,1,5,99,all,,,,,,,0,222;223,5;5,0,0,0,0,0,0,,0,,0,99,53 ,"AddCredit(13,530);AddExp(954);AddNimbus(159)",,,,,0,
+156,护送道友,15,25,1,0,3,,1,1,25,99,all,,,,,,,0,0,0,0,0,0,0,0,0,2,254,1,0,99,150,AddMoney(3000);AddNimbus(3000);AddExp(3000),,,,,0,
+163,望江矮叟,15,24,0,1,0,,,1,22,99,all,CheckTaskFinished(188),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,5,AddExp(875);AddNimbus(438);AddMoney(270),,,,,0,
+166,搭救云从,15,35,1,0,3,,1,1,35,99,all,,,,,,,0,0,0,0,0,0,0,0,0,2,98,1,0,99,200,AddMoney(6000);AddNimbus(6000);AddExp(6000),,,,,0,
+192,黑谷历史,25,1,0,1,0,,,1,1,99,xq,GetTaskItemSpace >= 1,,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,2,AddExp(120);AddNimbus(60);AddMoney(36),,,,,0,
+193,采集蘑菇,25,1,0,1,0,,,1,1,99,xq,"CheckTaskFinished(192)
+GetTaskItemSpace >= 1",,GetItemSpace >= 1,,,,0,0,0,233,4,160,233,1,4,,0,,0,99,4,AddExp(240);AddNimbus(120);AddMoney(72),"AddItem (347,3)",,,,0,
+194,法宝修炼,25,2,0,1,0,,,1,1,99,xq,,,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,2,AddExp(130);AddNimbus(65);AddMoney(42),,,,,0,
+195,特效丹药,25,2,0,1,0,,,1,1,99,xq,"CheckTaskFinished(194)
+GetTaskItemSpace >= 1",,,,,,0,0,0,419,5,370,419,1,5,,0,,0,99,5,AddExp(325);AddNimbus(162);AddMoney(105),,,,,0,
+196,烦躁的动物,25,3,0,1,0,,,1,2,99,xq,CheckTaskFinished(195),,GetItemSpace >= 1,,,,0,118,8,0,0,0,0,0,0,,0,,0,99,8,AddExp(560);AddNimbus(280);AddMoney(168),"AddItemEx(679,0,1,1)",,,,0,
+197,背后的唆使者,25,4,0,1,0,,,1,3,99,xq,CheckTaskFinished(196),,,,,,0,119,10,0,0,0,0,0,0,,0,,0,99,10,AddExp(750);AddNimbus(375);AddMoney(240),,,,,0,
+198,忠实的伙伴,25,5,0,1,0,,,1,4,99,xq,"CheckTaskFinished(197)
+GetTaskItemSpace >= 1",AddItem(420),GetItemSpace >= 1,,"RemoveItem(420,1)","RemoveItem(420,1)",0,0,0,0,0,0,0,0,0,3,118,1,0,99,2,AddExp(160);AddNimbus(80);AddMoney(48),"AddItemEx(648,0,202,1)
+AddItem (801,1)",,,,0,
+199,育成村的隐士,25,5,0,1,0,,,1,4,99,xq,"CheckTaskFinished(198)
+GetTaskItemSpace >= 1",AddItem(206),,,"RemoveItem(206,1)","RemoveItem(206,1)",0,0,0,206,1,0,0,0,0,,0,,0,99,4,AddExp(320);AddNimbus(160);AddMoney(96),,,,,0,
+,,,,,,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,
+,,,,,,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,
+201,饥肠辘辘,22,35,0,1,0,,,1,33,99,all,,,,,,,0,0,0,390,15,291,390,1,15,,0,,0,99,15 ,AddExp(3450);AddNimbus(1725);AddMoney(1035),,,,,0,
+202,不忘前仇,22,35,0,1,0,,,1,33,99,all,,,,,,,0,292;293,15;15,0,0,0,0,0,0,,0,,0,99,30 ,AddExp(6900);AddNimbus(3450);AddMoney(2070),,,,,0,
+203,搜寻尸体,22,35,0,1,0,,,1,33,99,all,CheckTaskFinished(202),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,15 ,AddExp(3450);AddNimbus(1725);AddMoney(1035),,,,,0,
+204,报仇血恨,22,35,0,1,0,,,1,33,99,all,CheckTaskFinished(203),,,,,,0,294,30,0,0,0,0,0,0,,0,,0,99,30 ,AddExp(6900);AddNimbus(3450);AddMoney(2070),,,,,0,
+205,投石问路,22,35,0,1,0,,,1,33,99,all,"CheckTaskFinished(204)
+GetTaskItemSpace >= 1",AddItem(391),,,"RemoveItem(391,1)","RemoveItem(391,1)",0,0,0,0,0,0,0,0,0,,0,,0,99,10 ,AddExp(2300);AddNimbus(1150);AddMoney(690),,,,,0,
+206,取野魔头颅(精英),22,38,1,1,0,,,1,36,99,all,"CheckTaskFinished(204)
+GetTaskItemSpace >= 1",,GetItemSpace >= 1,,,,0,302;303,1;15,0,0,0,0,0,0,,0,,0,99,70 ,AddExp(17150);AddNimbus(8575);AddMoney(5250),,,,"em;AddItemEx(79,0,1,1)
+fm;AddItemEx(106,0,1,1)
+bh;AddItemEx(133,0,1,1)
+qc;AddItemEx(577,0,1,1)
+xq;AddItemEx(655,0,1,1)",0,
+207,传输物资,22,36,0,1,0,,,1,34,99,all,GetTaskItemSpace >= 1,AddItem(390),,,"RemoveItem(390,1)","RemoveItem(390,1)",0,0,0,0,0,0,0,0,0,,0,,0,99,15 ,AddExp(3525);AddNimbus(1762);AddMoney(1080),,,,,0,
+208,潜伏的危机,22,36,0,1,0,,,1,34,99,all,,,,,,,0,295,30,0,0,0,0,0,0,,0,,0,99,30 ,AddExp(7050);AddNimbus(3525);AddMoney(2160),,,,,0,
+209,沼泽危机,22,36,0,1,0,,,1,34,99,all,CheckTaskFinished(208),,,,,,0,0,0,392,20,296,392,0.5,20,,0,,0,99,40 ,AddExp(9400);AddNimbus(4700);AddMoney(2880),,,,,0,
+210,秃鹫首领(精英),22,36,1,1,0,,,1,34,99,all,CheckTaskFinished(209),,GetItemSpace >= 1,,,,0,297;298,1;15,0,0,0,0,0,0,,0,,0,99,70 ,AddExp(16450);AddNimbus(8225);AddMoney(5040),,,,"em;AddItemEx(315,0,1,1)
+fm;AddItemEx(324,0,1,1)
+bh;AddItemEx(333,0,1,1)
+qc;AddItemEx(622,0,1,1)
+xq;AddItemEx(700,0,1,1)",0,
+211,十万火急,22,36,0,1,0,,,1,34,99,all,CheckTaskFinished(209),,,,,,0,0,0,393,1,329,393,1,1,,0,,0,99,20 ,AddExp(4700);AddNimbus(2350);AddMoney(1440),,,,,0,
+212,大难临头(精英),22,37,1,1,0,,,1,35,99,all,,,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,70 ,AddExp(16800);AddNimbus(8400);AddMoney(5040),,,,,0,
+213,受伤的草药郎中,22,37,0,1,0,,,1,35,99,all,,,,,,,0,299,30,0,0,0,0,0,0,,0,,0,99,30 ,AddExp(7200);AddNimbus(3600);AddMoney(2160),,,,,0,
+214,寻找药典,22,37,0,1,0,,,1,35,99,all,CheckTaskFinished(213),,GetItemSpace >= 1,,,,0,0,0,394,1,330,394,1,1,,0,,0,99,20 ,AddExp(4800);AddNimbus(2400);AddMoney(1440),,"AddItemEx(241,0,52,1)
+AddItemEx(241,0,51,1)",,,0,
+215,皮毛商贩的请求,22,37,0,1,0,,,1,35,99,all,,,,,,,0,0,0,395,20,300,395,0.5,20,,0,,0,99,40 ,AddExp(9600);AddNimbus(4800);AddMoney(2880),,,,,0,
+216,雪山飞蛇,22,37,0,1,0,,,1,35,99,all,,,,,,,0,301,30,0,0,0,0,0,0,,0,,0,99,30 ,AddExp(7200);AddNimbus(3600);AddMoney(2160),,,,,0,
+217,雪山美味,22,38,0,1,0,,,1,36,99,all,CheckTaskFinished(216),,,,,,0,0,0,396,20,305,396,0.5,20,,0,,0,99,40 ,AddExp(9800);AddNimbus(4900);AddMoney(3000),,,,,0,
+218,雪山美酒,22,38,0,1,0,,,1,36,99,all,CheckTaskFinished(217),,,,,,0,0,0,397,20,316,397,1,20,,0,,0,99,20 ,AddExp(4900);AddNimbus(2450);AddMoney(1500),,,,,0,
+219,资源紧缺,22,38,0,1,0,,,1,36,99,all,,,,,,,0,0,0,398,20,304,398,0.5,20,,0,,0,99,40 ,AddExp(9800);AddNimbus(4900);AddMoney(3000),,,,,0,
+220,资源紧缺,22,38,0,1,0,,,1,36,99,all,CheckTaskFinished(219),,,,,,0,0,0,398,20,304,398,0.5,20,,0,,0,99,40 ,AddExp(9800);AddNimbus(4900);AddMoney(3000),,,,,0,
+221,雪鹰之眼,22,39,0,1,0,,,1,37,99,all,,,,,,,0,0,0,399,20,306,399,0.5,20,,0,,0,99,40 ,AddExp(10000);AddNimbus(5000);AddMoney(3000),,,,,0,
+222,雪豹之胆,22,39,0,1,0,,,1,37,99,all,,,,,,,0,0,0,400,20,307,400,0.5,20,,0,,0,99,40 ,AddExp(10000);AddNimbus(5000);AddMoney(3000),,,,,0,
+223,村长的忧愁,22,39,0,1,0,,,1,37,99,all,,,,,,,0,308,30,0,0,0,0,0,0,,0,,0,99,30 ,AddExp(7500);AddNimbus(3750);AddMoney(2250),,,,,0,
+224,村长的忧愁(精英),22,39,1,1,0,,,1,37,99,all,CheckTaskFinished(223),,GetItemSpace >= 1,,,,0,309;308,1;15,0,0,0,0,0,0,,0,,0,99,70 ,AddExp(17500);AddNimbus(8750);AddMoney(5250),,"AddItemEx(251,0,101,1)
+AddItemEx(251,0,102,1)",,,0,
+225,八姑原神,22,39,0,1,0,,,1,38,99,all,CheckTaskFinished(224),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,10 ,AddExp(2500);AddNimbus(1250);AddMoney(750),,,,,0,
+226,打探虚实,22,40,0,1,0,,,1,38,99,all,CheckTaskFinished(225),,,,,,0,310,30,0,0,0,0,0,0,,0,,0,99,30 ,AddExp(7650);AddNimbus(3825);AddMoney(2340),,,,,0,
+227,铲除妖孽,22,40,0,1,0,,,1,38,99,all,CheckTaskFinished(226),,,,,,0,311,30,0,0,0,0,0,0,,0,,0,99,30 ,AddExp(7650);AddNimbus(3825);AddMoney(2340),,,,,0,
+228,智禽妖僧(精英),22,40,1,1,0,,,1,38,99,all,CheckTaskFinished(227),,GetItemSpace >= 1,,,,0,312;313,1;15,0,0,0,0,0,0,,0,,0,99,70 ,AddExp(17850);AddNimbus(8925);AddMoney(5460),,,,"em;AddItemEx(8,0,152,1)
+fm;AddItemEx(28,0,152,1)
+bh;AddItemEx(58,0,152,1)
+qc;AddItemEx(554,0,1,1)
+xq;AddItemEx(632,0,1,1)",0,
+229,试炼身手,22,40,0,1,0,,,1,38,99,all,CheckTaskFinished(226),,,,,,0,314,30,0,0,0,0,0,0,,0,,0,99,30 ,AddExp(7650);AddNimbus(3825);AddMoney(2340),,,,,0,
+230,八姑信物,22,40,0,1,0,,,1,38,99,all,GetTaskItemSpace >= 1,AddItem(391),,,"RemoveItem(391,1)","RemoveItem(391,1)",0,,,,,,,,,,,,0,99,10 ,AddExp(2550);AddNimbus(1275);AddMoney(780),,,,,0,
+,,,,,,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,AddExp(0);AddNimbus(0);AddMoney(0),,,,,0,
+250,三世神童,26,31,0,1,0,,,1,29,99,all,,,,,,,0,186,32,0,0,0,0,0,0,,0,,0,99,32 ,AddExp(6720);AddNimbus(3360);AddMoney(2016),,,,,0,
+251,拜山求医,26,31,0,1,0,,,1,29,99,all,"CheckTaskFinished(250)
+GetTaskItemSpace >= 1",AddItem(206),,,"RemoveItem(206,1)","RemoveItem(206,1)",0,0,0,206,1,0,0,0,0,,0,,0,99,10 ,AddExp(2100);AddNimbus(1050);AddMoney(630),,,,,0,
+252,桂屋来敌,26,31,0,1,0,,,1,29,99,all,CheckTaskFinished(251),,,,,,0,185,32,0,0,0,0,0,0,,0,,0,99,32 ,AddExp(6720);AddNimbus(3360);AddMoney(2016),,,,,0,
+253,机关战甲,26,31,0,1,0,,,1,29,99,all,CheckTaskFinished(252),,,,,,0,0,0,421,18,185,421,0.5,18,,0,,0,99,36 ,AddExp(7560);AddNimbus(3780);AddMoney(2268),,,,,0,
+254,碧泉药引,26,32,0,1,0,,,1,30,99,all,CheckTaskFinished(253),,,,,,0,0,0,422,20,188,422,0.5,20,,0,,0,99,40 ,AddExp(8600);AddNimbus(4300);AddMoney(2640),,,,,0,
+255,机关人的心病,26,32,0,1,0,,,1,30,99,all,,,,,,,0,0,0,423,20,75,423,0.5,20,,0,,0,99,40 ,AddExp(8600);AddNimbus(4300);AddMoney(2640),,,,,0,
+256,大战金驼,26,32,1,1,0,,,1,30,99,all,CheckTaskFinished(255),,GetItemSpace >= 1,,,,0,376;190,2;1,0,0,0,0,0,0,,0,,0,99,25 ,AddExp(5375);AddNimbus(2688);AddMoney(1650),,,,"em;AddItemEx(261,0,1,1)
+fm;AddItemEx(270,0,1,1)
+bh;AddItemEx(279,0,1,1)
+qc;AddItemEx(604,0,1,1)
+xq;AddItemEx(682,0,1,1)",0,
+257,仙潭之水,26,32,0,1,0,,,1,30,99,all,,,,,,,0,188,36,0,0,0,0,0,0,,0,,0,99,36 ,AddExp(7740);AddNimbus(3870);AddMoney(2376),,,,,0,
+258,净化树林,26,33,0,1,0,,,1,31,99,all,CheckTaskFinished(257),,,,,,0,0,0,424,20,377,424,0.5,20,,0,,0,99,40 ,AddExp(8800);AddNimbus(4400);AddMoney(2640),,,,,0,
+259,故布疑阵,26,33,0,1,0,,,1,31,99,all,CheckTaskFinished(255),,,,,,0,378,5,0,0,0,0,0,0,,0,,0,99,35 ,AddExp(7700);AddNimbus(3850);AddMoney(2310),,,,,0,
+260,机关总图,26,33,0,1,0,,,1,31,99,all,,,,,,,0,0,0,425,20,189,425,0.5,20,,0,,0,99,40 ,AddExp(8800);AddNimbus(4400);AddMoney(2640),,,,,0,
+261,机关枢纽,26,34,1,1,0,,,1,32,99,all,CheckTaskFinished(260),,GetItemSpace >= 1,,,,0,189;196,20;1,0,0,0,0,0,0,,0,,0,99,30 ,AddExp(6750);AddNimbus(3375);AddMoney(2070),,,,"em;AddItemEx(88,0,1,1)
+fm;AddItemEx(115,0,1,1)
+bh;AddItemEx(142,0,1,1)
+qc;AddItemEx(586,0,1,1)
+xq;AddItemEx(664,0,1,1)",0,
+262,修真房之战,26,34,0,1,0,,,1,32,99,all,CheckTaskFinished(261),,,,,,0,379,35,0,0,0,0,0,0,,0,,0,99,35 ,AddExp(7875);AddNimbus(3938);AddMoney(2415),,,,,0,
+263,真假姥姥,26,34,1,1,0,,,1,32,99,all,CheckTaskFinished(262),,,,,,0,197;380,1;2,0,0,0,0,0,0,,0,,0,99,20 ,AddExp(4500);AddNimbus(2250);AddMoney(1380),,,,,0,
+264,仙潭之路,26,34,0,1,0,,,1,32,99,all,,,,,,,0,191,32,0,0,0,0,0,0,,0,,0,99,32 ,AddExp(7200);AddNimbus(3600);AddMoney(2208),,,,,0,
+265,福仙潭,26,34,0,1,0,,,1,32,99,all,CheckTaskFinished(264),,,,,,0,192,34,0,0,0,0,0,0,,0,,0,99,34 ,AddExp(7650);AddNimbus(3825);AddMoney(2346),,,,,0,
+266,守潭怪兽,26,34,1,1,0,,,1,32,99,all,,,GetItemSpace >= 1,,,,0,381;194,5;1,0,0,0,0,0,0,,0,,0,99,25 ,AddExp(5625);AddNimbus(2813);AddMoney(1725),,,,"em;AddItemEx(288,0,1,1)
+fm;AddItemEx(297,0,1,1)
+bh;AddItemEx(306,0,1,1)
+qc;AddItemEx(613,0,1,1)
+xq;AddItemEx(691,0,1,1)",0,
+267,乌风草,26,35,0,1,0,,,1,32,99,all,,,,,,,0,0,0,426,25,382,426,1,25,,0,,0,99,25 ,AddExp(5750);AddNimbus(2875);AddMoney(1725),,,,,0,
+268,黑石怪,26,35,1,1,0,,,1,33,99,all,,,,,,,0,195;383,1;20,0,0,0,0,0,0,,0,,0,99,30 ,AddExp(6900);AddNimbus(3450);AddMoney(2070),,,,,0,
+269,火岩洞,26,35,0,1,0,,,1,33,99,all,CheckTaskFinished(264),,,,,,0,193,36,0,0,0,0,0,0,,0,,0,99,36 ,AddExp(8280);AddNimbus(4140);AddMoney(2484),,,,,0,
+270,火之护甲,26,35,0,1,0,,,1,33,99,all,CheckTaskFinished(269),,,,,,0,0,0,427,20,191;192,427;427,0.5;0.5;,20;20,,0,,0,99,40 ,AddExp(9200);AddNimbus(4600);AddMoney(2760),,,,,0,
+271,涅磐,26,35,1,1,0,,,1,33,99,all,CheckTaskFinished(270),,GetItemSpace >= 1,,,,0,190;198,1;1,0,0,0,0,0,0,,0,,0,99,25 ,AddExp(5750);AddNimbus(2875);AddMoney(1725),,,,"em;AddItemEx(97,0,1,1)
+fm;AddItemEx(124,0,1,1)
+bh;AddItemEx(151,0,1,1)
+qc;AddItemEx(595,0,1,1)
+xq;AddItemEx(673,0,1,1)",0,
+272,污染的桂花林,26,33,0,1,0,,,1,32,99,all,,,,,,,0,188;377;,20;20;,0,0,0,0,0,0,,0,,0,99,40 ,"AddCredit(26,400);AddExp(1760);AddNimbus(293)",,,,,0,
+273,替天行道,22,40,0,1,0,,,1,38,99,all,,,,,,,0,306;307;310;311;314;,10;10;10;10;10;,0,0,0,0,0,0,,0,,0,99,50 ,"AddCredit(22,500);AddExp(2550);AddNimbus(425)",,,,,0,
+274,野兽诱捕器,26,30,0,0,0,2,,1,30,99,all,,,,,,,0,0,0,4328;4329;4330,15;15;15,377;188;75,4328;4329;4330,0.5;0.5;0.5,15;15;15,,0,,0,99,90 ,AddExp(3690);AddNimbus(615),,,,,,
+275,匡扶正义之百人斩,16,27,0,0,0,2,,1,27,99,all,,,,,,,0,246,100,0,0,0,0,0,0,,0,,0,99,100 ,AddExp(3800);AddNimbus(633),,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+301,护送紫铃,22,45,1,0,3,,1,1,45,99,all,,,,,,,0,0,0,0,0,0,0,0,0,2,436,1,0,99,,AddMoney(10000);AddNimbus(10000);AddExp(10000),,,,,0,
+400,被感染的动物,11,12,11,0,2,,,1,10,99,all,,,,,,,0,3121;3122;3123;3124;,10;20;1;20,0,0,0,0,0,0,0,0,0,0,99,150 ,AddExp(3450);AddNimbus(2875);AddMoney(1800),,,,,0,
+401,清除血精灵,11,18,11,0,2,,,1,15,99,all,,,,,,,0,3125;3126;3127;3128;,20;20;20;1,0,0,0,0,0,0,0,0,0,0,99,180 ,AddExp(5220);AddNimbus(4350);AddMoney(2700),,,,,0,
+402,清理水域,11,25,11,0,2,,,1,20,99,all,,,,,,,0,3316;3317;3318;3319;,20;20;20;1,0,0,0,0,0,0,0,0,0,0,99,180 ,AddExp(6480);AddNimbus(5400);AddMoney(3240),,,,,0,
+403,百花护法,11,30,11,0,2,,,1,25,99,all,,,,,,,0,3320;3321;3322;3323;,20;20;20;1,0,0,0,0,0,0,0,0,0,0,99,180 ,AddExp(7380);AddNimbus(6150);AddMoney(3780),,,,,0,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+407,200面旗子,13,5,0,0,0,,,1,3,99,all,,,,,,,0,0,0,3442,200,0,0,0,0,,0,,0,99,,"AddMoney(10000);AddCredit(13,300)",,,,,0,
+408,300面旗子,13,5,0,0,0,,,1,3,99,all,,,,,,,0,0,0,3442,300,0,0,0,0,,0,,0,99,,"AddMoney(20000);AddCredit(13,450)",,,,,0,
+409,10面旗子,14,5,0,0,0,,,1,3,99,all,,,,,,,0,0,0,3442,10,0,0,0,0,,0,,0,99,,"AddMoney(300);AddCredit(14,10)",,,,,0,
+410,50面旗子,14,5,0,0,0,,,1,3,99,all,,,,,,,0,0,0,3442,50,0,0,0,0,,0,,0,99,,"AddMoney(2000);AddCredit(14,60)",,,,,0,
+411,100面旗子,14,5,0,0,0,,,1,3,99,all,,,,,,,0,0,0,3442,100,0,0,0,0,,0,,0,99,,"AddMoney(4500);AddCredit(14,140)",,,,,0,
+412,200面旗子,14,5,0,0,0,,,1,3,99,all,,,,,,,0,0,0,3442,200,0,0,0,0,,0,,0,99,,"AddMoney(10000);AddCredit(14,300)",,,,,0,
+413,300面旗子,14,5,0,0,0,,,1,3,99,all,,,,,,,0,0,0,3442,300,0,0,0,0,,0,,0,99,,"AddMoney(20000);AddCredit(14,450)",,,,,0,
+414,10面旗子,18,15,0,0,0,,,1,3,99,all,,,,,,,0,0,0,3442,10,0,0,0,0,,0,,0,99,,"AddMoney(300);AddCredit(18,10)",,,,,0,
+415,50面旗子,18,15,0,0,0,,,1,3,99,all,,,,,,,0,0,0,3442,50,0,0,0,0,,0,,0,99,,"AddMoney(2000);AddCredit(18,60)",,,,,0,
+416,100面旗子,18,15,0,0,0,,,1,3,99,all,,,,,,,0,0,0,3442,100,0,0,0,0,,0,,0,99,,"AddMoney(4500);AddCredit(18,140)",,,,,0,
+417,200面旗子,18,15,0,0,0,,,1,3,99,all,,,,,,,0,0,0,3442,200,0,0,0,0,,0,,0,99,,"AddMoney(10000);AddCredit(18,300)",,,,,0,
+418,300面旗子,18,15,0,0,0,,,1,3,99,all,,,,,,,0,0,0,3442,300,0,0,0,0,,0,,0,99,,"AddMoney(20000);AddCredit(18,450)",,,,,0,
+419,10面旗子,17,15,0,0,0,,,1,3,99,all,,,,,,,0,0,0,3442,10,0,0,0,0,,0,,0,99,,"AddMoney(300);AddCredit(17,10)",,,,,0,
+420,50面旗子,17,15,0,0,0,,,1,3,99,all,,,,,,,0,0,0,3442,50,0,0,0,0,,0,,0,99,,"AddMoney(2000);AddCredit(17,60)",,,,,0,
+421,100面旗子,17,15,0,0,0,,,1,3,99,all,,,,,,,0,0,0,3442,100,0,0,0,0,,0,,0,99,,"AddMoney(4500);AddCredit(17,140)",,,,,0,
+422,200面旗子,17,15,0,0,0,,,1,3,99,all,,,,,,,0,0,0,3442,200,0,0,0,0,,0,,0,99,,"AddMoney(10000);AddCredit(17,300)",,,,,0,
+423,300面旗子,17,15,0,0,0,,,1,3,99,all,,,,,,,0,0,0,3442,300,0,0,0,0,,0,,0,99,,"AddMoney(20000);AddCredit(17,450)",,,,,0,
+424,10面旗子,15,20,0,0,0,,,1,3,99,all,,,,,,,0,0,0,3442,10,0,0,0,0,,0,,0,99,,"AddMoney(300);AddCredit(15,10)",,,,,0,
+425,50面旗子,15,20,0,0,0,,,1,3,99,all,,,,,,,0,0,0,3442,50,0,0,0,0,,0,,0,99,,"AddMoney(2000);AddCredit(15,60)",,,,,0,
+426,100面旗子,15,20,0,0,0,,,1,3,99,all,,,,,,,0,0,0,3442,100,0,0,0,0,,0,,0,99,,"AddMoney(4500);AddCredit(15,140)",,,,,0,
+427,200面旗子,15,20,0,0,0,,,1,3,99,all,,,,,,,0,0,0,3442,200,0,0,0,0,,0,,0,99,,"AddMoney(10000);AddCredit(15,300)",,,,,0,
+428,300面旗子,15,20,0,0,0,,,1,3,99,all,,,,,,,0,0,0,3442,300,0,0,0,0,,0,,0,99,,"AddMoney(20000);AddCredit(15,450)",,,,,0,
+438,收集邮包,100,1,0,0,20,,,1,1,99,all,,,,,,,0,0,0,3492,1,4508,3492,1,1,,0,,0,99,,AddNimbus(168),,,,,0,
+439,儿子的思念,14,18,0,1,,,,1,16,99,all,GetTaskItemSpace >= 1,AddItem(3791),GetItemSpace >= 1,,"RemoveItem(3791,1)","RemoveItem(3791,1)",0,0,0,3791,1,0,0,0,0,,0,,0,99,13 ,AddExp(1885);AddNimbus(942);AddMoney(585),"AddItemEx(1202,1,0,1)",,,,0,
+440,圣诞礼物领取TW,15,15,0,1,,,,1,15,99,all,,,GetItemSpace >= 1,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,,,"AddItemEx(3741,1,0,1)",,,,1,
+441,高级圣诞礼物领取ML,15,30,0,1,,,,1,30,99,all,,,GetItemSpace >= 1,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,,,"AddItem (3742,1)",,,,1,
+442,圣诞礼物领取ML,15,15,0,1,,,,1,15,99,all,,,GetItemSpace >= 1,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,,,"AddItem (3753,1)",,,,1,
+443,圣诞礼物领取am,15,10,0,1,,,,1,10,99,all,,,GetItemSpace >= 1,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,,,"AddItem (3754,1)",,,,1,
+444,装饰圣诞树,15,10,0,0,20,,,1,10,99,all,,,GetItemSpace >= 1,,,,0,0,0,3760;3761;3762;3763;3764,2;2;2;2;2,0,0,0,0,,0,,0,99,,,"AddItem (3751,1)",,,,1,
+445,装饰圣诞树ML,15,10,0,0,20,,,1,10,99,all,,,GetItemSpace >= 1,,,,0,0,0,3760;3761;3762;3763;3764,5;5;5;5;5,0,0,0,0,,0,,0,99,,,"AddItem (3765,1)",,,,1,
+446,高级圣诞礼物领取TW,15,30,0,1,,,,1,30,99,all,,,GetItemSpace >= 1,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,,,"AddItemEx(3767,1,0,1)",,,,1,
+447,换取门派道具包(ML),15,1,0,0,,,,0,1,99,all,,,GetItemSpace >= 4,,"RemoveItem(3824,1)","RemoveItem(3824,1)",0,0,0,3824,1,0,0,0,0,,0,,0,99,,,,,,"em;AddItemEx(3800,0,0,0)
+em;AddItemEx(3801,0,0,0)
+em;AddItemEx(3802,0,0,0)
+em;AddItemEx(3803,0,0,0)
+fm;AddItemEx(3804,0,0,0)
+fm;AddItemEx(3805,0,0,0)
+fm;AddItemEx(3806,0,0,0)
+fm;AddItemEx(3807,0,0,0)
+bh;AddItemEx(3808,0,0,0)
+bh;AddItemEx(3809,0,0,0)
+bh;AddItemEx(3810,0,0,0)
+bh;AddItemEx(3811,0,0,0)
+qc;AddItemEx(3812,0,0,0)
+qc;AddItemEx(3813,0,0,0)
+qc;AddItemEx(3814,0,0,0)
+qc;AddItemEx(3815,0,0,0)
+xq;AddItemEx(3816,0,0,0)
+xq;AddItemEx(3817,0,0,0)
+xq;AddItemEx(3818,0,0,0)
+xq;AddItemEx(3819,0,0,0)",1,
+448,"恭喜发财,红包拿来!",15,10,0,1,,,,0,10,99,all,,,GetItemSpace >= 1,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,,,"AddItemEx(3890,0,0,1)",,,,1,
+449,"年兽出没,新年出击!",15,1,0,1,,,1,1,1,99,all,,,,,,,,4640,1,0,0,0,0,0,0,,0,,0,99,,AddExp(16888);AddNimbus(16888);AddMoney(10608),,,,,1,
+450,新手欢庆新年任务,15,20,0,1,,,,1,20,99,all,,,GetItemSpace >= 1,,,,,32;122;69;38,1;1;1;1,0,0,0,0,0,0,,0,,0,99,,AddExp(2888);AddNimbus(2888),"AddItemEx(3890,0,0,1)",,,,1,
+451,高手欢庆新年任务,15,30,0,1,,,,1,30,99,all,,,GetItemSpace >= 1,,,,,197;198;302;309,1;1;1;1,0,0,0,0,0,0,,0,,0,99,,AddExp(5888);AddNimbus(5888),"AddItemEx(3890,0,0,1)",,,,1,
+452,高手之高高手欢庆新年任务,15,40,0,1,,,,1,40,99,all,,,GetItemSpace >= 1,,,,,4397;4405;4404;4410,1;1;1;1,0,0,0,0,0,0,,0,,0,99,,AddExp(8888);AddNimbus(8888),"AddItemEx(3891,0,0,1)",,,,1,
+453,问候前辈,15,25,0,1,,,,1,25,99,all,,,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,,AddExp(9999);AddNimbus(18999);,"AddItemEx(3891,0,0,1)",,,,,
+455,蜈蚣之灾(15),14,13,0,0,,2,,1,13,99,all,,,,,,,0,13;14;,20;20,0,0,0,0,0,0,,0,,0,99,40 ,"AddCredit(14,400);AddExp(960);AddNimbus(160)",,,,,,
+456,狂蟒之灾(15),14,15,11,0,,3,,1,15,99,all,,,,,,,0,146;147;148;149;154;155;156;158;,6;6;6;6;6;6;1;1,0,0,0,0,0,0,,0,,0,99,80 ,"AddCredit(14,800);AddExp(2080);AddNimbus(347)",,,,,,
+457,辟邪隐忧(21),15,20,0,0,,2,,1,20,99,all,,,,,,,0,19;22;28;,20;20;20,0,0,0,0,0,0,,0,,0,99,60 ,"AddCredit(15,600);AddExp(1860);AddNimbus(310)",,,,,,
+458,清理西郊邪恶势力(25),16,25,0,0,,2,,1,25,99,all,,,,,,,0,30;27;124;,20;20;20,0,0,0,0,0,0,,0,,0,99,80 ,"AddCredit(16,800);AddExp(2880);AddNimbus(480)",,,,,,
+459,清理欢喜恶僧(26),16,27,11,0,,3,,1,27,99,all,,,,,,,0,267;268;269;270;271;260;263;,8;8;8;8;8;1;1;,0,0,0,0,0,0,,0,,0,99,100 ,"AddCredit(16,1000);AddExp(3800);AddNimbus(633)",,,,,,
+460,桂花山的秘密(31),26,33,0,0,,2,,1,32,99,all,,,,,,,0,189;379;,30;30;,0,0,0,0,0,0,,0,,0,99,60 ,"AddCredit(26,600);AddExp(2640);AddNimbus(440)",,,,,,
+461,沼泽邪灵(35),22,35,0,0,,2,,1,35,99,all,,,,,,,0,301;304;305;,15;15;10,0,0,0,0,0,0,,0,,0,99,40 ,"AddCredit(22,400);AddExp(1840);AddNimbus(307)",,,,,,
+462,马熊村的突围(46),31,47,0,0,,2,,1,45,99,all,,,,,,,0,4398;4399;4400;4401;4406;4407;4408;4409;,10;10;10;10;10;10;10;10;,0,0,0,0,0,0,,0,,0,99,60 ,"AddCredit(31,600);AddExp(3480);AddNimbus(580)",,,,,,
+463,清理妖人洞府(50),31,50,11,0,,5,,1,50,99,all,,,,,,,0,4461;4462;4465;4468;4470;4497;4498;,10;10;10;10;10;1;1;,0,0,0,0,0,0,,0,,0,99,80 ,"AddCredit(31,800);AddExp(4880);AddNimbus(813)",,,,,,
+474,清理红花洞府,26,38,11,0,,4,,1,35,99,all,,,,,,,0,4655;4656;4657;4658;4659;4660;4661;4662;4663;4665,8;8;8;8;8;8;8;8;1;1;,0,0,0,0,0,0,,0,,0,99,100 ,"AddCredit(26,1000);AddExp(4900);AddNimbus(817)",,,,,,
+475,藤须妖兽清剿,17,15,11,0,3,,,1,13,99,all,"GuildBuildingLevel(3)>=1
+TodayGuildContributeLeft>=100",,,TodayGuildContributeLeft>=100,,,0,398;401;357;351;353;355;94;,8;8;8;1;1;1;1,0,0,0,0,0,0,,0,,0,99,135 ,AddExp(3510);AddNimbus(2925);AddMoney(1755),AddGuildContribute(100),,,,,
+476,云灵蛇穴清剿,20,20,11,0,3,,,1,18,99,all," GuildLevel>1
+GuildBuildingLevel(3)>=2
+TodayGuildContributeLeft>=100",,,TodayGuildContributeLeft>=100,,,0,146;147;148;149;154;155;156;158;,6;6;6;6;6;6;1;1,0,0,0,0,0,0,,0,,0,99,180 ,AddExp(5580);AddNimbus(4650);AddMoney(2880),AddGuildContribute(100),,,,,
+477,慈云恶僧清剿,21,25,11,0,3,,,1,23,99,all," GuildLevel>2
+GuildBuildingLevel(3)>=3
+TodayGuildContributeLeft>=100",,,TodayGuildContributeLeft>=100,,,0,267;268;269;270;260;263;,8;8;8;8;1;1;,0,0,0,0,0,0,,0,,0,99,220 ,AddExp(7920);AddNimbus(6600);AddMoney(3960),AddGuildContribute(100),,,,,
+478,欢喜殿清剿,21,30,11,0,3,,,1,28,99,all," GuildLevel>3
+GuildBuildingLevel(3)>=4
+TodayGuildContributeLeft>=100",,,TodayGuildContributeLeft>=100,,,0,271;276;277;262;264;266;,6;6;6;1;1;1,0,0,0,0,0,0,,0,,0,99,260 ,AddExp(10660);AddNimbus(8883);AddMoney(5460),AddGuildContribute(100),,,,,
+479,毒龙孽畜清剿,26,35,11,0,3,,,1,33,99,all," GuildLevel>4
+GuildBuildingLevel(3)>=5
+TodayGuildContributeLeft>=100",,,TodayGuildContributeLeft>=100,,,0,4655;4656;4657;4658;4659;4660;4661;4662;4663;4665,6;6;6;6;6;6;6;6;1;1;,0,0,0,0,0,0,,0,,0,99,310 ,AddExp(14260);AddNimbus(11883);AddMoney(7130),AddGuildContribute(100),,,,,
+480,青螺魔宫清剿,28,40,11,0,3,,,1,38,99,all," GuildLevel>5
+GuildBuildingLevel(3)>=6
+TodayGuildContributeLeft>=100",,,TodayGuildContributeLeft>=100,,,0,4308;4309;4319;4320;4325;4324;,8;8;8;8;1;1,0,0,0,0,0,0,,0,,0,99,350 ,AddExp(17850);AddNimbus(14875);AddMoney(9100),AddGuildContribute(100),,,,,
+481,魔宫深渊清剿,28,45,11,0,3,,,1,43,99,all," GuildLevel>6
+GuildBuildingLevel(3)>=7
+TodayGuildContributeLeft>=100",,,TodayGuildContributeLeft>=100,,,0,4303;4310;4321;4322;4323;4326;,8;8;8;8;1;1,0,0,0,0,0,0,,0,,0,99,380 ,AddExp(21280);AddNimbus(17733);AddMoney(10640),AddGuildContribute(100),,,,,
+482,烈火妖人清剿,29,50,11,0,3,,,1,48,99,all," GuildLevel>7
+GuildBuildingLevel(3)>=8
+TodayGuildContributeLeft>=100",,,TodayGuildContributeLeft>=100,,,0,4461;4462;4465;4468;4470;4497;4498;,10;10;10;10;10;1;1;,0,0,0,0,0,0,,0,,0,99,450 ,AddExp(27450);AddNimbus(22875);AddMoney(13950),AddGuildContribute(100),,,,,
+483,丰富的矿产初级,15,30,0,0,1,,,0,30,99,all,"GuildOfficial>=4
+ GuildLevel>=4
+GuildBuildingLevel(4)>=1
+GetGuildUserDataInt(""day"")!=Day",,GetItemSpace >= 1,"GetGuildUserDataInt(""day"")!=Day","SetGuildUserDataInt(""day"",Day)",,0,0,0,3993,1,0,0,0,0,,0,,0,99,,,"AddItem (4003,1)",,,,,
+484,丰富的矿产中级,15,35,0,0,1,,,0,35,99,all,"GuildOfficial>=4
+ GuildLevel>=5
+GuildBuildingLevel(4)>=2
+GetGuildUserDataInt(""day"")!=Day",,GetItemSpace >= 1,"GetGuildUserDataInt(""day"")!=Day","SetGuildUserDataInt(""day"",Day)",,0,0,0,3993,2,0,0,0,0,,0,,0,99,,,"AddItem (4004,1)",,,,,
+485,丰富的矿产高级,15,40,0,0,1,,,0,40,99,all,"GuildOfficial>=4
+ GuildLevel>=6
+GuildBuildingLevel(4)>=3
+GetGuildUserDataInt(""day"")!=Day",,GetItemSpace >= 1,"GetGuildUserDataInt(""day"")!=Day","SetGuildUserDataInt(""day"",Day)",,0,0,0,3993,3,0,0,0,0,,0,,0,99,,,"AddItem (4005,1)",,,,,
+486,富饶的矿藏初级,15,45,0,0,1,,,0,45,99,all,"GuildOfficial>=4
+ GuildLevel>=7
+GuildBuildingLevel(4)>=4
+GetGuildUserDataInt(""day"")!=Day",,GetItemSpace >= 1,"GetGuildUserDataInt(""day"")!=Day","SetGuildUserDataInt(""day"",Day)",,0,0,0,3993,4,0,0,0,0,,0,,0,99,,,"AddItem (4006,1)",,,,,
+487,富饶的矿藏中级,15,50,0,0,1,,,0,50,99,all,"GuildOfficial>=4
+ GuildLevel>=8
+GuildBuildingLevel(4)>=5
+GetGuildUserDataInt(""day"")!=Day",,GetItemSpace >= 1,"GetGuildUserDataInt(""day"")!=Day","SetGuildUserDataInt(""day"",Day)",,0,0,0,3993,5,0,0,0,0,,0,,0,99,,,"AddItem (4007,1)",,,,,
+488,富饶的矿藏高级,15,55,0,0,1,,,0,55,99,all,"GuildOfficial>=4
+ GuildLevel>=9
+GuildBuildingLevel(4)>=6
+GetGuildUserDataInt(""day"")!=Day",,GetItemSpace >= 1,"GetGuildUserDataInt(""day"")!=Day","SetGuildUserDataInt(""day"",Day)",,0,0,0,3993,6,0,0,0,0,,0,,0,99,,,"AddItem (4008,1)",,,,,
+489,太虚宝藏初级,15,60,0,0,1,,,0,60,99,all,"GuildOfficial>=4
+ GuildLevel>=10
+GuildBuildingLevel(4)>=7
+GetGuildUserDataInt(""day"")!=Day",,GetItemSpace >= 1,"GetGuildUserDataInt(""day"")!=Day","SetGuildUserDataInt(""day"",Day)",,0,0,0,3993,7,0,0,0,0,,0,,0,99,,,"AddItem (4009,1)",,,,,
+492,决战七星,30,60,11,1,,3,,1,55,99,all,,,,,,,0,4611;4612;4615;4760;4761;4762;4763;4764;4765;4766;4767;,1;1;1;1;1;1;1;1;1;1;1;,0,0,0,0,0,0,,0,,0,99,250 ,"AddCredit(30,2500);AddExp(17750);AddNimbus(2958)",,,,,,
+501,捣乱的短尾猴,12,1,0,1,0,,,1,1,99,em,,,GetItemSpace >= 1,,,,0,3010,10,0,0,0,0,0,0,,0,,0,99,10 ,AddExp(600);AddNimbus(300);AddMoney(180),"AddItem (202,1)",,,,1,
+502,修复阵法,12,2,0,1,0,,,1,2,99,em,"CheckTaskFinished(501)
+GetTaskItemSpace >= 1",AddItem(3001),,,"RemoveItem(3001,1)","RemoveItem(3001,1)",0,0,0,0,0,0,0,0,0,,0,,3001,1,15 ,AddExp(975);AddNimbus(488);AddMoney(315),,,,,1,
+503,不速之客,12,3,0,1,0,,,1,3,99,em,,,GetItemSpace >= 1,,,,0,3011,10,0,0,0,0,0,0,,0,,0,99,10 ,AddExp(700);AddNimbus(350);AddMoney(210),"AddItemEx(258,0,1,1)",,,,1,
+504,修复石笋,12,3,0,1,0,,,1,3,99,em,"CheckTaskFinished(503)
+GetTaskItemSpace >= 1",AddItem(3002),,,"RemoveItem(3002,1)","RemoveItem(3002,1)",0,0,0,0,0,0,0,0,0,,0,,3002,1,10 ,AddExp(700);AddNimbus(350);AddMoney(210),,,,,1,
+505,肉芝内丹,12,4,0,1,0,,,1,4,99,em,,,,,,,0,0,0,3003,7,3012,3003,0.5,7,,0,,0,99,14 ,AddExp(1050);AddNimbus(525);AddMoney(336),,,,,1,
+506,千年肉芝,12,4,0,1,0,,,1,4,99,em,CheckTaskFinished(505),,GetItemSpace >= 1,,,,0,0,0,3004,6,3013,3004,0.5,6,,0,,0,99,12 ,AddExp(900);AddNimbus(450);AddMoney(288),"AddItemEx(85,0,1,1)",,,,1,
+507,试练,12,5,0,1,0,,,0,5,99,em,,,GetItemSpace >= 1,,,,0,0,0,0,0,0,0,0,0,4,3014,1,0,99,30 ,AddExp(2400);AddNimbus(1200);AddMoney(720),"AddItemEx(64,0,202,1)",,,,1,
+508,下山,12,5,0,1,0,,,1,5,99,em,"CheckTaskFinished(507)
+GetTaskItemSpace >= 1",AddItem(206),,,"RemoveItem(206,1)","RemoveItem(206,1)",0,0,0,206,1,0,0,0,0,,0,,0,99,10 ,AddExp(800);AddNimbus(400);AddMoney(240),,,,,1,
+511,血神印记,15,1,0,0,2,,,1,1,99,all,,,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,,,AddEffect(2220),,,,1,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+601,醉仙草,23,1,0,1,0,,,1,1,99,qc,,,GetItemSpace >= 1,,,,0,0,0,3409,10,3210,3409,1,10,,0,,0,99,12 ,AddExp(720);AddNimbus(360);AddMoney(216),"AddItem (200,1)",,,,1,
+602,野战的末日,23,2,0,1,0,,,1,2,99,qc,CheckTaskFinished(601),,,,,,0,3204;3205;,6;6,0,0,0,0,0,0,,0,,0,99,10 ,AddExp(650);AddNimbus(325);AddMoney(210),,,,,1,
+603,不速之客,23,3,0,1,0,,,1,3,99,qc,,,GetItemSpace >= 1,,,,0,3206;3207;,10;5,0,0,0,0,0,0,,0,,0,99,15 ,AddExp(1050);AddNimbus(525);AddMoney(315),"AddItemEx(601,0,1,1)",,,,1,
+604,变异的石头,23,4,0,1,0,,,1,4,99,qc,CheckTaskFinished(603),,GetItemSpace >= 1,,,,0,3208,20,0,0,0,0,0,0,,0,,0,99,20 ,AddExp(1500);AddNimbus(750);AddMoney(480),"AddItemEx(583,0,1,1)",,,,1,
+605,试练,23,5,0,1,0,,,0,5,99,qc,,,GetItemSpace >= 1,,,,0,0,0,0,0,0,0,0,0,4,3209,1,0,99,30 ,AddExp(2400);AddNimbus(1200);AddMoney(720),"AddItemEx(570,0,202,1)",,,,1,
+606,下山,23,5,0,1,0,,,1,5,99,qc,"CheckTaskFinished(605)
+GetTaskItemSpace >= 1",AddItem(206),,,"RemoveItem(206,1)","RemoveItem(206,1)",0,0,0,206,1,0,0,0,0,,0,,0,99,10 ,AddExp(800);AddNimbus(400);AddMoney(240),,,,,1,
+651,清理花圃,19,1,0,1,0,,,1,1,99,bh,,,,,,,0,3310,10,0,0,0,0,0,0,,0,,0,99,10 ,AddExp(600);AddNimbus(300);AddMoney(180),,,,,1,
+652,清冽泉水,19,2,0,1,0,,,1,2,99,bh,"GetTaskItemSpace >= 1
+CheckTaskFinished(651)","AddItem(3410,1)",GetItemSpace >= 1,,"RemoveItem(3411,1)","RemoveItem(3411,1)",0,0,0,3411,1,0,0,0,0,,0,,0,99,5 ,AddExp(325);AddNimbus(162);AddMoney(105),"AddItem (202,1)",,,,1,
+653,金莲花粉,19,2,0,1,0,,,1,2,99,bh,,,,,,,0,0,0,3405,8,3311,3405,1,8,,0,,0,99,10 ,AddExp(650);AddNimbus(325);AddMoney(210),,,,,1,
+654,断肠草,19,3,0,1,0,,,1,3,99,bh,,,GetItemSpace >= 1,,,,0,0,0,3406,10,3312,3406,0.5,10,,0,,0,99,15 ,AddExp(1050);AddNimbus(525);AddMoney(315),"AddItemEx(276,0,1,1)",,,,1,
+655,晨露,19,4,0,1,0,,,1,4,99,bh,"GetTaskItemSpace >= 1
+CheckTaskFinished(654)",,GetItemSpace >= 1,,,,0,0,0,3407,10,3313,3407,0.5,10,,0,,0,99,14 ,AddExp(1050);AddNimbus(525);AddMoney(336),"AddItemEx(139,0,1,1)",,,,1,
+656,修炼,19,4,0,1,0,,,1,4,99,bh,"GetTaskItemSpace >= 1
+CheckTaskFinished(655)","AddItem(3408,1)",,,"RemoveItem(3408,1)","RemoveItem(3408,1)",0,0,0,3408,1,0,0,0,0,,0,,0,99,6 ,AddExp(450);AddNimbus(225);AddMoney(144),,,,,1,
+657,试练,19,5,0,1,0,,,0,5,99,bh,,,GetItemSpace >= 1,,,,0,0,0,0,0,0,0,0,0,4,3314,1,0,99,30 ,AddExp(2400);AddNimbus(1200);AddMoney(720),"AddItemEx(72,0,202,1)",,,,1,
+658,下山,19,5,0,1,0,,,1,5,99,bh,"GetTaskItemSpace >= 1
+CheckTaskFinished(657)",AddItem(206),,,"RemoveItem(206,1)","RemoveItem(206,1)",0,0,0,206,1,0,0,0,0,,0,,0,99,10 ,AddExp(800);AddNimbus(400);AddMoney(240),,,,,1,
+660,储备物资,15,25,0,1,,,,1,23,99,all,,,,,,,0,0,0,4538,10,26,4538,0.5,10,,,,0,99,20 ,AddExp(3600);AddNimbus(1800);AddMoney(1080),,,,,,
+661,毛太恶行,15,26,0,1,,,,1,24,99,all,,,,,,,0,0,0,4539,10,5045,4539,1,10,,,,0,99,20 ,AddExp(3700);AddNimbus(1850);AddMoney(1140),,,,,,
+662,捉拿逃匪,15,27,0,1,,,,1,25,99,all,,AddItem(4542),,,"RemoveItem(4542,1)","RemoveItem(4542,1)",0,0,0,0,0,0,0,0,0,3,244,1,0,99,20 ,AddExp(3800);AddNimbus(1900);AddMoney(1140),,,,,,
+663,撕破伪装,15,28,0,1,,,,1,26,99,all,,,,,,,0,0,0,4540,10,245,4540,0.5,10,,,,0,99,20 ,AddExp(3900);AddNimbus(1950);AddMoney(1200),,,,,,
+664,火烧贼穴,15,29,0,1,,,,1,27,99,all,,AddItem(4543),,,"RemoveItem(4543,1)","RemoveItem(4543,1)",0,0,0,0,0,0,0,0,0,,,,4543,1,20 ,AddExp(4000);AddNimbus(2000);AddMoney(1200),,,,,,
+665,传讯朱文,15,30,0,1,,,,1,28,99,all,,AddItem(4541),,,,,0,0,0,4541,1,0,0,0,0,,,,0,99,10 ,AddExp(2050);AddNimbus(1025);AddMoney(630),,,,,,
+701,探索林荫道,25,1,0,1,0,,,1,1,99,xq,,,GetItemSpace >= 1,,,,0,0,0,3401,5,3412;3413,3401;3401,0.5;0.5,5;5,,0,,0,99,10 ,AddExp(600);AddNimbus(300);AddMoney(180),"AddItem (200,1)",,,,1,
+702,采集药草,25,2,0,1,0,,,1,2,99,xq,,,,,,,0,0,0,3402,5,3420,3402,1,5,,0,,0,99,15 ,AddExp(975);AddNimbus(488);AddMoney(315),,,,,1,
+703,驱逐异化狼人,25,3,0,1,0,,,1,3,99,xq,CheckTaskFinished(701),,GetItemSpace >= 1,,,,0,3415,10,0,0,0,0,0,0,,0,,0,99,10 ,AddExp(700);AddNimbus(350);AddMoney(210),"AddItemEx(679,0,1,1)",,,,1,
+704,丑仙人的爱心,25,3,0,1,0,,,1,3,99,xq,"CheckTaskFinished(702)
+GetTaskItemSpace >= 1",AddItem(3403),,,"RemoveItem(3403,1)","RemoveItem(3403,1)",0,0,0,3403,1,0,0,0,0,,0,,0,99,5 ,AddExp(350);AddNimbus(175);AddMoney(105),,,,,1,
+705,探望老白,25,3,0,1,0,,,1,3,99,xq,"CheckTaskFinished(704)
+GetTaskItemSpace >= 1",AddItem(3403),,,"RemoveItem(3403,1)","RemoveItem(3403,1)",0,0,0,3403,1,0,0,0,0,,0,,0,99,5 ,AddExp(350);AddNimbus(175);AddMoney(105),,,,,1,
+706,清除魂魄,25,4,0,1,0,,,1,4,99,xq,,,GetItemSpace >= 1,,,,0,3416;3417,6;6,0,0,0,0,0,0,,0,,0,99,12 ,AddExp(900);AddNimbus(450);AddMoney(288),"AddItemEx(661,0,1,1)",,,,1,
+707,老白的回复,25,4,0,1,0,,,1,4,99,xq,CheckTaskFinished(706),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,5 ,AddExp(375);AddNimbus(188);AddMoney(120),,,,,1,
+708,林荫道的棋盘,25,4,0,1,0,,,1,4,99,xq,CheckTaskFinished(707),,,,,,0,0,0,3404,4,3418,3404,0.5,4,,0,,0,99,8 ,AddExp(600);AddNimbus(300);AddMoney(192),,,,,1,
+709,驯兽试炼,25,5,0,1,0,,,0,5,99,xq,GetTaskItemSpace >= 2,AddItem(420),GetItemSpace >= 2,,"RemoveItem(420,1)","RemoveItem(420,1)",0,0,0,0,0,0,0,0,0,3,3411,1,0,99,30 ,AddExp(2400);AddNimbus(1200);AddMoney(720),"AddItemEx(648,0,202,1)
+AddItem (801,1)",,,,1,
+710,光大仙禽,25,5,0,1,0,,,1,5,99,xq,"CheckTaskFinished(709)
+GetTaskItemSpace >= 1",AddItem(206),,,"RemoveItem(206,1)","RemoveItem(206,1)",0,0,0,206,1,0,0,0,0,,0,,0,99,10 ,AddExp(800);AddNimbus(400);AddMoney(240),,,,,1,
+711,圣诞快乐大礼包,15,10,0,1,0,,,0,10,99,all,,,GetItemSpace >= 1,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,,,"AddItemEx(4221,0,0,1)",,,,,
+712,圣诞快乐大礼包,15,35,0,1,0,,,0,35,99,all,,,GetItemSpace >= 1,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,,,"AddItemEx(4222,0,0,1)",,,,,
+713,圣诞快乐大礼包,15,35,0,1,0,,,0,35,99,all,,,GetItemSpace >= 1,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,,,"AddItemEx(4239,0,0,1)",,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+800,询问李宁,11,20,1,1,0,,,1,20,99,all,GetTaskItemSpace >= 1,AddItem(4033),,,"RemoveItem(4033,1)","RemoveItem(4033,1)",0,3125;3127,15;15,0,0,0,0,0,0,,0,,0,99,24 ,AddExp(3720);AddNimbus(1860);AddMoney(1152),,,,,0,
+802,百花弟子,11,21,1,1,0,,,1,20,99,all,"CheckTaskFinished(801)
+GetTaskItemSpace >= 1",AddItem(4040),,,"RemoveItem(4040,1)","RemoveItem(4040,1)",0,3319;3323;,1;1,0,0,0,0,0,0,,0,,0,99,40 ,AddExp(6400);AddNimbus(3200);AddMoney(1920),,,,,0,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+804,飞鸽急书,13,22,0,1,0,,,1,20,99,all,"CheckTaskFinished(803)
+GetTaskItemSpace >= 1",AddItem(4044),,,"RemoveItem(4044,1)","RemoveItem(4044,1)",0,0,0,0,0,0,0,0,0,,0,,0,99,20 ,AddExp(3300);AddNimbus(1650);AddMoney(1020),,,,,0,
+805,护送金蝉,13,22,1,1,0,,,1,20,99,all,CheckTaskFinished(804),,,,,,0,0,0,0,0,0,0,0,0,2,4695,1,0,99,45 ,AddExp(7425);AddNimbus(3712);AddMoney(2295),,,,,0,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+809,李宁口谕,13,20,1,1,0,,,1,20,99,all,CheckTaskFinished(800),,,,,,,0,0,0,0,0,0,0,0,,0,,0,99,10 ,AddExp(1550);AddNimbus(775);AddMoney(480),,,,,0,
+810,伏虎口谕,13,20,1,1,0,,,1,20,99,all,CheckTaskFinished(801),,,,,,,0,0,0,0,0,0,0,0,,0,,0,99,10 ,AddExp(1550);AddNimbus(775);AddMoney(480),,,,,0,
+811,"恭喜发财,红包拿来!",15,10,0,1,,,,0,10,99,all,,,GetItemSpace >= 1,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,,,"AddItemEx(3890,0,0,1)",,,,1,
+812,"年兽出没,新年出击!",15,1,0,1,,,1,1,1,99,all,,,,,,,,4640,1,0,0,0,0,0,0,,0,,0,99,,AddExp(16888);AddNimbus(16888);AddMoney(10608),,,,,1,
+813,新手欢庆新年任务,15,20,0,1,,,,1,20,99,all,,,GetItemSpace >= 1,,,,,32;122;69;38,1;1;1;1,0,0,0,0,0,0,,0,,0,99,,AddExp(2888);AddNimbus(2888),"AddItemEx(3890,0,0,1)",,,,1,
+814,高手欢庆新年任务,15,30,0,1,,,,1,30,99,all,,,GetItemSpace >= 1,,,,,197;198;302;309,1;1;1;1,0,0,0,0,0,0,,0,,0,99,,AddExp(5888);AddNimbus(5888),"AddItemEx(3890,0,0,1)",,,,1,
+815,高手之高高手欢庆新年任务,15,40,0,1,,,,1,40,99,all,,,GetItemSpace >= 1,,,,,4397;4405;4404;4410,1;1;1;1,0,0,0,0,0,0,,0,,0,99,,AddExp(8888);AddNimbus(8888),"AddItemEx(3891,0,0,1)",,,,1,
+816,问候前辈,15,25,0,1,,,,1,25,99,all,,,GetItemSpace >= 1,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,,AddExp(9999);AddNimbus(18999);,"AddItemEx(3891,0,0,1)",,,,1,
+829,改头换面,15,10,0,1,,,,1,10,99,all,,,GetItemSpace >= 1,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,,,"AddItemEx(4534,0,0,1)",,,,,
+,,,,,,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1151,剿灭追兵,28,41,0,1,0,,,1,39,99,all,,,,,,,0,4312,40,0,0,0,0,0,0,,0,,0,99,40 ,AddExp(10400);AddNimbus(5200);AddMoney(3120),,,,,0,
+1152,寻找金蝉,28,41,0,1,0,,,1,39,99,all,CheckTaskFinished(1153),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,15 ,AddExp(3900);AddNimbus(1950);AddMoney(1170),,,,,0,
+1153,罪恶的爪子,28,41,0,1,0,,,1,39,99,all,"CheckTaskFinished(1151)
+GetTaskItemSpace >= 1",,,,,,0,0,0,3412,20,4312,3412,0.5,20,,0,,0,99,40 ,AddExp(10400);AddNimbus(5200);AddMoney(3120),,,,,0,
+1154,清山行动,28,41,0,1,0,,,1,39,99,all,,,,,,,0,4311,40,0,0,0,0,0,0,,0,,0,99,40 ,AddExp(10400);AddNimbus(5200);AddMoney(3120),,,,,0,
+1155,雪人的反击,28,41,0,1,0,,,1,39,99,all,CheckTaskFinished(1154),,,,,,0,4304,40,0,0,0,0,0,0,,0,,0,99,40 ,AddExp(10400);AddNimbus(5200);AddMoney(3120),,,,,0,
+1156,雪人的反击（后续）,28,42,0,1,0,,,1,40,99,all,CheckTaskFinished(1155),,,,,,0,4305,40,0,0,0,0,0,0,,0,,0,99,40 ,AddExp(10600);AddNimbus(5300);AddMoney(3240),,,,,0,
+1157,清山行动（后续）,28,42,0,1,0,,,1,40,99,all,,,GetItemSpace >=1,,,,0,4313,40,0,0,0,0,0,0,,0,,0,99,40 ,AddExp(10600);AddNimbus(5300);AddMoney(3240),,,,"em;AddItemEx(262,0,1,1)
+fm;AddItemEx(271,0,1,1)
+bh;AddItemEx(280,0,1,1)
+qc;AddItemEx(605,0,1,1)
+xq;AddItemEx(683,0,1,1)",0,
+1158,收集魔典,28,42,11,1,0,,,1,40,99,all,,,,,,,0,0,0,3413;3414;3415;3416,1;1;1;1,4323;4324;4325;4326,3413;3414;3415;3416,1;1;1;1,1;1;1;1;,,0,,0,99,60 ,AddExp(15900);AddNimbus(7950);AddMoney(4860),,,,,0,
+1159,收集雪人皮毛,28,42,0,1,0,,,1,40,99,all,CheckTaskFinished(1156),,,,,,0,0,0,3417,20,4305,3417,0.5,20,,0,,0,99,40 ,AddExp(10600);AddNimbus(5300);AddMoney(3240),,,,,0,
+1160,寻找七星真人,28,42,0,1,0,,,1,40,99,all,CheckTaskFinished(1157),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,15 ,AddExp(3975);AddNimbus(1988);AddMoney(1215),,,,,0,
+1161,采集温泉水,28,43,0,1,0,,,1,41,99,all,,,,,,,0,0,0,3418,20,4317,3418,0.5,20,,0,,0,99,40 ,AddExp(10800);AddNimbus(5400);AddMoney(3240),,,,,0,
+1162,"清山行动
+（后续2）",28,43,0,1,0,,,1,41,99,all,,,GetItemSpace >=1,,,,0,4318,40,0,0,0,0,0,0,,0,,0,99,40 ,AddExp(10800);AddNimbus(5400);AddMoney(3240),,,,"em;AddItemEx(89,0,1,1)
+fm;AddItemEx(116,0,1,1)
+bh;AddItemEx(143,0,1,1)
+qc;AddItemEx(587,0,1,1)
+xq;AddItemEx(665,0,1,1)",0,
+1163,魔化雪怪的侵袭,28,43,0,1,0,,,1,41,99,all,,,,,,,0,4306,40,0,0,0,0,0,0,,0,,0,99,40 ,AddExp(10800);AddNimbus(5400);AddMoney(3240),,,,,0,
+1164,神效止血草,28,43,0,1,0,,,1,41,99,all,CheckTaskFinished(1163),,,,,,0,0,0,3419,20,4306,3419,0.5,20,,0,,0,99,40 ,AddExp(10800);AddNimbus(5400);AddMoney(3240),,,,,0,
+1165,寻找魏青,28,43,0,1,0,,,1,41,99,all,CheckTaskFinished(1162),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,15 ,AddExp(4050);AddNimbus(2025);AddMoney(1215),,,,,0,
+1166,"清山行动
+（后续3）",28,44,0,1,0,,,1,42,99,all,,,GetItemSpace >=1,,,,0,4314,40,0,0,0,0,0,0,,0,,0,99,40 ,AddExp(11000);AddNimbus(5500);AddMoney(3360),,,,"em;AddItemEx(289,0,1,1)
+fm;AddItemEx(298,0,1,1)
+bh;AddItemEx(307,0,1,1)
+qc;AddItemEx(614,0,1,1)
+xq;AddItemEx(692,0,1,1)",0,
+1167,魔幻银针,28,44,0,1,0,,,1,42,99,all,CheckTaskFinished(1166),,,,,,0,0,0,3421,20,4314,3421,0.5,20,,0,,0,99,40 ,AddExp(11000);AddNimbus(5500);AddMoney(3360),,,,,0,
+1168,深寒之魂,28,44,0,1,0,,,1,42,99,all,,,,,,,0,4301,40,0,0,0,0,0,0,,0,,0,99,40 ,AddExp(11000);AddNimbus(5500);AddMoney(3360),,,,,0,
+1169,寻找乐三官,28,44,0,1,0,,,1,42,99,all,CheckTaskFinished(1168),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,15 ,AddExp(4125);AddNimbus(2062);AddMoney(1260),,,,,0,
+1170,"清山行动
+（后续4）",28,45,0,1,0,,,1,43,99,all,,,GetItemSpace >=1,,,,0,4315,40,0,0,0,0,0,0,,0,,0,99,40 ,AddExp(11200);AddNimbus(5600);AddMoney(3360),,,,"em;AddItemEx(98,0,1,1)
+fm;AddItemEx(125,0,1,1)
+bh;AddItemEx(152,0,1,1)
+qc;AddItemEx(596,0,1,1)
+xq;AddItemEx(674,0,1,1)",0,
+1171,铲除余孽,28,45,0,1,0,,,1,43,99,all,,,,,,,0,4302,40,0,0,0,0,0,0,,0,,0,99,40 ,AddExp(11200);AddNimbus(5600);AddMoney(3360),,,,,0,
+1172,激战雪峰亭,28,45,0,1,0,,,1,43,99,all,,,,,,,0,4316,40,0,0,0,0,0,0,,0,,0,99,40 ,AddExp(11200);AddNimbus(5600);AddMoney(3360),,,,,0,
+1173,古墓遗愿,28,42,11,1,0,,,1,40,99,all,,,,,,,0,4308;4309,15;15,3424,1,4324,3424,1,1,,0,,0,99,60 ,AddExp(15900);AddNimbus(7950);AddMoney(4860),,,,,0,
+1174,冰坚战士的灵魂,28,43,11,1,0,,,1,41,99,all,,,,,,,0,4326,1,3420,20,4307,3420,0.5,20,,0,,0,99,70 ,AddExp(18900);AddNimbus(9450);AddMoney(5670),,,,,0,
+1175,调查魔幻之迷,28,45,11,1,0,,,1,43,99,all,,,,,,,0,4303;4310,15;15,0,0,0,0,0,0,,0,,0,99,80 ,AddExp(22400);AddNimbus(11200);AddMoney(6720),,,,,0,
+1176,魔宫的覆灭,28,45,11,1,0,,,1,43,99,all,,,,,,,0,4321;4322,15;15,3422,1,4323,3422,1,1,,0,,0,99,90 ,AddExp(25200);AddNimbus(12600);AddMoney(7560),,,,,0,
+1177,魔宫生物,28,45,11,1,0,,,1,43,99,all,,,,,,,0,4319;4320,15;15,3423,1,4325,3423,1,1,,0,,0,99,80 ,AddExp(22400);AddNimbus(11200);AddMoney(6720),,,,,0,
+1178,铲除魔爪,28,42,0,1,0,,,1,40,99,all,,,,,,,0,4311;4313;4304;4305,30;30;30;30,0,0,0,0,0,0,,0,,0,99,120 ,AddExp(31800);AddNimbus(15900);AddMoney(9720),,,,,0,
+1179,清剿群魔(重复),28,44,0,0,0,2,,1,40,99,all,,,,,,,0,4311;4312;4313;,10;10;10;,0,0,0,0,0,0,,0,,0,99,30 ,"AddCredit(28,300);AddExp(1650);AddNimbus(275)",,,,,0,
+1180,魔宫围剿行动(重复),28,45,11,1,0,3,,1,45,99,all,,,,,,,0,4303;4308;4309;4310;4319;4320;,10;10;10;10;10;10;,0,0,0,0,0,0,,0,,0,99,60 ,"AddCredit(28,600);AddExp(3360);AddNimbus(560)",,,,,0,
+1181,寻找李英琼,29,45,0,1,,,,1,44,99,all,,,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,15 ,AddExp(4200);AddNimbus(2100);AddMoney(1260),,,,,0,
+1182,梅花香酒,29,45,0,1,,,,1,44,99,all,,,,,,,0,0,0,3425,20,4388,3425,0.5,20,,0,,0,99,40 ,AddExp(11200);AddNimbus(5600);AddMoney(3360),,,,,0,
+1183,马熊村民的口信,29,45,0,1,,,,1,44,99,all,,,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,15 ,AddExp(4200);AddNimbus(2100);AddMoney(1260),,,,,0,
+1184,调查赵神殿前广场,29,45,0,1,,,,1,44,99,all,,,,,,,0,4388,45,0,0,0,0,0,0,,0,,0,99,45 ,AddExp(12600);AddNimbus(6300);AddMoney(3780),,,,,0,
+1185,赵神殿中的秘密,29,45,0,1,,,,1,44,99,all,CheckTaskFinished(1184),,,,,,0,4389,45,0,0,0,0,0,0,,0,,0,99,45 ,AddExp(12600);AddNimbus(6300);AddMoney(3780),,,,,0,
+1186,受到惊吓的马熊村民,29,46,0,1,,,,1,44,99,all,CheckTaskFinished(1185),,,,,,0,0,0,3426;3428;3427;,10;10;10,4387;4389;4391,3426;3428;3427;,0.5;0.50;0.5,10;10;10,,0,,0,99,60 ,AddExp(17100);AddNimbus(8550);AddMoney(5220),,,,,0,
+1187,解除封印,29,46,0,1,,,,1,44,99,all,CheckTaskFinished(1186),"AddItem(3452,1)",GetItemSpace >= 1,,,,0,0,0,3452,1,0,0,0,0,,0,,0,99,30 ,AddExp(8550);AddNimbus(4275);AddMoney(2610),,,,,0,
+1188,护送马熊村民,29,46,0,1,,,,1,44,99,all,CheckTaskFinished(1187),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(14250);AddNimbus(7125);AddMoney(4350),,,,,0,
+1189,斩杀坏马熊,29,46,0,1,,,,1,44,99,all,,,,,,,0,4393;4394;,40;40,0,0,0,0,0,0,,0,,0,99,80 ,AddExp(22800);AddNimbus(11400);AddMoney(6960),,,,,0,
+1190,斩杀马熊护卫,29,46,0,1,,,,1,44,99,all,CheckTaskFinished(1189),,,,,,0,4395;4396;,40;40,0,0,0,0,0,0,,0,,0,99,80 ,AddExp(22800);AddNimbus(11400);AddMoney(6960),,,,,0,
+1191,通缉失魂马熊统领,29,46,1,1,,,,1,44,99,all,,,GetItemSpace >= 1,,,,0,4397,1,0,0,0,0,0,0,,0,,0,99,30 ,AddExp(8550);AddNimbus(4275);AddMoney(2610),,,,"em;AddItemEx(316,0,1,1)
+fm;AddItemEx(325,0,1,1)
+bh;AddItemEx(334,0,1,1)
+qc;AddItemEx(623,0,1,1)
+xq;AddItemEx(701,0,1,1)",0,
+1192,调查山魈势力,29,47,0,1,,,,1,45,99,all,,,,,,,0,4398,45,0,0,0,0,0,0,,0,,0,99,45 ,AddExp(13050);AddNimbus(6525);AddMoney(3915),,,,,0,
+1193,收集绿色土壤,29,47,0,1,,,,1,45,99,all,,,,,,,0,0,0,3453,30,4419,3453,1,30,,0,,0,99,30 ,AddExp(8700);AddNimbus(4350);AddMoney(2610),,,,,0,
+1194,杀入山魈洞穴,29,47,0,1,,,,1,45,99,all,CheckTaskFinished(1192),,,,,,0,4399;4400;4401;,30;30;30,0,0,0,0,0,0,,0,,0,99,90 ,AddExp(26100);AddNimbus(13050);AddMoney(7830),,,,,0,
+1195,围剿华山派邪恶散仙,29,47,1,1,,,,1,45,99,all,CheckTaskFinished(1194),,GetItemSpace >= 1,,,,0,4404;4405,1;1,0,0,0,0,0,0,,0,,0,99,45 ,AddExp(13050);AddNimbus(6525);AddMoney(3915),,"AddItemEx(242,0,52,1)
+AddItemEx(242,0,51,1)",,,0,
+1196,后山的奇石,29,47,0,1,,,,1,45,99,all,,,,,,,0,4402,45,0,0,0,0,0,0,,0,,0,99,45 ,AddExp(13050);AddNimbus(6525);AddMoney(3915),,,,,0,
+1197,奇石的秘密,29,47,0,1,,,,1,45,99,all,CheckTaskFinished(1196),,,,,,0,0,0,3429,20,4403,3429,0.5,20,,0,,0,99,40 ,AddExp(11600);AddNimbus(5800);AddMoney(3480),,,,,0,
+1198,妙一夫人,29,48,0,1,,,,1,46,99,all,CheckTaskFinished(1197),"AddItem (3430,1)",,,"RemoveItem(3430,1)",,0,0,0,3430,1,0,0,0,0,,0,,0,99,15 ,AddExp(4425);AddNimbus(2212);AddMoney(1350),,,,,0,
+1199,亲人的头颅,29,48,0,1,,,,1,46,99,all,,,,,,,0,0,0,3431,20,4406,3431,0.5,20,,0,,0,99,40 ,AddExp(11800);AddNimbus(5900);AddMoney(3600),,,,,0,
+1200,木魃洞穴的哀嚎,29,48,0,1,,,,1,46,99,all,,,,,,,0,4406;4407;,40;40,0,0,0,0,0,0,,0,,0,99,80 ,AddExp(23600);AddNimbus(11800);AddMoney(7200),,,,,0,
+1201,清理木魃洞穴,29,48,0,1,,,,1,46,99,all,CheckTaskFinished(1200),,,,,,0,4407;4408;4409;,30;30;30,0,0,0,0,0,0,,0,,0,99,90 ,AddExp(26550);AddNimbus(13275);AddMoney(8100),,,,,0,
+1202,寻求援兵,29,48,0,1,,,,1,46,99,all,CheckTaskFinished(1201),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,15 ,AddExp(4425);AddNimbus(2212);AddMoney(1350),,,,,0,
+1203,赤尸神君,29,48,1,1,,,,1,46,99,all,"CheckTaskFinished(1202)
+",,GetItemSpace >= 1,,,,0,4410,1,0,0,0,0,0,0,,0,,0,99,45 ,AddExp(13275);AddNimbus(6638);AddMoney(4050),,,,"em;AddItemEx(80,0,1,1)
+fm;AddItemEx(107,0,1,1)
+bh;AddItemEx(134,0,1,1)
+qc;AddItemEx(578,0,1,1)
+xq;AddItemEx(656,0,1,1)",0,
+1204,幼年猛虎,29,48,0,1,,,,1,46,99,all,CheckTaskFinished(1198),,,,,,0,4426,45,0,0,0,0,0,0,,0,,0,99,45 ,AddExp(13275);AddNimbus(6638);AddMoney(4050),,,,,0,
+1205,成年猛虎,29,49,0,1,,,,1,47,99,all,CheckTaskFinished(1204),,,,,,0,4427,45,0,0,0,0,0,0,,0,,0,99,45 ,AddExp(13500);AddNimbus(6750);AddMoney(4050),,,,,0,
+1206,白额猛虎,29,49,0,1,,,,1,47,99,all,CheckTaskFinished(1205),,,,,,0,4428,1,0,0,0,0,0,0,,0,,0,99,45 ,AddExp(13500);AddNimbus(6750);AddMoney(4050),,,,,0,
+1207,雷姑婆的嘱托,29,49,0,1,,,,1,47,99,all,,,,,,,0,0,0,3433,25,4429,3433,0.5,25,,0,,0,99,50 ,AddExp(15000);AddNimbus(7500);AddMoney(4500),,,,,0,
+1208,双头火蛇,29,49,0,1,,,,1,47,99,all,CheckTaskFinished(1207),,,,,,0,4430,50,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(15000);AddNimbus(7500);AddMoney(4500),,,,,0,
+1209,鬼哄森林中的妖魔,29,49,0,1,,,,1,47,99,all,,,,,,,0,4431;4432;,40;40,0,0,0,0,0,0,,0,,0,99,80 ,AddExp(24000);AddNimbus(12000);AddMoney(7200),,,,,0,
+1210,赤城子的下落,29,49,0,1,,,,1,47,99,all,,,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,15 ,AddExp(4500);AddNimbus(2250);AddMoney(1350),,,,,0,
+1211,鬼哄之謎,29,49,0,1,,,,1,47,99,all,,,,,,,0,4433,50,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(15000);AddNimbus(7500);AddMoney(4500),,,,,0,
+1212,深苔蜘蛛卵,29,49,0,1,,,,1,47,99,all,,,,,,,0,0,0,3435,20,4434,3435,0.5,20,,0,,0,99,40 ,AddExp(12000);AddNimbus(6000);AddMoney(3600),,,,,0,
+1213, 香脆的蜘蛛腿,29,49,0,1,,,,1,47,99,all,,,,,,,0,0,0,3436,20,4434,3436,0.5,20,,0,,0,99,40 ,AddExp(12000);AddNimbus(6000);AddMoney(3600),,,,,0,
+1214,残缺神像声望,29,45,0,0,20,,,1,44,99,all,,,,,,,0,0,0,3437,120,0,0,0,0,,0,,0,99,15 ,"AddCredit(29,150);AddExp(840);AddNimbus(140)",,,,,0,
+1215,残缺神像灵力,29,45,0,0,20,,,1,44,99,all,,,,,,,0,0,0,3437,120,0,0,0,0,,0,,0,99,120 ,AddNimbus(5600);AddExp(3360);AddMoney(672),,,,,0,
+1216,残缺神像经验,29,45,0,0,20,,,1,44,99,all,,,,,,,0,0,0,3437,180,0,0,0,0,,0,,0,99,36 ,AddExp(10080);AddNimbus(5040);AddMoney(3024),,,,,0,
+1217,马熊兽角声望,29,46,0,0,20,,,1,44,99,all,,,,,,,0,0,0,3438,120,0,0,0,0,,0,,0,99,15 ,"AddCredit(29,150);AddExp(855);AddNimbus(142)",,,,,0,
+1218,马熊兽角灵力,29,46,0,0,20,,,1,44,99,all,,,,,,,0,0,0,3438,120,0,0,0,0,,0,,0,99,120 ,AddNimbus(5700);AddExp(3420);AddMoney(696),,,,,0,
+1219,马熊兽角经验,29,46,0,0,20,,,1,44,99,all,,,,,,,0,0,0,3438,180,0,0,0,0,,0,,0,99,36 ,AddExp(10260);AddNimbus(5130);AddMoney(3132),,,,,0,
+1220,山魈利爪声望,29,47,0,0,20,,,1,45,99,all,,,,,,,0,0,0,3439,120,0,0,0,0,,0,,0,99,15 ,"AddCredit(29,150);AddExp(870);AddNimbus(145)",,,,,0,
+1221,山魈利爪灵力,29,47,0,0,20,,,1,45,99,all,,,,,,,0,0,0,3439,120,0,0,0,0,,0,,0,99,120 ,AddNimbus(5800);AddExp(3480);AddMoney(696),,,,,0,
+1222,山魈利爪经验,29,47,0,0,20,,,1,45,99,all,,,,,,,0,0,0,3439,180,0,0,0,0,,0,,0,99,36 ,AddExp(10440);AddNimbus(5220);AddMoney(3132),,,,,0,
+1223,木魃头颅声望,29,48,0,0,20,,,1,46,99,all,,,,,,,0,0,0,3440,120,0,0,0,0,,0,,0,99,15 ,"AddCredit(29,150);AddExp(885);AddNimbus(148)",,,,,0,
+1224,木魃头颅灵力,29,48,0,0,20,,,1,46,99,all,,,,,,,0,0,0,3440,120,0,0,0,0,,0,,0,99,120 ,AddNimbus(5900);AddExp(3540);AddMoney(720),,,,,0,
+1225,木魃头颅经验,29,48,0,0,20,,,1,46,99,all,,,,,,,0,0,0,3440,180,0,0,0,0,,0,,0,99,36 ,AddExp(10620);AddNimbus(5310);AddMoney(3240),,,,,0,
+1226,天淫令牌声望,29,49,0,0,20,,,1,47,99,all,,,,,,,0,0,0,3441,120,0,0,0,0,,0,,0,99,15 ,"AddCredit(29,150);AddExp(900);AddNimbus(150)",,,,,0,
+1227,天淫令牌灵力,29,49,0,0,20,,,1,47,99,all,,,,,,,0,0,0,3441,120,0,0,0,0,,0,,0,99,120 ,AddNimbus(6000);AddExp(3600);AddMoney(720),,,,,0,
+1228,天淫令牌经验,29,49,0,0,20,,,1,47,99,all,,,,,,,0,0,0,3441,180,0,0,0,0,,0,,0,99,36 ,AddExp(10800);AddNimbus(5400);AddMoney(3240),,,,,0,
+1229,飞天夜叉,29,47,11,1,,,,1,46,99,all,CheckTaskFinished(1210),,,,,,0,4460;4461;4497;,15;15;1,0,0,0,0,0,0,,0,,0,99,100 ,AddExp(29000);AddNimbus(14500);AddMoney(8700),,,,,0,
+1230,通缉滇西大魔头,29,48,11,1,,,,1,47,99,all,,,,,,,0,4462;4463;4498;,15;15;1,0,0,0,0,0,0,,0,,0,99,120 ,AddExp(35400);AddNimbus(17700);AddMoney(10800),,,,,0,
+1231,营救裘芷仙,29,48,11,1,,,,1,47,99,all,,,,,,,0,,,,,,,,,2,4504,1,0,99,120 ,AddExp(35400);AddNimbus(17700);AddMoney(10800),,,,,0,
+1232,深潭水怪,29,49,11,1,,,,1,48,99,all,,,,,,,0,4464;4465;4494;,15;15;1,0,0,0,0,0,0,,0,,0,99,140 ,AddExp(42000);AddNimbus(21000);AddMoney(12600),,,,,0,
+1233,乔瘦滕的秘密,29,49,11,1,,,,1,48,99,all,,,GetItemSpace >= 1,,,,0,4466;4467;4501;,15;15;1,3434,1,4501,3434,1,1,,0,,0,99,160 ,AddExp(48000);AddNimbus(24000);AddMoney(14400),,,,"em;AddItemEx(9,0,152,1)
+fm;AddItemEx(29,0,152,1)
+bh;AddItemEx(59,0,152,1)
+qc;AddItemEx(555,0,1,1)
+xq;AddItemEx(633,0,1,1)",0,
+1234,紫晟青索,29,50,11,1,,,,1,48,99,all,,,GetItemSpace >= 1,,,,0,4468;4469;4470;4502;,15;15;15;1,3432,1,4502,3432,1,1,,0,,0,99,190 ,AddExp(57950);AddNimbus(28975);AddMoney(17670),,,,"em;AddItemEx(19,0,152,1)
+fm;AddItemEx(39,0,152,1)
+bh;AddItemEx(49,0,152,1)
+qc;AddItemEx(565,0,1,1)
+xq;AddItemEx(643,0,1,1)",0,
+1235,马熊村长的嘱托,30,50,0,1,,,,1,48,99,all,GetTaskItemSpace >= 1,"AddItem (3777,1)",,,"RemoveItem(3777,1)",,0,0,0,3777,1,0,0,0,0,,0,,0,99,16 ,AddExp(4880);AddNimbus(2440);AddMoney(1488),,,,,0,
+1236,妙一夫人的嘱托,30,50,0,1,,,,1,48,99,all,GetTaskItemSpace >= 1,"AddItem (3778,1)",,,"RemoveItem(3778,1)",,0,0,0,3778,1,0,0,0,0,,0,,0,99,16 ,AddExp(4880);AddNimbus(2440);AddMoney(1488),,,,,0,
+1237,青螺山追踪者,30,50,0,1,,,,1,48,99,all,,,,,,,0,4568,50,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(15250);AddNimbus(7625);AddMoney(4650),,,,,0,
+1238,青螺山余孽,30,50,0,1,,,,1,48,99,all,CheckTaskFinished(1237),,,,,,0,4569,50,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(15250);AddNimbus(7625);AddMoney(4650),,,,,0,
+1239,不死军团的试炼,30,50,0,1,,,,1,48,99,all,CheckTaskFinished(1238),,,,,,0,4570,50,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(15250);AddNimbus(7625);AddMoney(4650),,,,,0,
+1240,青螺山军团的覆灭,30,50,1,1,,,,1,48,99,all,CheckTaskFinished(1239),,GetItemSpace >= 1,,,,0,4570;4571,25;1,0,0,0,0,0,0,,0,,0,99,35 ,AddExp(10675);AddNimbus(5338);AddMoney(3255),,,,"em;AddItemEx(263,0,1,1)
+fm;AddItemEx(272,0,1,1)
+bh;AddItemEx(281,0,1,1)
+qc;AddItemEx(606,0,1,1)
+xq;AddItemEx(684,0,1,1)",0,
+1241,铲除青螺山余孽经验,30,50,0,0,,,,1,48,99,all,,,,,,,0,4568;4569;4570,100;100;100,0,0,0,0,0,0,,0,,0,99,40 ,AddExp(12200);AddNimbus(6100);AddMoney(3720),,,,,1,
+1242,铲除青螺山余孽灵力,30,50,0,0,,,,1,48,99,all,,,,,,,0,4568;4569;4570,80;80;80,0,0,0,0,0,0,,0,,0,99,120 ,AddNimbus(6100);AddExp(3660);AddMoney(744),,,,,1,
+1243,铲除青螺山余孽声望,30,50,0,0,,,,1,48,99,all,,,,,,,0,4568;4569;4570,40;40;40,0,0,0,0,0,0,,0,,0,99,120 ,"AddCredit(30,1200);AddExp(7440);AddNimbus(1240)",,,,,1,
+1244,消灭藤须怪,30,51,0,1,,,,1,49,99,all,CheckTaskFinished(1239),,,,,,0,4572;,50,0,0,0,0,0,0,,0,,0,99,50,AddExp(15500);AddNimbus(7750);AddMoney(4650),,,,,0,
+1245,相赠药材,30,51,0,1,,,,1,49,99,all,"CheckTaskFinished(1244)
+GetTaskItemSpace >= 1","AddItem (3780,1)",,,"RemoveItem(3780,1)",,0,0,0,3780,1,0,0,0,0,,0,,0,99,16 ,AddExp(4960);AddNimbus(2480);AddMoney(1488),,,,,0,
+1246,收集灵药,30,51,0,1,,,,1,49,99,all,CheckTaskFinished(1245),,,,,,0,0,0,3780,30,4573,3780,0.5,30,,0,,0,99,60 ,AddExp(18600);AddNimbus(9300);AddMoney(5580),,,,,0,
+1247,驱逐荆棘兽,30,51,0,1,,,,1,49,99,all,,,,,,,0,4574,50,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(15500);AddNimbus(7750);AddMoney(4650),,,,,0,
+1248,灵宝内丹,30,51,0,1,,,,1,49,99,all,CheckTaskFinished(1247),,,,,,0,0,0,3408,25,4575,3408,0.5,25,,0,,0,99,50 ,AddExp(15500);AddNimbus(7750);AddMoney(4650),,,,,0,
+1249,长沙之约,30,51,0,1,,,,1,49,99,all,"CheckTaskFinished(1248)
+GetTaskItemSpace >= 1","AddItem (3781,1)",,,"RemoveItem(3781,1)",,0,0,0,3781,1,0,0,0,0,,0,,0,99,16 ,AddExp(4960);AddNimbus(2480);AddMoney(1488),,,,,0,
+1250,枯萎的荆棘经验(重复5),30,51,0,0,,,,1,49,99,all,,,,,,,0,4572;4574,150;150,0,0,0,0,0,0,,0,,0,99,40 ,AddExp(12400);AddNimbus(6200);AddMoney(3720),,,,,1,
+1251,枯萎的荆棘灵力(重复5),30,51,0,0,,,,1,49,99,all,,,,,,,0,4572;4574,120;120,0,0,0,0,0,0,,0,,0,99,120 ,AddNimbus(6200);AddExp(3720);AddMoney(744),,,,,1,
+1252,枯萎的荆棘声望(重复5),30,51,0,0,,,,1,49,99,all,,,,,,,0,4572;4574,60;60,0,0,0,0,0,0,,0,,0,99,120 ,"AddCredit(30,1200);AddExp(7560);AddNimbus(1260)",,,,,1,
+1253,路匪的烦恼,30,52,0,1,,,,1,50,99,all,,,,,,,0,4576,50,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(15750);AddNimbus(7875);AddMoney(4800),,,,,0,
+1254,湘江渔翁,30,52,0,1,,,,1,50,99,all,CheckTaskFinished(1253),,,,,,0,4577,50,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(15750);AddNimbus(7875);AddMoney(4800),,,,,0,
+1255,清理匪窝,30,52,0,1,,,,1,50,99,all,,,,,,,0,4578,50,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(15750);AddNimbus(7875);AddMoney(4800),,,,,0,
+1256,长沙地痞,30,52,0,1,,,,1,50,99,all,,,,,,,0,4579,50,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(15750);AddNimbus(7875);AddMoney(4800),,,,,0,
+1257,长沙除暴,30,52,0,1,,,,1,50,99,all,CheckTaskFinished(1256),,,,,,0,4580,50,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(15750);AddNimbus(7875);AddMoney(4800),,,,,0,
+1258,长沙英雄任务经验(重复5),30,52,0,0,,,,1,50,99,all,,,,,,,0,4576;4577;4578;4579;4580,60;60;60;60;60,0,0,0,0,0,0,,0,,0,99,40 ,AddExp(12600);AddNimbus(6300);AddMoney(3840),,,,,1,
+1259,长沙英雄任务灵力(重复5),30,52,0,0,,,,1,50,99,all,,,,,,,0,4576;4577;4578;4579;4580,45;45;45;45;45,0,0,0,0,0,0,,0,,0,99,120 ,AddNimbus(6300);AddExp(3780);AddMoney(768),,,,,1,
+1260,长沙英雄任务声望(重复5),30,52,0,0,,,,1,50,99,all,,,,,,,0,4576;4577;4578;4579;4580,25;25;25;25;25,0,0,0,0,0,0,,0,,0,99,120 ,"AddCredit(30,1200);AddExp(7680);AddNimbus(1280)",,,,,1,
+1261,凌府危机,30,53,0,1,,,,1,51,99,all,CheckTaskFinished(1256),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,16 ,AddExp(5120);AddNimbus(2560);AddMoney(1536),,,,,0,
+1262,凌府外围,30,53,0,1,,,,1,51,99,all,,,,,,,0,4581,50,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(16000);AddNimbus(8000);AddMoney(4800),,,,,0,
+1263,义助凌府,30,53,0,1,,,,1,51,99,all,CheckTaskFinished(1262),,,,,,0,4582,50,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(16000);AddNimbus(8000);AddMoney(4800),,,,,0,
+1264,小惩霹雳手,30,53,1,1,,,,1,51,99,all,CheckTaskFinished(1263),,GetItemSpace >= 1,,,,0,4582;,25,0,0,0,0,0,0,4,4584,1,0,99,35 ,AddExp(11200);AddNimbus(5600);AddMoney(3360),,,,"em;AddItemEx(90,0,1,1)
+fm;AddItemEx(117,0,1,1)
+bh;AddItemEx(144,0,1,1)
+qc;AddItemEx(588,0,1,1)
+xq;AddItemEx(666,0,1,1)",0,
+1265,问责陈家庄,30,53,0,1,,,,1,51,99,all,"CheckTaskFinished(1264)
+GetTaskItemSpace >= 1","AddItem (3898,1)",,,"RemoveItem(3898,1)",,0,4583,50,3898,1,0,0,0,0,,0,,0,99,65 ,AddExp(20800);AddNimbus(10400);AddMoney(6240),,,,,0,
+1266,见义勇为经验(重复5),30,53,0,0,,,,1,51,99,all,,,,,,,0,4581;4582;4583;,100;100;100,0,0,0,0,0,0,,0,,0,99,40 ,AddExp(12800);AddNimbus(6400);AddMoney(3840),,,,,1,
+1267,见义勇为灵力(重复5),30,53,0,0,,,,1,51,99,all,,,,,,,0,4581;4582;4583;,80;80;80,0,0,0,0,0,0,,0,,0,99,120 ,AddNimbus(6400);AddExp(3840);AddMoney(768),,,,,1,
+1268,见义勇为声望(重复5),30,53,0,0,,,,1,51,99,all,,,,,,,0,4581;4582;4583;,40;40;40,0,0,0,0,0,0,,0,,0,99,120 ,"AddCredit(30,1200);AddExp(7800);AddNimbus(1300)",,,,,1,
+1269,传书戴家场,30,54,0,1,,,,1,52,99,all,GetTaskItemSpace >= 1,"AddItem (3899,1)",,,"RemoveItem(3899,1)",,0,0,0,3899,1,0,0,0,0,,0,,0,99,16 ,AddExp(5200);AddNimbus(2600);AddMoney(1584),,,,,0,
+1270,初战戴家场,30,54,0,1,,,,1,52,99,all,,,,,,,0,4585;,50,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(16250);AddNimbus(8125);AddMoney(4950),,,,,0,
+1271,清理陈家庄劲卒,30,54,0,1,,,,1,52,99,all,CheckTaskFinished(1270),,,,,,0,4586;,50,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(16250);AddNimbus(8125);AddMoney(4950),,,,,0,
+1272,清理陈家庄家将,30,54,0,1,,,,1,52,99,all,CheckTaskFinished(1271),,,,,,0,4587;,50,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(16250);AddNimbus(8125);AddMoney(4950),,,,,0,
+1273,力擒陈家庄兵统帅崔天绶,30,54,1,1,,,,1,52,99,all,CheckTaskFinished(1272),,GetItemSpace >= 1,,,,0,4587;4588,25;1,0,0,0,0,0,0,,0,,0,99,35 ,AddExp(11375);AddNimbus(5688);AddMoney(3465),,,,"em;AddItemEx(290,0,1,1)
+fm;AddItemEx(299,0,1,1)
+bh;AddItemEx(308,0,1,1)
+qc;AddItemEx(615,0,1,1)
+xq;AddItemEx(693,0,1,1)",0,
+1274,清理戴家场经验(重复5),30,54,0,0,,,,1,52,99,all,,,,,,,0,4585;4586;4587,100;100;100,0,0,0,0,0,0,,0,,0,99,40 ,AddExp(13000);AddNimbus(6500);AddMoney(3960),,,,,1,
+1275,清理戴家场灵力(重复5),30,54,0,0,,,,1,52,99,all,,,,,,,0,4585;4586;4587,80;80;80,0,0,0,0,0,0,,0,,0,99,120 ,AddNimbus(6500);AddExp(3900);AddMoney(792),,,,,1,
+1276,清理戴家场声望(重复5),30,54,0,0,,,,1,52,99,all,,,,,,,0,4585;4586;4587,40;40;40,0,0,0,0,0,0,,0,,0,99,120 ,"AddCredit(30,1200);AddExp(7920);AddNimbus(1320)",,,,,1,
+1277,鱼神洞探子,30,55,0,1,,,,1,53,99,all,,,,,,,0,4589,50,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(16500);AddNimbus(8250);AddMoney(4950),,,,,0,
+1278,鱼神洞探密,30,55,0,1,,,,1,53,99,all,CheckTaskFinished(1277),,,,,,0,4590,50,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(16500);AddNimbus(8250);AddMoney(4950),,,,,0,
+1279,约战陈家庄,30,55,1,1,,,,1,53,99,all,CheckTaskFinished(1278),,GetItemSpace >= 1,,,,0,0,0,0,0,0,0,0,0,4,4591,1,0,99,35 ,AddExp(11550);AddNimbus(5775);AddMoney(3465),,,,"em;AddItemEx(99,0,1,1)
+fm;AddItemEx(126,0,1,1)
+bh;AddItemEx(153,0,1,1)
+qc;AddItemEx(597,0,1,1)
+xq;AddItemEx(675,0,1,1)",0,
+1280,收集物资1,30,55,0,1,,,,1,53,99,all,,,,,,,0,0,0,3782,30,4592,3782,0.5,30,,0,,0,99,60 ,AddExp(19800);AddNimbus(9900);AddMoney(5940),,,,,0,
+1281,收集物资2,30,55,0,1,,,,1,53,99,all,,,,,,,0,0,0,3783,30,4593,3783,0.5,30,,0,,0,99,60 ,AddExp(19800);AddNimbus(9900);AddMoney(5940),,,,,0,
+1282,白府粮草,30,55,0,1,,,,1,53,99,all,"GetTaskItemSpace >= 1
+CheckTaskFinished(1279)","AddItem (3784,1)",,,"RemoveItem(3784,1)",,0,0,0,3784,1,0,0,0,0,,0,,0,99,16 ,AddExp(5280);AddNimbus(2640);AddMoney(1584),,,,,0,
+1283,试炼身手经验,30,55,0,0,,,,1,53,99,all,,,,,,,0,4589;4590;4592;4593;,75;75;75;75,0,0,0,0,0,0,,0,,0,99,40 ,AddExp(13200);AddNimbus(6600);AddMoney(3960),,,,,1,
+1284,试炼身手灵力,30,55,0,0,,,,1,53,99,all,,,,,,,0,4589;4590;4592;4593;,60;60;60;60,0,0,0,0,0,0,,0,,0,99,120 ,AddNimbus(6600);AddExp(3960);AddMoney(792),,,,,1,
+1285,试炼身手声望,30,55,0,0,,,,1,53,99,all,,,,,,,0,4589;4590;4592;4593;,30;30;30;30,0,0,0,0,0,0,,0,,0,99,120 ,"AddCredit(30,1200);AddExp(8040);AddNimbus(1340)",,,,,1,
+1286,运送粮草（最后做）,30,56,0,1,,,,1,54,99,all,"GetTaskItemSpace >= 1
+CheckTaskFinished(1288)","AddItem (3786,1)",,,"RemoveItem(3786,1)",,0,0,0,3786,1,0,0,0,0,,0,,0,99,16 ,AddExp(5360);AddNimbus(2680);AddMoney(1632),,,,,0,
+1287,荒野强盗,30,56,0,1,,,,1,54,99,all,,,,,,,0,4594;,50,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(16750);AddNimbus(8375);AddMoney(5100),,,,,0,
+1288,乘胜追击,30,56,0,1,,,,1,54,99,all,CheckTaskFinished(1287),,,,,,0,4595;,50,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(16750);AddNimbus(8375);AddMoney(5100),,,,,0,
+1289,夺回物品,30,56,0,1,,,,1,54,99,all,"GetTaskItemSpace >= 1
+CheckTaskFinished(1287)",,,,,,0,0,0,3787,4,4633,3787,1,4,,0,,0,99,25 ,AddExp(8375);AddNimbus(4188);AddMoney(2550),,,,,0,
+1290,击杀强盗头领,30,56,1,1,,,,1,54,99,all,CheckTaskFinished(1288),,GetItemSpace >= 1,,,,0,4596;4597;,1;30,0,0,0,0,0,0,,0,,0,99,40 ,AddExp(13400);AddNimbus(6700);AddMoney(4080),,,,"em;AddItemEx(317,0,1,1)
+fm;AddItemEx(326,0,1,1)
+bh;AddItemEx(335,0,1,1)
+qc;AddItemEx(624,0,1,1)
+xq;AddItemEx(702,0,1,1)",0,
+1291,剿匪经验（重复5）,30,56,0,0,,,,1,54,99,all,,,,,,,0,4594;4595;4597;,100;100;100,0,0,0,0,0,0,,0,,0,99,40 ,AddExp(13400);AddNimbus(6700);AddMoney(4080),,,,,1,
+1292,剿匪灵力（重复5）,30,56,0,0,,,,1,54,99,all,,,,,,,0,4594;4595;4597;,80;80;80,0,0,0,0,0,0,,0,,0,99,120 ,AddNimbus(6700);AddExp(4020);AddMoney(816),,,,,1,
+1293,剿匪声望（重复5）,30,56,0,0,,,,1,54,99,all,,,,,,,0,4594;4595;4597;,40;40;40,0,0,0,0,0,0,,0,,0,99,120 ,"AddCredit(30,1200);AddExp(8160);AddNimbus(1360)",,,,,1,
+1294,初探吕村,30,57,0,1,,,,1,55,99,all,,,,,,,0,4598,50,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(17000);AddNimbus(8500);AddMoney(5100),,,,,0,
+1295,吕村粮草,30,57,0,1,,,,1,55,99,all,CheckTaskFinished(1294),,,,,,0,4599,50,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(17000);AddNimbus(8500);AddMoney(5100),,,,,0,
+1296,吕村秘密,30,57,1,1,,,,1,55,99,all,CheckTaskFinished(1295),,GetItemSpace >= 1,,,,0,4598;4601,30;1,0,0,0,0,0,0,,0,,0,99,40 ,AddExp(13600);AddNimbus(6800);AddMoney(4080),,"AddItemEx(243,0,52,1)
+AddItemEx(243,0,51,1)",,,0,
+1297,深入旧寨,30,57,0,1,,,,1,55,99,all,CheckTaskFinished(1295),,,,,,0,4600,50,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(17000);AddNimbus(8500);AddMoney(5100),,,,,0,
+1298,探察究竟,30,57,0,1,,,,1,55,99,all,CheckTaskFinished(1297),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,16 ,AddExp(5440);AddNimbus(2720);AddMoney(1632),,,,,0,
+1299,反击吕村经验（重复5）,30,57,0,0,,,,1,55,99,all,,,,,,,0,4598;4599;4600,100;100;100,0,0,0,0,0,0,,0,,0,99,40 ,AddExp(13600);AddNimbus(6800);AddMoney(4080),,,,,1,
+1300,反击吕村灵力（重复5）,30,57,0,0,,,,1,55,99,all,,,,,,,0,4598;4599;4600,80;80;80,0,0,0,0,0,0,,0,,0,99,120 ,AddNimbus(6800);AddExp(4080);AddMoney(816),,,,,1,
+1301,反击吕村声望（重复5）,30,57,0,0,,,,1,55,99,all,,,,,,,0,4598;4599;4600,40;40;40,0,0,0,0,0,0,,0,,0,99,120 ,"AddCredit(30,1200);AddExp(8280);AddNimbus(1380)",,,,,1,
+1302,摘果充饥,30,58,0,1,,,,1,56,99,all,GetTaskItemSpace >= 2,,,,,,0,0,0,3788,40,4634,3788,1,40,,0,,0,99,40 ,AddExp(13800);AddNimbus(6900);AddMoney(4200),,,,,0,
+1303,侠女遇难,30,58,0,1,,,,1,56,99,all,,,,,,,0,4602,50,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(17250);AddNimbus(8625);AddMoney(5250),,,,,0,
+1304,突袭水牢,30,58,0,1,,,,1,56,99,all,CheckTaskFinished(1303),,,,,,0,4603,50,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(17250);AddNimbus(8625);AddMoney(5250),,,,,0,
+1305,逃出生天,30,58,1,1,,,,1,56,99,all,CheckTaskFinished(1304),,GetItemSpace >= 1,,,,0,4604;4605,30;1,3792,1,4605,3792,1,1,,0,,0,99,40 ,AddExp(13800);AddNimbus(6900);AddMoney(4200),,,,"em;AddItemEx(81,0,1,1)
+fm;AddItemEx(108,0,1,1)
+bh;AddItemEx(135,0,1,1)
+qc;AddItemEx(579,0,1,1)
+xq;AddItemEx(657,0,1,1)",0,
+1306,护送登萍仙子,30,58,1,1,,,,1,56,99,all,CheckTaskFinished(1305),,GetItemSpace >= 1,,,,0,0,0,0,0,0,0,0,0,2,4635,1,0,99,50 ,AddExp(17250);AddNimbus(8625);AddMoney(5250),,,,,0,
+1307,清理水牢经验（重复5）,30,58,0,0,,,,1,56,99,all,,,,,,,0,4602;4603;4604,100;100;100,0,0,0,0,0,0,,0,,0,99,40 ,AddExp(13800);AddNimbus(6900);AddMoney(4200),,,,,1,
+1308,清理水牢灵力（重复5）,30,58,0,0,,,,1,56,99,all,,,,,,,0,4602;4603;4604,80;80;80,0,0,0,0,0,0,,0,,0,99,120 ,AddNimbus(6900);AddExp(4140);AddMoney(840),,,,,1,
+1309,清理水牢声望（重复5）,30,58,0,0,,,,1,56,99,all,,,,,,,0,4602;4603;4604,40;40;40,0,0,0,0,0,0,,0,,0,99,120 ,"AddCredit(30,1200);AddExp(8400);AddNimbus(1400)",,,,,1,
+1310,初探鱼神后洞,30,59,0,1,,,,1,57,99,all,,,,,,,0,4606;,50;,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(17500);AddNimbus(8750);AddMoney(5250),,,,,0,
+1311,再探鱼神后洞,30,59,0,1,,,,1,57,99,all,CheckTaskFinished(1310),,,,,,0,4607;,50;,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(17500);AddNimbus(8750);AddMoney(5250),,,,,0,
+1312,鱼神洞府异情,30,59,0,1,,,,1,57,99,all,CheckTaskFinished(1311),,,,,,0,4608;,50;,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(17500);AddNimbus(8750);AddMoney(5250),,,,,0,
+1313,实力的证明,30,59,0,1,,,,0,57,99,all,,,GetItemSpace >= 1,,,,0,4602;4603;4604;4606;4607;4608;,10;10;10;10;10;10,0,0,0,0,0,0,,0,,0,99,50 ,AddExp(17500);AddNimbus(8750);AddMoney(5250),,,,"em;AddItemEx(10,0,152,1)
+fm;AddItemEx(30,0,152,1)
+bh;AddItemEx(60,0,152,1)
+qc;AddItemEx(556,0,1,1)
+xq;AddItemEx(634,0,1,1)",0,
+1314,清理鱼神洞灵力（重复5）,30,59,0,0,,,,1,57,99,all,,,,,,,0,4606;4607;4608;,80;80;80,0,0,0,0,0,0,,0,,0,99,120 ,AddNimbus(7000);AddExp(4200);AddMoney(840),,,,,1,
+1315,清理鱼神洞声望（重复5）,30,59,0,0,,,,1,57,99,all,,,,,,,0,4606;4607;4608;,40;40;40,0,0,0,0,0,0,,0,,0,99,120 ,"AddCredit(30,1200);AddExp(8400);AddNimbus(1400)",,,,,1,
+1316,铲除青螺山余孽灵力,30,50,0,0,,2,,1,48,99,all,,,,,,,0,4568;4569;4570,40;40;40,0,0,0,0,0,0,,0,,0,99,120 ,AddNimbus(6200);AddExp(3720);AddMoney(744),,,,,0,
+1317,枯萎的荆棘声望(重复5),30,51,0,0,,2,,1,49,99,all,,,,,,,0,4572;4574,60;60,0,0,0,0,0,0,,0,,0,99,120 ,"AddCredit(30,1200);AddExp(7440);AddNimbus(1240)",,,,,0,
+1318,长沙英雄任务灵力(重复5),30,52,0,0,,2,,1,50,99,all,,,,,,,0,4576;4577;4578;4579;4580,24;24;24;24;24,0,0,0,0,0,0,,0,,0,99,120 ,AddNimbus(6400);AddExp(3840);AddMoney(768),,,,,0,
+1319,见义勇为声望(重复5),30,53,0,0,,2,,1,51,99,all,,,,,,,0,4581;4582;4583;,40;40;40,0,0,0,0,0,0,,0,,0,99,120 ,"AddCredit(30,1200);AddExp(7680);AddNimbus(1280)",,,,,0,
+1320,清理戴家场灵力(重复5),30,54,0,0,,2,,1,52,99,all,,,,,,,0,4585;4586;4587,40;40;40,0,0,0,0,0,0,,0,,0,99,120 ,AddNimbus(6600);AddExp(3960);AddMoney(792),,,,,0,
+1321,试炼身手声望,30,55,0,0,,2,,1,53,99,all,,,,,,,0,4589;4590;4592;4593;,30;30;30;30,0,0,0,0,0,0,,0,,0,99,120 ,"AddCredit(30,1200);AddExp(7920);AddNimbus(1320)",,,,,0,
+1322,剿匪灵力（重复5）,30,56,0,0,,2,,1,54,99,all,,,,,,,0,4594;4595;4597;,40;40;40,0,0,0,0,0,0,,0,,0,99,120 ,AddNimbus(6800);AddExp(4080);AddMoney(816),,,,,0,
+1323,反击吕村声望（重复5）,30,57,0,0,,2,,1,55,99,all,,,,,,,0,4598;4599;4600,40;40;40,0,0,0,0,0,0,,0,,0,99,120 ,"AddCredit(30,1200);AddExp(8160);AddNimbus(1360)",,,,,0,
+1324,清理水牢灵力（重复5）,30,58,0,0,,2,,1,56,99,all,,,,,,,0,4602;4603;4604,40;40;40,0,0,0,0,0,0,,0,,0,99,120 ,AddNimbus(7000);AddExp(4200);AddMoney(840),,,,,0,
+1325,清理鱼神洞声望（重复5）,30,59,0,0,,2,,1,57,99,all,,,,,,,0,4606;4607;4608;,40;40;40,0,0,0,0,0,0,,0,,0,99,120 ,"AddCredit(30,1200);AddExp(8400);AddNimbus(1400)",,,,,0,
+1326,师太党羽,26,36,11,1,,,,1,34,99,all,,,,,,,0,4655;4656;4663;,10;10;1,0,0,0,0,0,0,,0,,0,99,80 ,AddExp(18800);AddNimbus(9400);AddMoney(5760),,,,,0,
+1327,机关兽之迷,26,38,11,1,,,,1,35,99,all,,,,,,,0,4657;4658;4665;,10;10;1,0,0,0,0,0,0,,0,,0,99,80 ,AddExp(19600);AddNimbus(9800);AddMoney(6000),,,,,0,
+1328,毒龙命门,26,39,11,1,,,,1,35,99,all,,,,,,,0,4659;4660;4664;4667,10;10;1;1,0,0,0,0,0,0,,0,,0,99,85 ,AddExp(21250);AddNimbus(10625);AddMoney(6375),,,,,0,
+1329,污龙潭大战,26,40,11,1,,,,1,36,99,all,,,,,,,0,4661;4662;4681;,10;10;1,0,0,0,0,0,0,,0,,0,99,90 ,AddExp(22950);AddNimbus(11475);AddMoney(7020),,,,,0,
+1330,智擒罗文林,30,56,11,1,,,,1,54,99,all,,,,,,,0,4611;4756;4757;4774;4775;,1;1;1;10;10,0,0,0,0,0,0,,0,,0,99,150 ,AddExp(50250);AddNimbus(25125);AddMoney(15300),,,,,0,
+1331,蛇口除妖,30,57,11,1,,,,1,55,99,all,,,,,,,0,4612;4758;4759;4768;4769;,1;1;1;10;10,0,0,0,0,0,0,,0,,0,99,180 ,AddExp(61200);AddNimbus(30600);AddMoney(18360),,,,,0,
+1332,同生共死,30,59,11,1,,,,1,57,99,all,,,,,,,0,4760;4761;4771;4773;,1;1;10;10,4161;4162,1;1,4613;4614,4161;4162,1;1,1;1,,0,,0,99,240 ,AddExp(84000);AddNimbus(42000);AddMoney(25200),,,,,0,
+1333,观星恶灵,30,58,11,1,,,,1,56,99,all,,,,,,,0,4762;4763;4764;4765;4766;4767;,1;1;1;1;1;1,0,0,0,0,0,0,,0,,0,99,200 ,AddExp(69000);AddNimbus(34500);AddMoney(21000),,,,,0,
+1334,孤星之颠,30,60,11,1,,,,1,58,99,all,,,GetItemSpace >= 1,,,,0,4615;4770;4772;,1;15;15,0,0,0,0,0,0,,0,,0,99,260 ,AddExp(92300);AddNimbus(46150);AddMoney(28080),,,,"em;AddItemEx(20,0,152,1)
+fm;AddItemEx(40,0,152,1)
+bh;AddItemEx(50,0,152,1)
+qc;AddItemEx(566,0,1,1)
+xq;AddItemEx(644,0,1,1)",0,
+1335,烈火令牌收集令,29,47,11,0,3,,,1,45,99,all,,,,,,,0,4497;4494;4498;4501;4502,1;1;1;1;1,0,0,0,0,0,0,,0,,0,99,,AddExp(0);AddNimbus(0);AddMoney(0),"AddItemEx(4164,0,0,1)",,,,0,
+1336,神秘钥匙,29,47,11,0,,,,1,55,99,all,,,,,,,0,0,0,4164,3,0,0,0,0,,0,,0,99,,AddExp(0);AddNimbus(0);AddMoney(0),"AddItemEx(4163,0,0,1)",,,,0,
+1343,古墓探索,33,60,11,1,,,,1,58,99,all,,,,,,,0,4836;4845;4846;,1;15;15;,0,0,0,0,0,0,,0,,0,99,400 ,AddExp(142000);AddNimbus(71000);AddMoney(43200),,,,,0,
+1344,遍地蛛蝎,33,60,11,1,,,,1,58,99,all,,,,,,,0,4841;4842;4843;4844;,15;15;15;15,0,0,0,0,0,0,,0,,0,99,350 ,AddExp(124250);AddNimbus(62125);AddMoney(37800),,,,,0,
+1339,千年老蝎,33,60,11,1,,,,1,58,99,all,,,,,,,0,4837;,1,0,0,0,0,0,0,,0,,0,99,420 ,AddExp(149100);AddNimbus(74550);AddMoney(45360),,,,,0,
+1340,万年火蛛,33,60,11,1,,,,1,58,99,all,,,,,,,0,4838;,1,0,0,0,0,0,0,,0,,0,99,420 ,AddExp(149100);AddNimbus(74550);AddMoney(45360),,,,,0,
+1341,清除最后的阻碍,33,60,11,1,,,,1,58,99,all,,,,,,,0,4839;,1,0,0,0,0,0,0,,0,,0,99,450 ,AddExp(159750);AddNimbus(79875);AddMoney(48600),,,,,0,
+1342,直取文蛛,33,61,11,1,,,,1,58,99,all,,,,,,,0,4840;,1,0,0,0,0,0,0,,0,,0,99,520 ,AddExp(187200);AddNimbus(93600);AddMoney(56160),,,,,0,
+1345,古墓碎片,33,57,11,0,3,,,1,55,99,all,,,,,,,0,4611;4612;4614;4615;,1;1;1;1,0,0,0,0,0,0,,0,,0,99,,AddExp(0);AddNimbus(0);AddMoney(0),"AddItemEx(4179,0,0,1)",,,,0,
+1346,古墓钥匙,33,57,11,0,,,,1,58,99,all,,,,,,,0,0,0,4179,3,0,0,0,0,,0,,0,99,,AddExp(0);AddNimbus(0);AddMoney(0),"AddItemEx(4178,0,0,1)",,,,0,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1400,清剿四门山妖孽,34,61,11,0,,2,,1,61,99,all,,,,,,,0,4930;4931;4932;4933,15;15;15;15,0,0,0,0,0,0,,0,,0,99,60 ,AddExp(43200);AddNimbus(21600);AddMoney(6480),,,,,0,
+1401,限时清剿四门山妖孽（15分钟）,34,61,11,0,,3,,1,61,99,all,CheckTaskFinished(1400),,,,,,900,4930;4931;4932;4933,15;15;15;15,0,0,0,0,0,0,,0,,0,99,60 ,AddExp(43200);AddNimbus(21600);AddMoney(6480),,,,,0,
+1402,营救月龙幼童,34,62,11,0,,2,,0,61,99,all,,,,,,,0,0,0,4352,1,4945,4352,1,1,,0,,0,99,40 ,AddExp(29200);AddNimbus(14600);AddMoney(4440),,,,,0,
+1403,解除月龙村危机（护送）,34,63,11,0,,2,,1,62,99,all,,,,,,,0,0,0,0,0,0,0,0,0,2,4937,1,0,99,60 ,AddExp(44400);AddNimbus(22200);AddMoney(6660),,,,,0,
+1404,智擒孽畜妖狐,34,64,11,0,,2,,1,62,99,all,,,,,,,0,4934,1,0,0,0,0,0,0,,0,,0,99,100 ,AddExp(75000);AddNimbus(37500);AddMoney(11400),,,,,0,
+1405,勇闯石穴迷宫,34,65,11,0,,2,,1,63,99,all,,,,,,,0,4935,35,0,0,0,0,0,0,,0,,0,99,60 ,AddExp(45600);AddNimbus(22800);AddMoney(6840),,,,,0,
+1406,限时勇闯石穴迷宫（20分钟）,34,65,11,0,,3,,1,64,99,all,CheckTaskFinished(1405),,,,,,1200,4935,35,0,0,0,0,0,0,,0,,0,99,60 ,AddExp(45600);AddNimbus(22800);AddMoney(6840),,,,,0,
+1407,机关暗门,34,65,11,0,,2,,1,63,99,all,,,,,,,0,0,0,4353,1,4957;4958;4959;4960;5037;,4353;4353;4353;4353;4353,1;1;1;1;1,5;5;5;5;5,,0,,0,99,40 ,AddExp(30400);AddNimbus(15200);AddMoney(4560),,,,,0,
+1408,斩妖除魔,34,65,11,0,,2,,1,64,99,all,,,,,,,0,4936,1,0,0,0,0,0,0,,0,,0,99,150 ,AddExp(114000);AddNimbus(57000);AddMoney(17100),,,,,0,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1409,初来乍到,34,61,0,1,,,,1,61,99,all,,,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,57 ,AddExp(41040);AddNimbus(20520);AddMoney(6156),,,,,0,
+1410,勘查地形,34,62,0,1,,,,1,61,99,all,,,GetItemSpace >= 1,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,57 ,AddExp(41610);AddNimbus(20805);AddMoney(6327),"AddItemFromCode(""i=4419,sml=7,t=3600"")",,,,0,
+1411,巧妙的伪装,34,61,0,1,,,,1,61,99,all,,,GetItemSpace >= 1,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,57 ,AddExp(41040);AddNimbus(20520);AddMoney(6156),"AddItemFromCode(""i=4425"")",,,,0,
+1412,九色鹿的传说,34,63,1,1,,,,1,61,99,all,,,GetItemSpace >= 1,,,,0,0,0,4376,1,4989,4376,1,1,,0,,0,99,124 ,AddExp(91760);AddNimbus(45880);AddMoney(13764),"AddItemEx(4430,0,0,1)","
+",,,0,
+1413,疑云密布,34,61,0,1,,,,1,61,99,all,,,,,,,0,0,0,4361,20,4969,4361,0.5,20,,0,,0,99,135 ,AddExp(97200);AddNimbus(48600);AddMoney(14580),,,,,0,
+1414,深入贼穴,34,61,0,1,,,,1,61,99,all,CheckTaskFinished(1413),,,,,,0,0,0,4362,30,4976,4362,1,30,,0,,0,99,135 ,AddExp(97200);AddNimbus(48600);AddMoney(14580),,,,,0,
+1415,证据确凿,34,62,0,1,,,,1,61,99,all,CheckTaskFinished(1414),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,45 ,AddExp(32850);AddNimbus(16425);AddMoney(4995),,,,,0,
+1416,速速汇报,34,62,0,1,,,,1,61,99,all,CheckTaskFinished(1413),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,45 ,AddExp(32850);AddNimbus(16425);AddMoney(4995),,,,,0,
+1417,迫在眉睫,34,62,0,1,,,,1,61,99,all,CheckTaskFinished(1416),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,45 ,AddExp(32850);AddNimbus(16425);AddMoney(4995),,,,,0,
+1418,月龙村内鬼,34,63,0,1,,,,1,61,99,all,CheckTaskFinished(1417),,,,,,0,0,0,4377,10,4980,4377,0.25,10,,0,,0,99,143 ,AddExp(105820);AddNimbus(52910);AddMoney(15873),,,,,0,
+1419,破译代号,34,63,0,1,,,,1,61,99,all,,,,,,,0,0,0,4378,1,4981,4378,0.05,1,,0,,0,99,143 ,AddExp(105820);AddNimbus(52910);AddMoney(15873),,,,,0,
+1420,行动暴露,34,63,0,1,,,,1,61,99,all,"CheckTaskFinished(1419)
+GetTaskItemSpace >= 1",,GetItemSpace >= 1,,"AddItem(4422,1)",,0,0,0,0,0,0,0,0,0,,0,,0,99,57 ,AddExp(42180);AddNimbus(21090);AddMoney(6327),,,,,0,
+1421,就地正法,34,63,0,1,,,,1,61,99,all,CheckTaskFinished(1420),,,,"RemoveItem(4422,1)",,0,4982,1,0,0,0,0,0,0,,0,,0,99,195 ,AddExp(144300);AddNimbus(72150);AddMoney(21645),,,,,0,
+1422,身份之谜,34,64,0,1,,,,1,61,99,all,,,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,45 ,AddExp(33750);AddNimbus(16875);AddMoney(5130),,,,,0,
+1423,告白天下,34,64,0,1,,,,1,61,99,all,CheckTaskFinished(1422),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,57 ,AddExp(42750);AddNimbus(21375);AddMoney(6498),,,,,0,
+1424,捕风捉影,34,65,0,1,,,,1,61,99,all,CheckTaskFinished(1423),,,,,,0,0,0,4399,30,4999,4399,0.5,30,,0,,0,99,150 ,AddExp(114000);AddNimbus(57000);AddMoney(17100),,,,,0,
+1425,蛛丝马迹,34,65,0,1,,,,1,61,99,all,CheckTaskFinished(1424),,,,,,0,0,0,4400,30,5000,4400,0.5,30,,0,,0,99,150 ,AddExp(114000);AddNimbus(57000);AddMoney(17100),,,,,0,
+1426,诈引朱洪,34,65,0,1,,,,1,61,99,all,"CheckTaskFinished(1425)
+GetItemSpace >= 1","AddItem(4423,1)",,,,,0,0,0,4423,1,0,0,0,0,,0,,0,99,60 ,AddExp(45600);AddNimbus(22800);AddMoney(6840),,,,,0,
+1427,镇山之宝,34,65,1,1,,,,1,61,99,all,"CheckTaskFinished(1426)
+GetTaskItemSpace >= 1","AddItem(4423,1)",,,,,0,0,0,4423;4401,1;1,5001,4401,1,1,,0,,0,99,270 ,AddExp(205200);AddNimbus(102600);AddMoney(30780),,,,,0,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1428,挑战月龙护卫,34,61,1,0,1,,,1,61,99,all,,,,,,,0,0,0,0,0,0,0,0,0,4,4975,1,0,99,80 ,AddExp(11520);AddNimbus(1920),,,,,0,
+1429,挑战月龙斗士,34,62,1,0,1,,,1,61,99,all,,,,,,,0,0,0,0,0,0,0,0,0,4,4979,1,0,99,80 ,AddExp(11680);AddNimbus(1947),AddEffect(2234),,,,0,
+1430,挑战月龙勇士,34,63,1,0,1,,,1,62,99,all,,,,,,,0,0,0,0,0,0,0,0,0,4,4988,1,0,99,80 ,AddExp(11840);AddNimbus(1973),AddEffect(2235),,,,0,
+1431,挑战月龙侠客,34,64,1,0,1,,,1,63,99,all,,,,,,,0,0,0,0,0,0,0,0,0,4,4995,1,0,99,80 ,AddExp(12000);AddNimbus(2000),AddEffect(2237),,,,0,
+1432,挑战月龙霸主,34,65,1,0,1,,,1,64,99,all,,,,,,,0,0,0,0,0,0,0,0,0,4,5002,1,0,99,80 ,AddExp(12160);AddNimbus(2027),AddEffect(2236),,,,0,
+1433,屠魔战士,34,63,0,1,,,,1,61,99,all,,,,,,,0,0,0,4402,99,4967;4968;4969;4970;4971;4972;4973;4974;4975;4976;4977;4978;4979;4980;4981;4982;4983;4984;4985;4986;4987;4988;4989;4990;4991;4992;4993;4994;4995;4996;4997;4998;4999;5000;5001;5002;5003;5004;5005;5006;5007;5008;5009;,4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;,0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3,99;99;99;99;99;99;99;99;99;99;99;99;99;99;99;99;99;99;99;99;99;99;99;99;99;99;99;99;99;99;99;99;99;99;99;99;99;99;99;99;99;99;99;,,0,,0,99,83 ,AddExp(61420);AddNimbus(30710);AddMoney(9213),,,,,0,
+1434,道心纵魔大法,34,63,0,0,,,,1,61,99,all,CheckTaskFinished(1433),,GetItemSpace >= 1,,,,0,0,0,4402,495,4967;4968;4969;4970;4971;4972;4973;4974;4975;4976;4977;4978;4979;4980;4981;4982;4983;4984;4985;4986;4987;4988;4989;4990;4991;4992;4993;4994;4995;4996;4997;4998;4999;5000;5001;5002;5003;5004;5005;5006;5007;5008;5009;,4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;4402;,0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3;0.3,495;495;495;495;495;495;495;495;495;495;495;495;495;495;495;495;495;495;495;495;495;495;495;495;495;495;495;495;495;495;495;495;495;495;495;495;495;495;495;495;495;495;495;,,0,,0,99,400 ,AddExp(59200);AddNimbus(9867),"AddItemEx(4403,0,0,1)",,,,0,
+1435,神坛斗士,34,63,1,1,,,,1,61,99,all,CheckTaskFinished(1433),,,,,,0,0,0,4403,99,0,0,0,0,,0,,0,99,811 ,AddExp(599999);AddNimbus(300000);AddMoney(90000),,,,,0,
+1436,包打听对于偏门法宝的悬赏公告,34,61,0,0,1,,,1,61,99,all,,,,,,,0,0,0,4424,1,4967;4968;4969;4970;4971;4972;4973;4974;4975;,4424;4424;4424;4424;4424;4424;4424;4424;4424;,0.05;0.05;0.05;0.05;0.05;0.05;0.05;0.05;0.05,1;1;1;1;1;1;1;1;1;,,0,,0,99,80 ,AddExp(57600);AddNimbus(28800);AddMoney(8640),,,,,0,
+1437,月龙祭司对于占星术下卷的悬赏公告,34,62,0,0,1,,,1,61,99,all,,,,,,,0,0,0,4372,1,4976;4977;4978;4979;,4372;4372;4372;4372,0.05;0.05;0.05;0.05,1;1;1;1;,,0,,0,99,80 ,AddExp(58400);AddNimbus(29200);AddMoney(8880),,,,,0,
+1438,月龙长老对于古籍的悬赏公告,34,63,0,0,1,,,1,61,99,all,,,,,,,0,0,0,4379,1,4980;4981;4982;4983;4984;4985;4986;4987;4988;4989;,4379;4379;4379;4379;4379;4379;4379;4379;4379;4379;,0.05;0.05;0.05;0.05;0.05;0.05;0.05;0.05;0.05;0.05,1;1;1;1;1;1;1;1;1;1,,0,,0,99,80 ,AddExp(59200);AddNimbus(29600);AddMoney(8880),,,,,0,
+1439,月龙村财主对翠玉钗的悬赏公告,34,64,0,0,1,,,1,61,99,all,,,,,,,0,0,0,4392,1,4990;4991;4992;4993;4994;4995;4996;4997;4998;,4392;4392;4392;4392;4392;4392;4392;4392;4392;,0.05;0.05;0.05;0.05;0.05;0.05;0.05;0.05;0.05;,1;1;1;1;1;1;1;1;1;,,0,,0,99,80 ,AddExp(60000);AddNimbus(30000);AddMoney(9120),,,,,0,
+1440,月龙铁匠对于飞天宝刀的悬赏公告,34,65,0,0,1,,,1,61,99,all,,,,,,,0,0,0,4404,1,4999;5000;5001;5002;5003;5004;5005;5006;5007;5008;5009;,4404;4404;4404;4404;4404;4404;4404;4404;4404;4404;4404;,0.05;0.05;0.05;0.05;0.05;0.05;0.05;0.05;0.05;0.05;0.05;,1;1;1;1;1;1;1;1;1;1;1,,0,,0,99,80 ,AddExp(60800);AddNimbus(30400);AddMoney(9120),,,,,0,
+1441,白云大师的召唤,34,63,0,1,,,,1,63,99,all,,,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,30 ,AddExp(22200);AddNimbus(11100);AddMoney(3330),,,,,0,
+1442,通臂神猿李宁的召唤,34,63,0,1,,,,1,63,99,all,,,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,30 ,AddExp(22200);AddNimbus(11100);AddMoney(3330),,,,,0,
+1443,餐霞大师的召唤,34,63,0,1,,,,1,63,99,all,,,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,30 ,AddExp(22200);AddNimbus(11100);AddMoney(3330),,,,,0,
+1444,追云叟白谷逸的召唤,34,63,0,1,,,,1,63,99,all,,,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,30 ,AddExp(22200);AddNimbus(11100);AddMoney(3330),,,,,0,
+1445,百禽道人公冶黄的召唤,34,63,0,1,,,,1,63,99,all,,,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,30 ,AddExp(22200);AddNimbus(11100);AddMoney(3330),,,,,0,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1446,重金悬赏令,34,61,0,1,,,,1,61,99,all,,,,,,,0,0,0,4364;4365;,10;20,4968;5025,4364;4365;,0.5;1,10;20,,0,,0,99,83 ,AddExp(59760);AddNimbus(29880);AddMoney(8964),,,,,0,
+1447,未曾找回的物品,34,61,0,1,,,,1,61,99,all,CheckTaskFinished(1446),,,,,,0,0,0,4366,20,4969,4366,0.5,20,,0,,0,99,90 ,AddExp(64800);AddNimbus(32400);AddMoney(9720),,,,,0,
+1448,直捣黄龙,34,61,1,1,,,,1,61,99,all,CheckTaskFinished(1447),,GetItemSpace >= 1,,,,0,4970,1,0,0,0,0,0,0,,0,,0,99,128 ,AddExp(92160);AddNimbus(46080);AddMoney(13824),,,,"em;AddItemEx(264,0,1,1)
+fm;AddItemEx(273,0,1,1)
+bh;AddItemEx(282,0,1,1)
+qc;AddItemEx(607,0,1,1)
+xq;AddItemEx(685,0,1,1)",0,
+1449,幕后推手,34,62,0,1,,,,1,61,99,all,CheckTaskFinished(1448),,,,,,0,4976,25,0,0,0,0,0,0,,0,,0,99,90 ,AddExp(65700);AddNimbus(32850);AddMoney(9990),,,,,0,
+1450,月龙村守卫,34,62,0,1,,,,1,61,99,all,CheckTaskFinished(1449),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,40 ,AddExp(29200);AddNimbus(14600);AddMoney(4440),,,,,0,
+1451,恶汉来袭,34,63,0,1,,,,1,61,99,all,CheckTaskFinished(1450),,,,,,0,4980,30,0,0,0,0,0,0,,0,,0,99,90 ,AddExp(66600);AddNimbus(33300);AddMoney(9990),,,,,0,
+1452,散播谣言,34,63,0,1,,,,1,61,99,all,CheckTaskFinished(1451),,,,,,0,0,0,4385,20,4981,4385,0.5,20,,0,,0,99,90 ,AddExp(66600);AddNimbus(33300);AddMoney(9990),,,,,0,
+1453,万恶之源,34,63,1,1,,,,1,61,99,all,CheckTaskFinished(1452),,GetItemSpace >= 1,,,,0,4983,1,0,0,0,0,0,0,,0,,0,99,128 ,AddExp(94720);AddNimbus(47360);AddMoney(14208),,,,"em;AddItemEx(91,0,1,1)
+fm;AddItemEx(118,0,1,1)
+bh;AddItemEx(145,0,1,1)
+qc;AddItemEx(589,0,1,1)
+xq;AddItemEx(667,0,1,1)",0,
+1454,九尾银狐,34,64,0,1,,,,1,61,99,all,CheckTaskFinished(1453),,,,,,0,4990,35,0,0,0,0,0,0,,0,,0,99,90 ,AddExp(67500);AddNimbus(33750);AddMoney(10260),,,,,0,
+1455,可怕的巫术,34,64,1,1,,,,1,61,99,all,CheckTaskFinished(1454),,,,,,0,4994,35,0,0,0,0,0,0,,0,,0,99,90 ,AddExp(67500);AddNimbus(33750);AddMoney(10260),,,,,0,
+1456,数百年的诅咒,34,64,0,1,,,,1,61,99,all,CheckTaskFinished(1455),,GetItemSpace >= 1,,,,0,4998,1,0,0,0,0,0,0,,0,,0,99,135 ,AddExp(101250);AddNimbus(50625);AddMoney(15390),,,,"em;AddItemEx(291,0,1,1)
+fm;AddItemEx(300,0,1,1)
+bh;AddItemEx(309,0,1,1)
+qc;AddItemEx(616,0,1,1)
+xq;AddItemEx(694,0,1,1)",0,
+1457,寻找女童安雅,34,64,0,1,,,,1,62,99,all,,,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,45 ,AddExp(33750);AddNimbus(16875);AddMoney(5130),,,,,0,
+1458,解除重围,34,64,1,1,,,,1,62,99,all,CheckTaskFinished(1457),,,,,,0,0,0,0,0,0,0,0,0,2,5026,1,0,99,120 ,AddExp(90000);AddNimbus(45000);AddMoney(13680),,,,,0,
+1459,魔教来犯,34,65,0,1,,,,1,62,99,all,CheckTaskFinished(1458),,,,,,0,4999,40,0,0,0,0,0,0,,0,,0,99,90 ,AddExp(68400);AddNimbus(34200);AddMoney(10260),,,,,0,
+1460,严阵以待,34,65,0,1,,,,1,62,99,all,CheckTaskFinished(1459),,,,,,0,5000,40,0,0,0,0,0,0,,0,,0,99,90 ,AddExp(68400);AddNimbus(34200);AddMoney(10260),,,,,0,
+1461,一手遮天,34,65,1,1,,,,1,62,99,all,CheckTaskFinished(1460),,GetItemSpace >= 1,,,,0,5003,1,0,0,0,0,0,0,,0,,0,99,150 ,AddExp(114000);AddNimbus(57000);AddMoney(17100),,,,"em;AddItemEx(100,0,1,1)
+fm;AddItemEx(127,0,1,1)
+bh;AddItemEx(154,0,1,1)
+qc;AddItemEx(598,0,1,1)
+xq;AddItemEx(676,0,1,1)",0,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1462,收获的季节,34,61,0,1,,,,1,61,99,all,,,,,,,0,0,0,4367,20,4973,4367,1,20,,0,,0,99,83 ,AddExp(59760);AddNimbus(29880);AddMoney(8964),,,,,0,
+1463,九层塔，十里香,34,61,0,1,,,,1,61,99,all,CheckTaskFinished(1462),,,,,,0,0,0,4368,20,4971,4368,0.5,20,,0,,0,99,83 ,AddExp(59760);AddNimbus(29880);AddMoney(8964),,,,,0,
+1464,稀缺麝香,34,61,0,1,,,,1,61,99,all,CheckTaskFinished(1463),,,,,,0,0,0,4369,20,4972,4369,0.5,20,,0,,0,99,90 ,AddExp(64800);AddNimbus(32400);AddMoney(9720),,,,,0,
+1465,寻找合适的容器,34,62,1,1,,,,1,61,99,all,CheckTaskFinished(1464),,GetItemSpace >= 1,,,,0,0,0,4373,1,4977,4373,1,1,,0,,0,99,128 ,AddExp(93440);AddNimbus(46720);AddMoney(14208),"AddItemEx(4431,0,0,1)",,,,0,
+1466,制作九龙麝香雪玉膏,34,62,0,1,,,,1,61,99,all,"CheckTaskFinished(1465)
+GetTaskItemSpace >= 1",,GetItemSpace >= 1,,"AddItem(4417,1)",,0,0,0,3517;2051,3;3,0,0,0,0,,0,,0,99,100 ,AddExp(73000);AddNimbus(36500);AddMoney(11100),,,,,0,
+1467,九龙麝香黑玉膏,34,62,0,1,,,,1,61,99,all,CheckTaskFinished(1466),,GetItemSpace >= 1,,,,0,0,0,3517;2051,1;1,0,0,0,0,,0,,0,99,98 ,AddExp(71540);AddNimbus(35770);AddMoney(10878),"AddItemEx(4418,0,0,1)",,,,0,
+1468,救治受伤村民,34,62,0,1,,,,1,61,99,all,CheckTaskFinished(1466),,,,,,0,0,0,4417,1,0,0,0,0,,0,,0,99,75 ,AddExp(54750);AddNimbus(27375);AddMoney(8325),,,,,0,
+1469,和玉甘露,34,63,0,1,,,,1,61,99,all,,,,,,,0,0,0,4386,25,4984,4386,0.5,25,,0,,0,99,98 ,AddExp(72520);AddNimbus(36260);AddMoney(10878),,,,,0,
+1470,冬虫灵芝,34,63,0,1,,,,1,61,99,all,CheckTaskFinished(1469),,,,,,0,0,0,4387,25,4985,4387,0.5,25,,0,,0,99,98 ,AddExp(72520);AddNimbus(36260);AddMoney(10878),,,,,0,
+1471,难求药引,34,63,0,1,,,,1,61,99,all,CheckTaskFinished(1470),,GetItemSpace >= 1,,"AddItem(4429,1)",,0,0,0,2014,20,0,0,0,0,,0,,0,99,98 ,AddExp(72520);AddNimbus(36260);AddMoney(10878),,,,,0,
+1472,药到病除,34,64,0,1,,,,1,61,99,all,CheckTaskFinished(1471),,,,,,0,5012,1,0,0,0,0,0,0,,0,,0,99,113 ,AddExp(84750);AddNimbus(42375);AddMoney(12882),,,,,0,
+1473,相借古籍药典,34,64,0,1,,,,1,62,99,all,,,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,68 ,AddExp(51000);AddNimbus(25500);AddMoney(7752),,,,,0,
+1474,开启古籍药典,34,64,0,1,,,,1,62,99,all,CheckTaskFinished(1473),,,,,,0,0,0,504,1,0,0,0,0,,0,,0,99,90 ,AddExp(67500);AddNimbus(33750);AddMoney(10260),,,,,0,
+1475,地蝎蛰刺,34,64,0,1,,,,1,62,99,all,CheckTaskFinished(1474),,,,,,0,0,0,4394,25,4992,4394,0.5,25,,0,,0,99,98 ,AddExp(73500);AddNimbus(36750);AddMoney(11172),,,,,0,
+1476,吸积地灵之气,34,65,0,1,,,,1,62,99,all,CheckTaskFinished(1475),,,,,,0,0,0,4405,25,5004,4405,1,25,,0,,0,99,98 ,AddExp(74480);AddNimbus(37240);AddMoney(11172),,,,,0,
+1477,日月之精华,34,65,0,1,,,,1,62,99,all,CheckTaskFinished(1476),,,,,,0,0,0,4406,25,5005,4406,0.5,25,,0,,0,99,98 ,AddExp(74480);AddNimbus(37240);AddMoney(11172),,,,,0,
+1478,融人杰之力,34,65,0,1,,,,1,62,99,all,CheckTaskFinished(1477),,,,,,0,0,0,514,5,0,0,0,0,,0,,0,99,75 ,AddExp(57000);AddNimbus(28500);AddMoney(8550),,,,,0,
+1479,浑然天成,34,65,0,1,,,,1,62,99,all,CheckTaskFinished(1478),,GetItemSpace >= 1,,,,0,0,0,4407,25,5006,4407,0.5,25,,0,,0,99,135 ,AddExp(102600);AddNimbus(51300);AddMoney(15390),"AddItemEx(4415,0,0,1)",,,,0,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1480,百蛮山山神祭祀大会,34,61,0,1,,,,1,61,99,all,,,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,45 ,AddExp(32400);AddNimbus(16200);AddMoney(4860),,,,,0,
+1481,供奉山神的麝肉,34,61,0,1,,,,1,61,99,all,,,,,,,0,0,0,4370,20,4972,4370,0.5,20,,0,,0,99,90 ,AddExp(64800);AddNimbus(32400);AddMoney(9720),,,,,0,
+1482,祭祀大会的鲜果,34,61,0,1,,,,1,61,99,all,,,,,,,0,0,0,4371,25,4974,4371,1,25,,0,,0,99,92 ,AddExp(66240);AddNimbus(33120);AddMoney(9936),,,,,0,
+1483,供奉山神的玉帛,34,62,0,1,,,,1,61,99,all,CheckTaskFinished(1482),,,,,,0,0,0,4374,25,4978,4374,1,25,,0,,0,99,92 ,AddExp(67160);AddNimbus(33580);AddMoney(10212),,,,,0,
+1484,祭祀万灵的蛇血,34,62,0,1,,,,1,61,99,all,CheckTaskFinished(1481),,,,,,0,0,0,4375,20,4971,4375,0.5,20,,0,,0,99,96 ,AddExp(70080);AddNimbus(35040);AddMoney(10656),,,,,0,
+1485,祭祀大会落幕,34,62,0,1,,,,1,61,99,all,CheckTaskFinished(1483);CheckTaskFinished(1484),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,98 ,AddExp(71540);AddNimbus(35770);AddMoney(10878),,,,,0,
+1486,祭司的制裁,34,63,0,1,,,,1,61,99,all,,,,,,,0,0,0,4389,1,4984,4389,0.025,1,,0,,0,99,92 ,AddExp(68080);AddNimbus(34040);AddMoney(10212),,,,,0,
+1487,山神的愤怒,34,63,0,1,,,,1,61,99,all,CheckTaskFinished(1486),,,,,,0,0,0,4390,1,4986,4390,0.025,1,,0,,0,99,105 ,AddExp(77700);AddNimbus(38850);AddMoney(11655),,,,,0,
+1488,忧心忡忡,34,63,0,1,,,,1,61,99,all,CheckTaskFinished(1487),,,,,,0,0,0,4391,5,4987,4391,0.05,5,,0,,0,99,110 ,AddExp(81400);AddNimbus(40700);AddMoney(12210),,,,,0,
+1489,算破天机,34,64,0,1,,,,1,61,99,all,CheckTaskFinished(1488),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,45 ,AddExp(33750);AddNimbus(16875);AddMoney(5130),,,,,0,
+1490,求助医师,34,64,0,1,,,,1,61,99,all,CheckTaskFinished(1489),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,45 ,AddExp(33750);AddNimbus(16875);AddMoney(5130),,,,,0,
+1491,奇石雄黄,34,64,0,1,,,,1,61,99,all,CheckTaskFinished(1490),,,,,,0,0,0,4395,25,4994,4395,0.5,25,,0,,0,99,98 ,AddExp(73500);AddNimbus(36750);AddMoney(11172),,,,,0,
+1492,见血封喉,34,64,0,1,,,,1,61,99,all,CheckTaskFinished(1491),,,,,,0,0,0,4396,25,4991,4396,0.5,25,,0,,0,99,94 ,AddExp(70500);AddNimbus(35250);AddMoney(10716),,,,,0,
+1493,混世精元,34,65,0,1,,,,1,61,99,all,CheckTaskFinished(1492),,,,,,0,0,0,4408,1,5003,4408,1,1,,0,,0,99,98 ,AddExp(74480);AddNimbus(37240);AddMoney(11172),,,,,0,
+1494,玄火精炼,34,65,0,1,,,,1,61,99,all,CheckTaskFinished(1493),,,,,,0,0,0,4409,5,5007,4409,0.05,5,,0,,0,99,105 ,AddExp(79800);AddNimbus(39900);AddMoney(11970),,,,,0,
+1495,瑶池珍品,34,65,0,1,,,,1,61,99,all,CheckTaskFinished(1494),,GetItemSpace >= 1,,,,0,0,0,4410,5,5009,4410,0.05,5,,0,,0,99,145 ,AddExp(110200);AddNimbus(55100);AddMoney(16530),"AddItemEx(4416,0,0,1)",,,,0,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1496,蹉跎岁月,34,63,0,1,,,,1,61,99,all,,,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,53 ,AddExp(39220);AddNimbus(19610);AddMoney(5883),,,,,0,
+1497,小试牛刀,34,64,0,1,,,,1,61,99,all,,,,,,,0,4993,35,0,0,0,0,0,0,,0,,0,99,98 ,AddExp(73500);AddNimbus(36750);AddMoney(11172),,,,,0,
+1498,古籍由来,34,64,0,1,,,,1,61,99,all,CheckTaskFinished(1497),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,53 ,AddExp(39750);AddNimbus(19875);AddMoney(6042),,,,,0,
+1499,委以重任,34,64,0,1,,,,1,61,99,all,CheckTaskFinished(1498),,,,,,0,0,0,4397,5,4990,4397,0.05,5,,0,,0,99,105 ,AddExp(78750);AddNimbus(39375);AddMoney(11970),,,,,0,
+1500,蓄势待发,34,64,0,1,,,,1,61,99,all,CheckTaskFinished(1499),,,,,,0,4991,35,0,0,0,0,0,0,,0,,0,99,107 ,AddExp(80250);AddNimbus(40125);AddMoney(12198),,,,,0,
+1501,深入洞穴,34,64,0,1,,,,1,61,99,all,CheckTaskFinished(1500),,,,,,0,4992,35,0,0,0,0,0,0,,0,,0,99,108 ,AddExp(81000);AddNimbus(40500);AddMoney(12312),,,,,0,
+1502,古籍归一,34,64,0,1,,,,1,61,99,all,CheckTaskFinished(1501),,,,,,0,0,0,4398,1,5028,4398,1,1,,0,,0,99,120 ,AddExp(90000);AddNimbus(45000);AddMoney(13680),,,,,0,
+1503,恩怨情仇,34,65,0,1,,,,1,62,99,all,CheckTaskFinished(1502),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,58 ,AddExp(44080);AddNimbus(22040);AddMoney(6612),,,,,0,
+1504,玄火归元,34,65,0,1,,,,1,62,99,all,CheckTaskFinished(1503),,,,,,0,0,0,4411,1,5007,4411,0.02,1,,0,,0,99,120 ,AddExp(91200);AddNimbus(45600);AddMoney(13680),,,,,0,
+1505,水灵归元,34,65,0,1,,,,1,62,99,all,CheckTaskFinished(1504),,,,,,0,0,0,4412,1,5005,4412,0.02,1,,0,,0,99,120 ,AddExp(91200);AddNimbus(45600);AddMoney(13680),,,,,0,
+1506,陈木归元,34,65,0,1,,,,1,62,99,all,CheckTaskFinished(1505),,,,,,0,0,0,4413,1,5006,4413,0.02,1,,0,,0,99,120 ,AddExp(91200);AddNimbus(45600);AddMoney(13680),,,,,0,
+1507,金靡归元,34,65,0,1,,,,1,62,99,all,CheckTaskFinished(1506),,,,,,0,0,0,4414,1,5009,4414,0.02,1,,0,,0,99,120 ,AddExp(91200);AddNimbus(45600);AddMoney(13680),,,,,0,
+1508,四象归位，万恶俱除,34,65,1,1,,,,1,62,99,all,CheckTaskFinished(1507),,GetItemSpace >= 2,,,,0,5001,1,0,0,0,0,0,0,,0,,0,99,195 ,AddExp(148200);AddNimbus(74100);AddMoney(22230),"AddItemEx(4430,0,0,1)
+AddItemEx(4431,0,0,1)",,,,0,
+1509,驱鬼除魔,34,62,0,0,,2,,1,61,99,all,,,,,,,0,4985;4986;4987,20;20;20,0,0,0,0,0,0,,0,,0,99,165 ,AddExp(24090);AddNimbus(4015),,,,,0,
+1510,为我出头,34,61,0,0,,2,,1,61,99,all,,,,,,,0,4968;4969;4976,20;20;20,0,0,0,0,0,0,,0,,0,99,150 ,AddExp(21600);AddNimbus(3600),,,,,0,
+1511,麝香月龙天地灵物,34,61,0,0,,2,,1,61,99,all,CheckTaskFinished(1462),,,,,,0,0,0,4367;4369,25;20,4973;4972,4367;4369,1;0.5,25;20,,0,,0,99,115 ,AddExp(16560);AddNimbus(2760),,,,,0,
+1512,好友的问候,34,60,0,1,,,,1,61,99,all,,,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,30 ,AddExp(21300);AddNimbus(10650);AddMoney(3240),,,,,0,
+1513,内心的恐惧,34,61,0,0,,2,,1,61,99,all,,,,,,,0,4970;4977,1;1,0,0,0,0,0,0,,0,,0,99,175 ,AddExp(25200);AddNimbus(4200),,,,,0,
+1514,驱魔者的使命,34,64,0,0,,2,,1,61,99,all,,,,,,,0,4990;4991;4992;4994,20;20;20;20,0,0,0,0,0,0,,0,,0,99,175 ,AddExp(26250);AddNimbus(4375),,,,,0,
+1515,恶鬼峡的动向,34,66,0,1,,,,1,66,99,all,,,,,,,0,0,0,4581,25,5111,4581,1,25,,0,,0,99,110 ,AddExp(84700);AddNimbus(42350);AddMoney(12870),,,,,0,
+1516,失落的青螺宫,34,66,0,1,,,,1,66,99,all,CheckTaskFinished(1515),,,,,,0,5062,35,0,0,0,0,0,0,,0,,0,99,120 ,AddExp(92400);AddNimbus(46200);AddMoney(14040),,,,,0,
+1517,钢筋铁骨,34,66,0,1,,,,1,66,99,all,CheckTaskFinished(1516),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,60 ,AddExp(46200);AddNimbus(23100);AddMoney(7020),,,,,0,
+1518,破解之道,34,66,0,1,,,,1,66,99,all,CheckTaskFinished(1517),,,,,,0,0,0,4582,20,5065,4582,0.5,20,,0,,0,99,130 ,AddExp(100100);AddNimbus(50050);AddMoney(15210),,,,,0,
+1519,胜之不武,34,66,0,1,,,,1,66,99,all,CheckTaskFinished(1518),,,,,,0,5063,35,0,0,0,0,0,0,,0,,0,99,130 ,AddExp(100100);AddNimbus(50050);AddMoney(15210),,,,,0,
+1520,迦楼罗神力,34,66,0,1,,,,1,66,99,all,CheckTaskFinished(1519),"AddItem(4583,1)",,,"RemoveItem(4583,1)","RemoveItem(4583,1)",0,0,0,0,0,0,0,0,0,,0,,4583,1,110 ,AddExp(84700);AddNimbus(42350);AddMoney(12870),,,,,0,
+1521,三魔落网,34,66,1,1,,,,1,66,99,all,CheckTaskFinished(1520),,,,,,0,5101,1,0,0,0,0,0,0,,0,,0,99,400 ,AddExp(308000);AddNimbus(154000);AddMoney(46800),,,,"em;AddItemEx(318,0,1,1)
+fm;AddItemEx(327,0,1,1)
+bh;AddItemEx(336,0,1,1)
+qc;AddItemEx(625,0,1,1)
+xq;AddItemEx(703,0,1,1)",0,
+1522,道统传承的下落,34,66,0,1,,,,1,66,99,all,,,,,,,0,0,0,4584,20,5064,4584,0.5,20,,0,,0,99,130 ,AddExp(100100);AddNimbus(50050);AddMoney(15210),,,,,0,
+1523,宝石的异变,34,66,0,1,,,,1,66,99,all,CheckTaskFinished(1522),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,60 ,AddExp(46200);AddNimbus(23100);AddMoney(7020),,,,,0,
+1524,寻根求底,34,66,0,1,,,,1,66,99,all,CheckTaskFinished(1523),,,,,,0,0,0,4585,25,5112,4585,1,25,,0,,0,99,105 ,AddExp(80850);AddNimbus(40425);AddMoney(12285),,,,,0,
+1525,火眼狻猊,34,66,0,1,,,,1,66,99,all,CheckTaskFinished(1524),,,,,,0,0,0,4586,20,5066,4586,0.5,20,,0,,0,99,130 ,AddExp(100100);AddNimbus(50050);AddMoney(15210),,,,,0,
+1526,灵光重现,34,66,0,1,,,,1,66,99,all,"CheckTaskFinished(1525)
+GetTaskItemSpace >= 1","AddItem(4587,1)",,,"RemoveItem(4587,1)","RemoveItem(4587,1)",0,0,0,4587,1,0,0,0,0,,0,,0,99,60 ,AddExp(46200);AddNimbus(23100);AddMoney(7020),,,,,0,
+1527,愤愤不平,34,66,0,1,,,,1,66,99,all,CheckTaskFinished(1526),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,60 ,AddExp(46200);AddNimbus(23100);AddMoney(7020),,,,,0,
+1528,掉包的补偿,34,66,0,1,,,,1,66,99,all,CheckTaskFinished(1527),,,,,,0,0,0,4588,20,5063,4588,0.5,20,,0,,0,99,135 ,AddExp(103950);AddNimbus(51975);AddMoney(15795),,,,,0,
+1529,下不为例,34,66,0,1,,,,1,66,99,all,CheckTaskFinished(1528),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,60 ,AddExp(46200);AddNimbus(23100);AddMoney(7020),,,,,0,
+1530,以攻代守,34,66,0,1,,,,1,66,99,all,CheckTaskFinished(1529),,,,,,0,5064,35,0,0,0,0,0,0,,0,,0,99,130 ,AddExp(100100);AddNimbus(50050);AddMoney(15210),,,,,0,
+1531,青玉奇珍,34,66,0,1,,,,1,66,99,all,CheckTaskFinished(1530),,,,,,0,0,0,4589,20,5067,4589,0.5,20,,0,,0,99,130 ,AddExp(100100);AddNimbus(50050);AddMoney(15210),,,,,0,
+1532,特殊的召集,34,66,0,1,,,,1,66,99,all,"CheckTaskFinished(1531)
+GetTaskItemSpace >= 1","AddItem(4590,1)",,,"RemoveItem(4590,1)","RemoveItem(4590,1)",0,0,0,0,0,0,0,0,0,,0,,4590,1,110 ,AddExp(84700);AddNimbus(42350);AddMoney(12870),,,,,0,
+1533,师徒伏诛,34,66,1,1,,,,1,66,99,all,CheckTaskFinished(1532),,,,,,0,5100,1,0,0,0,0,0,0,,0,,0,99,450 ,AddExp(346500);AddNimbus(173250);AddMoney(52650),,,,,0,
+1534,鬼气冲天,34,67,0,1,,,,1,67,99,all,GetTaskItemSpace >= 1,"AddItem(4591,1)",,,"RemoveItem(4591,1)","RemoveItem(4591,1)",0,0,0,0,0,0,0,0,0,,0,,4591,1,100 ,AddExp(78000);AddNimbus(39000);AddMoney(11700),,,,,0,
+1535,生死之地,34,67,0,1,,,,1,67,99,all,CheckTaskFinished(1534),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,70 ,AddExp(54600);AddNimbus(27300);AddMoney(8190),,,,,0,
+1536,杀生石,34,67,0,1,,,,1,67,99,all,CheckTaskFinished(1535),,,,,,0,5071,35,0,0,0,0,0,0,,0,,0,99,140 ,AddExp(109200);AddNimbus(54600);AddMoney(16380),,,,,0,
+1537,驱魔之阵,34,67,0,1,,,,1,67,99,all,CheckTaskFinished(1536),,,,,,0,0,0,4592,20,5069,4592,0.5,20,,0,,0,99,145 ,AddExp(113100);AddNimbus(56550);AddMoney(16965),,,,,0,
+1538,从容应对,34,67,0,1,,,,1,67,99,all,CheckTaskFinished(1537),,,,,,0,0,0,4593,20,5072,4593,0.5,20,,0,,0,99,145 ,AddExp(113100);AddNimbus(56550);AddMoney(16965),,,,,0,
+1539,大阵初成,34,67,0,1,,,,1,67,99,all,"CheckTaskFinished(1538)
+GetTaskItemSpace >= 1","AddItem(4594,1)",,,"RemoveItem(4594,1)","RemoveItem(4594,1)",0,5074,1,0,0,0,0,0,0,,0,,4594,1,100 ,AddExp(78000);AddNimbus(39000);AddMoney(11700),,,,,0,
+1540,邪气陡现,34,67,0,1,,,,1,67,99,all,CheckTaskFinished(1539),,,,,,0,5073,35,0,0,0,0,0,0,,0,,0,99,140 ,AddExp(109200);AddNimbus(54600);AddMoney(16380),,,,,0,
+1541,风灵源体,34,67,0,1,,,,1,67,99,all,CheckTaskFinished(1540),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,70 ,AddExp(54600);AddNimbus(27300);AddMoney(8190),,,,,0,
+1542,祭风妖台,34,67,1,1,,,,1,67,99,all,CheckTaskFinished(1541),,,,,,0,5103,1,0,0,0,0,0,0,,0,,0,99,480 ,AddExp(374400);AddNimbus(187200);AddMoney(56160),"AddItemEx(244,0,0,1)",,,,0,
+1543,雪魂珠之争,34,67,0,1,,,,1,67,99,all,,,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,70 ,AddExp(54600);AddNimbus(27300);AddMoney(8190),,,,,0,
+1544,天劫地火,34,67,0,1,,,,1,67,99,all,CheckTaskFinished(1543),,,,,,0,0,0,4595,20,5073,4595,0.5,20,,0,,0,99,140 ,AddExp(109200);AddNimbus(54600);AddMoney(16380),,,,,0,
+1545,原火之灵,34,67,0,1,,,,1,67,99,all,CheckTaskFinished(1544),,,,,,0,5076;5077;5078,1;1;1,0,0,0,0,0,0,,0,,0,99,150 ,AddExp(117000);AddNimbus(58500);AddMoney(17550),,,,,0,
+1546,水克火,34,67,0,1,,,,1,67,99,all,"CheckTaskFinished(1544)
+GetTaskItemSpace >= 1","AddItem(4596,1)",,,"RemoveItem(4596,1)","RemoveItem(4596,1)",0,0,0,0,0,0,0,0,0,,0,,4596,1,100 ,AddExp(78000);AddNimbus(39000);AddMoney(11700),,,,,0,
+1547,珍宝重现,34,67,0,1,,,,1,67,99,all,"CheckTaskFinished(1545);
+CheckTaskFinished(1546)",,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,70 ,AddExp(54600);AddNimbus(27300);AddMoney(8190),,,,,0,
+1548,怪犬的尸毒,34,67,0,1,,,,1,67,99,all,CheckTaskFinished(1547),,,,,,0,0,0,4597,20,5070,4597,0.5,20,,0,,0,99,140 ,AddExp(109200);AddNimbus(54600);AddMoney(16380),,,,,0,
+1549,解毒的药引,34,67,0,1,,,,1,67,99,all,CheckTaskFinished(1548),,,,,,0,0,0,4598,1,0,0,0,0,,0,,0,1,100 ,AddExp(78000);AddNimbus(39000);AddMoney(11700),,,,,0,
+1550,灵丹妙药,34,67,0,1,,,,1,67,99,all,"CheckTaskFinished(1549)
+GetTaskItemSpace >= 1","AddItem(4599,1)",,,"RemoveItem(4599,1)","RemoveItem(4599,1)",0,0,0,0,0,0,0,0,0,,0,,4599,1,100 ,AddExp(78000);AddNimbus(39000);AddMoney(11700),,,,,0,
+1551,另辟蹊径,34,67,0,1,,,,1,67,99,all,CheckTaskFinished(1547),,,,,,0,5072,35,0,0,0,0,0,0,,0,,0,99,145 ,AddExp(113100);AddNimbus(56550);AddMoney(16965),,,,,0,
+1552,黑煞落魂砂,34,67,0,1,,,,1,67,99,all,CheckTaskFinished(1551),,,,,,0,0,0,4600,25,5113,4600,1,25,,0,,0,99,120 ,AddExp(93600);AddNimbus(46800);AddMoney(14040),,,,,0,
+1553,冥府法宝,34,67,0,1,,,,1,67,99,all,CheckTaskFinished(1552),,,,,,0,0,0,4601,20,5075,4601,0.5,20,,0,,0,99,140 ,AddExp(109200);AddNimbus(54600);AddMoney(16380),,,,,0,
+1554,天师恶徒露面,34,67,0,1,,,,1,67,99,all,CheckTaskFinished(1553),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,70 ,AddExp(54600);AddNimbus(27300);AddMoney(8190),,,,,0,
+1555,夺回雪魂珠,34,67,1,1,,,,1,67,99,all,CheckTaskFinished(1554),,,,,,0,0,0,4602,1,5102,4602,1,1,,0,,0,99,550 ,AddExp(429000);AddNimbus(214500);AddMoney(64350),,,,,0,
+1556,毒物与药草,34,68,0,1,,,,1,68,99,all,,,,,,,0,0,0,4603,25,5114,4603,1,25,,0,,0,99,130 ,AddExp(102700);AddNimbus(51350);AddMoney(15600),,,,,0,
+1557,配药解毒,34,68,0,1,,,,1,68,99,all,"CheckTaskFinished(1556)
+GetTaskItemSpace >= 1","AddItem(4604,1)",,,"RemoveItem(4604,1)","RemoveItem(4604,1)",0,0,0,0,0,0,0,0,0,,0,,4604,1,115 ,AddExp(90850);AddNimbus(45425);AddMoney(13800),,,,,0,
+1558,毒物初现,34,68,0,1,,,,1,68,99,all,CheckTaskFinished(1557),,,,,,0,5084,35,0,0,0,0,0,0,,0,,0,99,165 ,AddExp(130350);AddNimbus(65175);AddMoney(19800),,,,,0,
+1559,巨大的毒虫,34,68,0,1,,,,1,68,99,all,"CheckTaskFinished(1558)
+GetTaskItemSpace >= 1","AddItem(4631,1)",,,"RemoveItem(4631,1)","RemoveItem(4631,1)",0,0,0,0,0,0,0,0,0,3,5085,1,0,99,115 ,AddExp(90850);AddNimbus(45425);AddMoney(13800),,,,,0,
+1560,镇山之塔,34,68,0,1,,,,1,68,99,all,"CheckTaskFinished(1559)
+GetTaskItemSpace >= 1","AddItem(4605,1)",,,"RemoveItem(4605,1)","RemoveItem(4605,1)",0,0,0,0,0,0,0,0,0,,0,,4605,1,115 ,AddExp(90850);AddNimbus(45425);AddMoney(13800),,,,,0,
+1561,天外魔铁,34,68,0,1,,,,1,68,99,all,CheckTaskFinished(1560),,,,,,0,0,0,4606,25,5115,4606,1,25,,0,,0,99,130 ,AddExp(102700);AddNimbus(51350);AddMoney(15600),,,,,0,
+1562,妖魔肆虐,34,68,0,1,,,,1,68,99,all,CheckTaskFinished(1561),,,,,,0,5079,35,0,0,0,0,0,0,,0,,0,99,165 ,AddExp(130350);AddNimbus(65175);AddMoney(19800),,,,,0,
+1563,赤身洞之谜,34,68,0,1,,,,1,68,99,all,CheckTaskFinished(1562),,,,,,0,5086,8,0,0,0,0,0,0,,0,,0,99,150 ,AddExp(118500);AddNimbus(59250);AddMoney(18000),,,,,0,
+1564,长臂神魔,34,68,1,1,,,,1,68,99,all,CheckTaskFinished(1563),,,,,,0,5104,1,0,0,0,0,0,0,,0,,0,99,600 ,AddExp(474000);AddNimbus(237000);AddMoney(72000),,,,"em;AddItemEx(82,0,1,1)
+fm;AddItemEx(109,0,1,1)
+bh;AddItemEx(136,0,1,1)
+qc;AddItemEx(580,0,1,1)
+xq;AddItemEx(658,0,1,1)",0,
+1565,恐怖的蜘蛛,34,68,0,1,,,,1,68,99,all,,,,,,,0,5087,20,0,0,0,0,0,0,,0,,0,99,115 ,AddExp(90850);AddNimbus(45425);AddMoney(13800),,,,,0,
+1566,赤身洞毒王,34,68,0,1,,,,1,68,99,all,CheckTaskFinished(1565),,,,,,0,5080,35,0,0,0,0,0,0,,0,,0,99,165 ,AddExp(130350);AddNimbus(65175);AddMoney(19800),,,,,0,
+1567,伏魔灵丹,34,68,0,1,,,,1,68,99,all,CheckTaskFinished(1565),,,,,,0,0,0,4607,20,5080,4607,0.5,20,,0,,0,99,150 ,AddExp(118500);AddNimbus(59250);AddMoney(18000),,,,,0,
+1568,焚烧蛛穴,34,68,0,1,,,,1,68,99,all,"CheckTaskFinished(1566);
+CheckTaskFinished(1567);
+GetTaskItemSpace >= 1","AddItem(4608,1)",,,"RemoveItem(4608,1)","RemoveItem(4608,1)",0,0,0,0,0,0,0,0,0,,0,,4608,1,115 ,AddExp(90850);AddNimbus(45425);AddMoney(13800),,,,,0,
+1569,善恶有别,34,68,0,1,,,,1,68,99,all,CheckTaskFinished(1568),,,,,,0,0,0,4609,20,5081;5082,4609;4609,0.5;0.5,20;20,,0,,0,99,150 ,AddExp(118500);AddNimbus(59250);AddMoney(18000),,,,,0,
+1570,特殊的救治,34,68,0,1,,,,1,68,99,all,"CheckTaskFinished(1569)
+GetTaskItemSpace >= 1","AddItem(4610,1)",,,"RemoveItem(4610,1)","RemoveItem(4610,1)",0,0,0,0,0,0,0,0,0,,0,,4610,1,115 ,AddExp(90850);AddNimbus(45425);AddMoney(13800),,,,,0,
+1571,万劫不复,34,68,0,1,,,,1,68,99,all,CheckTaskFinished(1569),,,,,,0,5081,35,0,0,0,0,0,0,,0,,0,99,165 ,AddExp(130350);AddNimbus(65175);AddMoney(19800),,,,,0,
+1572,巫蛊奴长老,34,68,0,1,,,,1,68,99,all,CheckTaskFinished(1570),,,,,,0,0,0,0,0,0,0,0,0,2,5134,1,0,1,200 ,AddExp(158000);AddNimbus(79000);AddMoney(24000),,,,,0,
+1573,巫蛊宗师,34,68,1,1,,,,1,68,99,all,CheckTaskFinished(1572),,,,,,0,5105,1,0,0,0,0,0,0,,0,,0,99,660 ,AddExp(521400);AddNimbus(260700);AddMoney(79200),,,,,0,
+1574,巧设智文石,34,68,0,1,,,,1,68,99,all,GetTaskItemSpace >= 1,"AddItem(4611,1)",,,"RemoveItem(4611,1)","RemoveItem(4611,1)",0,0,0,0,0,0,0,0,0,,0,,4611,1,115 ,AddExp(90850);AddNimbus(45425);AddMoney(13800),,,,,0,
+1575,棋逢对手,34,68,0,1,,,,1,68,99,all,CheckTaskFinished(1574),,,,,,0,5083,35,0,0,0,0,0,0,,0,,0,99,165 ,AddExp(130350);AddNimbus(65175);AddMoney(19800),,,,,0,
+1576,观摩仿制,34,68,0,1,,,,1,68,99,all,CheckTaskFinished(1574),,,,,,0,0,0,4612,20,5083,4612,0.5,20,,0,,0,99,150 ,AddExp(118500);AddNimbus(59250);AddMoney(18000),,,,,0,
+1577,还治其人之身,34,68,0,1,,,,1,68,99,all,"CheckTaskFinished(1575);
+CheckTaskFinished(1576);
+GetTaskItemSpace >= 1","AddItem(4613,1)",,,"RemoveItem(4613,1)","RemoveItem(4613,1)",0,0,0,0,0,0,0,0,0,,0,,4613,1,660 ,AddExp(521400);AddNimbus(260700);AddMoney(79200),,,,,0,
+1578,百花门人,34,69,0,1,,,,1,69,99,all,,,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,90 ,AddExp(72000);AddNimbus(36000);AddMoney(10800),,,,,0,
+1579,妖魔逼近,34,69,0,1,,,,1,69,99,all,CheckTaskFinished(1578),,,,,,0,5090,35,0,0,0,0,0,0,,0,,0,99,180 ,AddExp(144000);AddNimbus(72000);AddMoney(21600),,,,,0,
+1580,魔门的坐骑,34,69,0,1,,,,1,69,99,all,CheckTaskFinished(1579),,,,,,0,5089,35,0,0,0,0,0,0,,0,,0,99,180 ,AddExp(144000);AddNimbus(72000);AddMoney(21600),,,,,0,
+1581,佛门的救援,34,69,0,1,,,,1,69,99,all,CheckTaskFinished(1580),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,90 ,AddExp(72000);AddNimbus(36000);AddMoney(10800),,,,,0,
+1582,邪恶与怪异,34,69,0,1,,,,1,69,99,all,CheckTaskFinished(1581),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,90 ,AddExp(72000);AddNimbus(36000);AddMoney(10800),,,,,0,
+1583,不死刀客,34,69,0,1,,,,1,69,99,all,CheckTaskFinished(1582),,,,,,0,5088,35,0,0,0,0,0,0,,0,,0,99,180 ,AddExp(144000);AddNimbus(72000);AddMoney(21600),,,,,0,
+1584,求教达人,34,69,0,1,,,,1,69,99,all,CheckTaskFinished(1583),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,90 ,AddExp(72000);AddNimbus(36000);AddMoney(10800),,,,,0,
+1585,破咒的仙草,34,69,0,1,,,,1,69,99,all,CheckTaskFinished(1584),,,,,,0,0,0,4614,25,5117,4614,1,25,,0,,0,99,165 ,AddExp(132000);AddNimbus(66000);AddMoney(19800),,,,,0,
+1586,紫鸢仙露,34,69,0,1,,,,1,69,99,all,"CheckTaskFinished(1585)
+GetTaskItemSpace >= 1","AddItem(4615,1)",,,"RemoveItem(4615,1)","RemoveItem(4615,1)",0,0,0,0,0,0,0,0,0,,0,,4615,1,130 ,AddExp(104000);AddNimbus(52000);AddMoney(15600),,,,,0,
+1587,邪术的终结,34,69,0,1,,,,1,69,99,all,CheckTaskFinished(1586),,,,,,0,5088,35,0,0,0,0,0,0,,0,,0,99,180 ,AddExp(144000);AddNimbus(72000);AddMoney(21600),,,,,0,
+1588,狂妄的洪长豹,34,69,1,1,,,,1,69,99,all,CheckTaskFinished(1587),,,,,,0,5106,1,0,0,0,0,0,0,,0,,0,99,720 ,AddExp(576000);AddNimbus(288000);AddMoney(86400),"AddItemEx(252,0,0,1)",,,,0,
+1589,青石洲之谜,34,69,0,1,,,,1,69,99,all,"CheckTaskFinished(1582)
+GetTaskItemSpace >= 1","AddItem(4616,1)",,,"RemoveItem(4616,1)","RemoveItem(4616,1)",0,0,0,0,0,0,0,0,0,,0,,4616,1,130 ,AddExp(104000);AddNimbus(52000);AddMoney(15600),,,,,0,
+1590,邪化的精灵,34,69,0,1,,,,1,69,99,all,"CheckTaskFinished(1589)
+GetTaskItemSpace >= 1","AddItem(4632,1)",,,"RemoveItem(4632,1)","RemoveItem(4632,1)",0,0,0,0,0,0,0,0,0,3,5091,1,0,99,130 ,AddExp(104000);AddNimbus(52000);AddMoney(15600),,,,,0,
+1591,绿洲之花,34,69,0,1,,,,1,69,99,all,CheckTaskFinished(1590),,,,,,0,0,0,4617,25,5118,4617,1,25,,0,,0,99,165 ,AddExp(132000);AddNimbus(66000);AddMoney(19800),,,,,0,
+1592,雷灵珠的下落,34,69,0,1,,,,1,69,99,all,CheckTaskFinished(1591),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,90 ,AddExp(72000);AddNimbus(36000);AddMoney(10800),,,,,0,
+1593,痛下杀手,34,69,0,1,,,,1,69,99,all,CheckTaskFinished(1592),,,,,,0,5091,35,0,0,0,0,0,0,,0,,0,99,180 ,AddExp(144000);AddNimbus(72000);AddMoney(21600),,,,,0,
+1594,魔道邪法,34,69,0,1,,,,1,69,99,all,CheckTaskFinished(1593),,,,,,0,0,0,4618,20,5092,4618,0.5,20,,0,,0,99,165 ,AddExp(132000);AddNimbus(66000);AddMoney(19800),,,,,0,
+1595,报仇雪恨,34,69,0,1,,,,1,69,99,all,CheckTaskFinished(1593),,,,,,0,5092,35,0,0,0,0,0,0,,0,,0,99,180 ,AddExp(144000);AddNimbus(72000);AddMoney(21600),,,,,0,
+1596,曙光初现,34,69,0,1,,,,1,69,99,all,"CheckTaskFinished(1594);
+CheckTaskFinished(1595)",,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,90 ,AddExp(72000);AddNimbus(36000);AddMoney(10800),,,,,0,
+1597,失而复得,34,69,1,1,,,,1,69,99,all,CheckTaskFinished(1596),,,,,,0,0,0,4619,1,5107,4619,1,1,,0,,0,99,780 ,AddExp(624000);AddNimbus(312000);AddMoney(93600),,,,,0,
+1598,尉迟火被困,34,70,0,1,,,,1,70,99,all,,,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,105 ,AddExp(85050);AddNimbus(42525);AddMoney(12915),,,,,0,
+1599,补充元气,34,70,0,1,,,,1,70,99,all,CheckTaskFinished(1598),,,,,,0,5094,35,0,0,0,0,0,0,,0,,0,99,200 ,AddExp(162000);AddNimbus(81000);AddMoney(24600),,,,,0,
+1600,不动明王阵,34,70,0,1,,,,1,70,99,all,"CheckTaskFinished(1599)
+GetTaskItemSpace >= 1","AddItem(4620,1)",,,"RemoveItem(4620,1)","RemoveItem(4620,1)",0,0,0,0,0,0,0,0,0,,0,,4620,1,140 ,AddExp(113400);AddNimbus(56700);AddMoney(17220),,,,,0,
+1601,撤离鬼镇,34,70,0,1,,,,1,70,99,all,CheckTaskFinished(1600),,,,,,0,0,0,0,0,0,0,0,0,2,5129,1,0,1,200 ,AddExp(162000);AddNimbus(81000);AddMoney(24600),,,,,0,
+1602,分化敌人,34,70,0,1,,,,1,70,99,all,CheckTaskFinished(1601),,,,,,0,0,0,4621,20,5096,4621,0.5,20,,0,,0,99,175 ,AddExp(141750);AddNimbus(70875);AddMoney(21525),,,,,0,
+1603,辛辰子的算盘,34,70,0,1,,,,1,70,99,all,CheckTaskFinished(1602),,,,,,0,5095,35,0,0,0,0,0,0,,0,,0,99,200 ,AddExp(162000);AddNimbus(81000);AddMoney(24600),,,,,0,
+1604,天龙之女神像,34,70,0,1,,,,1,70,99,all,"CheckTaskFinished(1603)
+GetTaskItemSpace >= 1","AddItem(4622,1)",,,"RemoveItem(4622,1)","RemoveItem(4622,1)",0,0,0,0,0,0,0,0,0,,0,,4622,1,140 ,AddExp(113400);AddNimbus(56700);AddMoney(17220),,,,,0,
+1605,梅鹿子师兄,34,70,1,1,,,,1,70,99,all,CheckTaskFinished(1604),,,,,,0,5110,1,0,0,0,0,0,0,,0,,0,99,830 ,AddExp(672300);AddNimbus(336150);AddMoney(102090),,,,"em;AddItemEx(11,0,152,1)
+fm;AddItemEx(31,0,152,1)
+bh;AddItemEx(61,0,152,1)
+qc;AddItemEx(557,0,1,1)
+xq;AddItemEx(635,0,1,1)",0,
+1606,百蛮七宝,34,70,0,1,,,,1,70,99,all,,,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,105 ,AddExp(85050);AddNimbus(42525);AddMoney(12915),,,,,0,
+1607,百毒金蚕蛊,34,70,0,1,,,,1,70,99,all,CheckTaskFinished(1606),,,,,,0,0,0,4623,20,5093,4623,0.5,20,,0,,0,99,175 ,AddExp(141750);AddNimbus(70875);AddMoney(21525),,,,,0,
+1608,寒光碧火,34,70,0,1,,,,1,70,99,all,CheckTaskFinished(1607),,,,,,0,0,0,4624,20,5119,4624,0.5,20,,0,,0,99,175 ,AddExp(141750);AddNimbus(70875);AddMoney(21525),,,,,0,
+1609,四上位法宝,34,70,0,1,,,,1,70,99,all,CheckTaskFinished(1608),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,105 ,AddExp(85050);AddNimbus(42525);AddMoney(12915),,,,,0,
+1610,百鬼夜行图,34,70,0,1,,,,1,70,99,all,CheckTaskFinished(1609),,,,,,0,0,0,4625,20,5094,4625,0.5,20,,0,,0,99,175 ,AddExp(141750);AddNimbus(70875);AddMoney(21525),,,,,0,
+1611,千光琉璃塔,34,70,0,1,,,,1,70,99,all,CheckTaskFinished(1610),,,,,,0,0,0,4626,20,5097,4626,0.5,20,,0,,0,99,175 ,AddExp(141750);AddNimbus(70875);AddMoney(21525),,,,,0,
+1612,百毒诛仙剑,34,70,0,1,,,,1,70,99,all,CheckTaskFinished(1610),,,,,,0,0,0,4627,20,5098,4627,0.5,20,,0,,0,99,175 ,AddExp(141750);AddNimbus(70875);AddMoney(21525),,,,,0,
+1613,七宝之首,34,70,0,1,,,,1,70,99,all,CheckTaskFinished(1610),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,105 ,AddExp(85050);AddNimbus(42525);AddMoney(12915),,,,,0,
+1614,玄牝珠之秘,34,70,1,1,,,,1,70,99,all,"CheckTaskFinished(1611);
+CheckTaskFinished(1612);
+CheckTaskFinished(1613)",,,,,,0,0,0,4628,1,5108,4628,1,1,,0,,0,99,880 ,AddExp(712800);AddNimbus(356400);AddMoney(108240),,,,"em;AddItemEx(21,0,152,1)
+fm;AddItemEx(41,0,152,1)
+bh;AddItemEx(51,0,152,1)
+qc;AddItemEx(567,0,1,1)
+xq;AddItemEx(645,0,1,1)",0,
+1615,秘魔残章,34,70,0,1,,,,1,70,99,all,GetTaskItemSpace >= 1,"AddItem(4629,1)",,,"RemoveItem(4629,1)","RemoveItem(4629,1)",0,5099,35,0,0,0,0,0,0,,0,,4629,1,175 ,AddExp(141750);AddNimbus(70875);AddMoney(21525),,,,,0,
+1616,镇龙亭,34,70,0,1,,,,1,70,99,all,CheckTaskFinished(1615),,,,,,0,5098,35,0,0,0,0,0,0,,0,,0,99,175 ,AddExp(141750);AddNimbus(70875);AddMoney(21525),,,,,0,
+1617,南方魔教的道统,34,70,0,1,,,,1,70,99,all,"CheckTaskFinished(1616)
+GetTaskItemSpace >= 1","AddItem(4633,1)",,,"RemoveItem(4633,1)","RemoveItem(4633,1)",0,0,0,0,0,0,0,0,0,3,5097,1,0,99,140 ,AddExp(113400);AddNimbus(56700);AddMoney(17220),,,,,0,
+1618,血魂斧,34,70,0,1,,,,1,70,99,all,CheckTaskFinished(1617),,,,,,0,0,0,4630,1,5109,4630,1,1,,0,,0,99,300 ,AddExp(243000);AddNimbus(121500);AddMoney(36900),,,,,0,
+1619,66级单次捕捉,34,66,0,1,,,,1,66,99,all,GetTaskItemSpace >= 1,"AddItem(4655,1)",,,"RemoveItem(4655,1)","RemoveItem(4655,1)",0,0,0,,,0,0,0,0,,,,0,1,150 ,AddExp(115500);AddNimbus(57750);AddMoney(17550),,,,,0,
+1620,67级单次捕捉,34,67,0,1,,,,1,67,99,all,GetTaskItemSpace >= 1,"AddItem(4656,1)",,,"RemoveItem(4656,1)","RemoveItem(4656,1)",0,0,0,,,0,0,0,0,,,,0,1,180 ,AddExp(140400);AddNimbus(70200);AddMoney(21060),,,,,0,
+1621,68级单次捕捉,34,68,0,1,,,,1,68,99,all,GetTaskItemSpace >= 1,"AddItem(4657,1)",,,"RemoveItem(4657,1)","RemoveItem(4657,1)",0,0,0,,,0,0,0,0,,,,0,1,210 ,AddExp(165900);AddNimbus(82950);AddMoney(25200),,,,,0,
+1622,69级单次捕捉,34,69,0,1,,,,1,69,99,all,GetTaskItemSpace >= 1,"AddItem(4658,1)",,,"RemoveItem(4658,1)","RemoveItem(4658,1)",0,0,0,,,0,0,0,0,,,,0,1,240 ,AddExp(192000);AddNimbus(96000);AddMoney(28800),,,,,0,
+1623,70级单次捕捉,34,70,0,1,,,,1,70,99,all,GetTaskItemSpace >= 1,"AddItem(4659,1)",,,"RemoveItem(4659,1)","RemoveItem(4659,1)",0,0,0,0,0,0,0,0,0,,,,0,1,270 ,AddExp(218700);AddNimbus(109350);AddMoney(33210),,,,,0,
+1624,67级世界捕捉,34,67,0,1,,,,1,67,99,all,GetTaskItemSpace >= 1,"AddItem(4660,1)",,,"RemoveItem(4660,1)","RemoveItem(4660,1)",0,0,0,0,0,0,0,0,0,3,5136,1,0,1,800 ,AddExp(624000);AddNimbus(312000);AddMoney(93600),,,,,0,
+1625,69级世界捕捉,34,69,0,1,,,,1,69,99,all,GetTaskItemSpace >= 1,"AddItem(4661,1)",,,"RemoveItem(4661,1)","RemoveItem(4661,1)",0,0,0,0,0,0,0,0,0,3,5137,1,0,1,1200 ,AddExp(960000);AddNimbus(480000);AddMoney(144000),,,,,0,
+1626,66级护卫宠任务(1),34,66,0,0,1,3,,1,66,99,all,,,,,,,0,0,0,4634;4635,15;15,5066;5070,4634;4635,0.5;0.5,15;15,,0,,0,99,150 ,AddExp(23100);AddNimbus(3850),,,,,0,
+1627,66级护卫宠任务(2),34,66,0,0,1,3,,1,66,99,all,CheckTaskFinished(1626),,GetItemSpace >= 1,,,,0,0,0,4638,10,0,0,0,0,,0,,0,99,100 ,AddExp(15400);AddNimbus(2567),"AddItemEx(4649,0,0,1)",,,,0,
+1628,66级逛街宠任务(1),34,66,0,0,1,3,,1,66,99,all,,,,,,,0,0,0,4636;4637,15;15,5063;5066,4636;4637,0.5;0.5,15;15,,0,,0,99,150 ,AddExp(23100);AddNimbus(3850),,,,,0,
+1629,66级逛街宠任务(2),34,66,0,0,1,3,,1,66,99,all,CheckTaskFinished(1629),,GetItemSpace >= 1,,,,0,0,0,4643,10,0,0,0,0,,0,,0,99,100 ,AddExp(15400);AddNimbus(2567),"AddItemEx(4650,0,0,1)",,,,0,
+1630,68级护卫宠任务(1),34,68,0,0,1,3,,1,68,99,all,,,,,,,0,0,0,4639;4640,15;15,5079;5084,4639;4640,0.5;0.5,15;15,,0,,0,99,150 ,AddExp(23700);AddNimbus(3950),,,,,0,
+1631,68级护卫宠任务(2),34,68,0,0,1,3,,1,68,99,all,CheckTaskFinished(1630),,GetItemSpace >= 1,,,,0,0,0,4638,10,0,0,0,0,,0,,0,99,100 ,AddExp(15800);AddNimbus(2633),"AddItemEx(4651,0,0,1)",,,,0,
+1632,68级逛街宠任务(1),34,68,0,0,1,3,,1,68,99,all,,,,,,,0,0,0,4641;4642,15;15,5084;5080,4641;4642,0.5;0.5,15;15,,0,,0,99,150 ,AddExp(23700);AddNimbus(3950),,,,,0,
+1633,68级逛街宠任务(2),34,68,0,0,1,3,,1,68,99,all,CheckTaskFinished(1632),,GetItemSpace >= 1,,,,0,0,0,4643,10,0,0,0,0,,0,,0,99,100 ,AddExp(15800);AddNimbus(2633),"AddItemEx(4652,0,0,1)",,,,0,
+1634,70级护卫宠任务(1),34,70,0,0,1,3,,1,70,99,all,,,,,,,0,0,0,4644;4645,15;15,5089;5094,4644;4645,0.5;0.5,15;15,,0,,0,99,150 ,AddExp(24300);AddNimbus(4050),,,,,0,
+1635,70级护卫宠任务(2),34,70,0,0,1,3,,1,70,99,all,CheckTaskFinished(1634),,GetItemSpace >= 1,,,,0,0,0,4638,10,0,0,0,0,,0,,0,99,100 ,AddExp(16200);AddNimbus(2700),"AddItemEx(4653,0,0,1)",,,,0,
+1636,70级逛街宠任务(1),34,70,0,0,1,3,,1,70,99,all,,,,,,,0,0,0,4646;4647,15;15,5094;5093,4646;4647,0.5;0.5,15;15,,0,,0,99,150 ,AddExp(24300);AddNimbus(4050),,,,,0,
+1637,70级逛街宠任务(2),34,70,0,0,1,3,,1,70,99,all,CheckTaskFinished(1636),,GetItemSpace >= 1,,,,0,0,0,4643,10,0,0,0,0,,0,,0,99,100 ,AddExp(16200);AddNimbus(2700),"AddItemEx(4654,0,0,1)",,,,0,

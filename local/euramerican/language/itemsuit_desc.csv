@@ -1,0 +1,17 @@
+程序导标记，不用翻译
+ID,Name,Action1_hint,Action2_hint,Action3_hint,Action4_hint,Action5_hint,Action6_hint,Action7_hint,Action8_hint,Action9_hint,Action10_hint
+1,Fire Dragon Suit,,Increase 50 points Vitality.,,Increase fire related attack 18 points.,,Increase Fire Burst range 20%.,,,,
+10,Red Ibis Suit,,Increase 90 points Intelligence.,,Increase move speed 3%.,,Decrease Heavy Crack preparing time 0.5 second.,,,,
+11,Chilly Light Suit,,Increase 65 points Vitality.,,Increase water critical strike rate 5%.,,Increase Tide Spout range 20%.,,,,
+12,Nature Voice Suit,,Increase 90 points Vitality.,,Increase buddha damage 5%.,,Increase Giant Raid critical strike rate 30%.,,,,
+13,Catkin Suit,,Increase 80 points Vitality.,,Increase lightning damage 5%.,,Decrease Sheen Slice preparing time 0.5 second.,,,,
+14,Sun Chase Suit,,Increase 80 points Vitality.,,Increase poison critical strike rate 5%.,,Decrease Elements Array cooling time 15 seconds.,,,,
+15,Birds Uprush Suit,,Increase 75 points Vitality.,,Increase poison critical strike rate 5%.,,Decrease Power Shoot preparing time 0.5 second.,,,,
+2,Thunder Sound Suit,,Increase 70 points Vitality.,,Increase block rate 10%.,,Decrease Buddha Shield cooling time 60 seconds.,,,,
+3,Lily Suit,,Increase 75 points Intelligence.,,Increase healing effect 46 points.,,Decrease Purple Shield cooling time 30 seconds.,,,,
+4,Demon Ruin Suit,,Increase 75 points Dexterity.,,Increase dodge rate 10%.,,Decrease Swift Move cooling time 60 seconds.,,,,
+5,Blue Snipe Suit,,Increase 65 points Intelligence.,,Increase water critical strike rate 2%.,,Decrease Rapid Crack cooling time 0.5 second.,,,,
+6,Seven Stars Suit,,Increase 90 points Intelligence.,,Increase fire critical strike rate 5%.,,Decrease Fire Burst cooling time 2 seconds.,,,,
+7,Buddha Vigor Suit,,Increase 90 points Strength.,,Increase defense 10%.,,Decrease Fatal Bash stamina cost 10 points.,,,,
+8,Willow Suit,,Increase 90 points Intelligence.,,Increase healing effect 152 points.,,Increase Healing Spell effect range 30.,,,,
+9,Greedy Wolf Suit,,Increase 90 points Dexterity.,,Increase lightning damage 5%.,,Decrease Lightning Sweeping stamina cost 5 points.,,,,

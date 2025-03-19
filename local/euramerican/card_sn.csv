@@ -1,0 +1,5 @@
+类型ID,名字,长度,前缀,后缀,忽略字符,类型开始,类型长度,说明
+TypeID,Name,Length,Prefix,Postfix,IgnoreChar,TypeStart,TypeLen,Desc
+1,活动序号,12,E,,,1,3,
+2,产品包,14,0,,,1,3,
+3,新产品包0724,14,A,,,1,3,
