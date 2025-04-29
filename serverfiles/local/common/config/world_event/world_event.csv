@@ -1,4 +1,0 @@
-ID,Name,Script,TriggerType,SpecialEvent
-1,鬼影孽事件,gui_ying_nie.lua,1,event_creature_die;event_creature_leave_world;
-2,赵神庙灵异事件,zhao_shen_miao_ling_yi.lua,1,event_creature_die;event_creature_leave_world;
-3,吕村暴动事件,nv_cun_bao_dong.lua,1,event_creature_die;event_creature_leave_world;

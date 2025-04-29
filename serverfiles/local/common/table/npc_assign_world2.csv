@@ -1,7 +1,0 @@
-ae,int,int,string,string,marea,"comb(id:int,density[%]:int)",npc,string,string,string
-"ID","areaID","IsRebirth","AssignMode","areaName","areaBlock","NpcAssign","Script","AI","Date","Comment"
-128,128,3,random,$L:Scenestable_ningbiyamidong$,"1259 1793 1512 2028;
-1645 1538 2012 1758;
-1694 1490 1809 1538;
-1061 1813 1230 2014;
-1067 1578 1252 1767;","5052,3;","script/NpcLocation_fb005.lua",,,
